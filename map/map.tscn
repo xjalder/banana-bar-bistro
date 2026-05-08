@@ -1,17 +1,19 @@
 [gd_scene format=3 uid="uid://cvok5ewpyc0k6"]
 
-[ext_resource type="PackedScene" uid="uid://c2bu7gqw8rbso" path="res://player/player.tscn" id="1_qyrbn"]
-[ext_resource type="Texture2D" uid="uid://bw52m2ogcluy7" path="res://icon.svg" id="2_67hre"]
-[ext_resource type="Script" uid="uid://ddy2f7g3os7wd" path="res://player/swingable.gd" id="3_67hre"]
-[ext_resource type="Texture2D" uid="uid://bk0lceil3gipo" path="res://assets/tree-branch-isolated-on-transparent-background_png.png.png" id="3_vv62k"]
+[ext_resource type="PackedScene" uid="uid://c2bu7gqw8rbso" path="res://player/player.tscn" id="1_kffv2"]
+[ext_resource type="Texture2D" uid="uid://bw52m2ogcluy7" path="res://icon.svg" id="2_7lyie"]
+[ext_resource type="PackedScene" uid="uid://qcg3f5otv3dp" path="res://map/platform.tscn" id="3_5jdw0"]
+[ext_resource type="Script" uid="uid://ddy2f7g3os7wd" path="res://player/swingable.gd" id="4_kxmgb"]
+[ext_resource type="Texture2D" uid="uid://bk0lceil3gipo" path="res://assets/tree-branch-isolated-on-transparent-background_png.png.png" id="5_e8e5r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1cmj6"]
+size = Vector2(20.946732, 29.903465)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1yi38"]
 
-[node name="TestMap" type="Node2D" unique_id=1327460236]
+[node name="Map" type="Node2D" unique_id=1327460236]
 
-[node name="Player" parent="." unique_id=1042275332 instance=ExtResource("1_qyrbn")]
+[node name="Player" parent="." unique_id=1042275332 instance=ExtResource("1_kffv2")]
 walkspeed = 40.0
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1716734742]
@@ -20,7 +22,7 @@ scale = Vector2(17.720003, 2.8)
 collision_mask = 0
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=1011172669]
-texture = ExtResource("2_67hre")
+texture = ExtResource("2_7lyie")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1144853885]
 scale = Vector2(5.640002, 5.880001)
@@ -32,21 +34,24 @@ scale = Vector2(2.7200031, 8)
 collision_mask = 0
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D2" unique_id=1522975652]
-texture = ExtResource("2_67hre")
+texture = ExtResource("2_7lyie")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1716309341]
 scale = Vector2(5.640002, 5.880001)
 shape = SubResource("RectangleShape2D_1cmj6")
+
+[node name="Platform" parent="." unique_id=626660404 instance=ExtResource("3_5jdw0")]
+position = Vector2(-3.9999924, -361)
 
 [node name="Area2D" type="Area2D" parent="." unique_id=216673192]
 position = Vector2(13.999998, -113)
 scale = Vector2(2.92, 0.88)
 collision_layer = 8
 collision_mask = 4
-script = ExtResource("3_67hre")
+script = ExtResource("4_kxmgb")
 
 [node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=624604150]
-texture = ExtResource("3_vv62k")
+texture = ExtResource("5_e8e5r")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1245552]
 scale = Vector2(20.160002, 9.080001)
@@ -57,10 +62,10 @@ position = Vector2(13.999998, -555)
 scale = Vector2(2.92, 0.88)
 collision_layer = 8
 collision_mask = 4
-script = ExtResource("3_67hre")
+script = ExtResource("4_kxmgb")
 
 [node name="Sprite2D" type="Sprite2D" parent="Area2D2" unique_id=359399599]
-texture = ExtResource("3_vv62k")
+texture = ExtResource("5_e8e5r")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" unique_id=903801478]
 scale = Vector2(20.160002, 9.080001)
@@ -71,10 +76,10 @@ position = Vector2(13.999998, -935)
 scale = Vector2(2.92, 0.88)
 collision_layer = 8
 collision_mask = 4
-script = ExtResource("3_67hre")
+script = ExtResource("4_kxmgb")
 
 [node name="Sprite2D" type="Sprite2D" parent="Area2D3" unique_id=1838956579]
-texture = ExtResource("3_vv62k")
+texture = ExtResource("5_e8e5r")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D3" unique_id=299475362]
 scale = Vector2(20.160002, 9.080001)
@@ -85,10 +90,10 @@ position = Vector2(13.999998, -1363)
 scale = Vector2(2.92, 0.88)
 collision_layer = 8
 collision_mask = 4
-script = ExtResource("3_67hre")
+script = ExtResource("4_kxmgb")
 
 [node name="Sprite2D" type="Sprite2D" parent="Area2D4" unique_id=519289975]
-texture = ExtResource("3_vv62k")
+texture = ExtResource("5_e8e5r")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D4" unique_id=62169486]
 scale = Vector2(20.160002, 9.080001)

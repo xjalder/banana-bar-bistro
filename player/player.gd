@@ -9,6 +9,7 @@ var num_arms_grappled : int = 0
 
 var walk_left_held : bool
 var walk_right_held : bool
+var crouching : bool
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -16,7 +17,7 @@ func _ready() -> void:
 	SignalBus.ungrapple.connect(on_ungrapple)
 
 func _physics_process(delta: float) -> void:
-	if grappled or (walk_left_held and walk_right_held) or body.get_contact_count() < 1:
+	if grappled or (walk_left_held and walk_right_held):
 		return
 	
 	if walk_left_held:
@@ -41,8 +42,17 @@ func _input(event: InputEvent) -> void:
 		walk_left_held = true
 	elif event.is_action_pressed("walk_right"):
 		walk_right_held = true
+	if event.is_action_pressed("crouch"):
+		crouching = false
 		
 	if event.is_action_released("walk_left"):
 		walk_left_held = false
 	elif event.is_action_released("walk_right"):
 		walk_right_held = false
+	elif event.is_action_released("crouch"):
+		crouching = false
+		
+	if event.is_action_pressed("jump") and crouching:
+		SignalBus.falling_held.emit()
+	if event.is_action_released("jump"):
+		SignalBus.falling_released.emit()

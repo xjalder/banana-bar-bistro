@@ -59,6 +59,7 @@ jump={
 2d_physics/layer_2="Player"
 2d_physics/layer_3="Hand"
 2d_physics/layer_4="Swingable"
+2d_physics/layer_5="Platform"
 
 [physics]
 
