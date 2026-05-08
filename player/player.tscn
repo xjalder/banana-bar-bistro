@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c2bu7gqw8rbso"]
 
 [ext_resource type="Script" uid="uid://dubpjnqv8tn24" path="res://player/body.gd" id="1_i3pqv"]
+[ext_resource type="Script" uid="uid://cf64h7p18bjq" path="res://player/camera.gd" id="2_g1dw6"]
 [ext_resource type="PackedScene" uid="uid://nvmw36h1tqir" path="res://player/arm.tscn" id="2_yw30f"]
 
 [sub_resource type="Gradient" id="Gradient_ig7tw"]
@@ -31,6 +32,8 @@ shape = SubResource("RectangleShape2D_0xm2m")
 
 [node name="Camera2D" type="Camera2D" parent="Body" unique_id=1559137683]
 zoom = Vector2(0.75, 0.75)
+position_smoothing_enabled = true
+script = ExtResource("2_g1dw6")
 
 [node name="LeftArm" parent="." unique_id=2147052751 instance=ExtResource("2_yw30f")]
 position = Vector2(0, -60)
