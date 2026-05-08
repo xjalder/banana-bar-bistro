@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c2bu7gqw8rbso"]
 
 [ext_resource type="Script" uid="uid://dubpjnqv8tn24" path="res://player/body.gd" id="1_i3pqv"]
+[ext_resource type="Script" uid="uid://2sop8jeytx05" path="res://player/player.gd" id="1_yw30f"]
 [ext_resource type="Script" uid="uid://cf64h7p18bjq" path="res://player/camera.gd" id="2_g1dw6"]
 [ext_resource type="PackedScene" uid="uid://nvmw36h1tqir" path="res://player/arm.tscn" id="2_yw30f"]
 
@@ -14,10 +15,14 @@ gradient = SubResource("Gradient_ig7tw")
 size = Vector2(83, 91)
 
 [node name="Player" type="Node2D" unique_id=1042275332]
+script = ExtResource("1_yw30f")
+walkspeed = 30.0
 
 [node name="Body" type="RigidBody2D" parent="." unique_id=875229320 node_paths=PackedStringArray("left_arm", "right_arm")]
 collision_layer = 2
 mass = 500.0
+contact_monitor = true
+max_contacts_reported = 1
 script = ExtResource("1_i3pqv")
 left_arm = NodePath("../LeftArm")
 right_arm = NodePath("../RightArm")

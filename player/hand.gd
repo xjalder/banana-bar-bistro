@@ -4,7 +4,7 @@ var grabbing : bool
 var arm_action : String
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta: float) -> void:
+func _physics_process(delta: float) -> void:
 	if !grabbing:
 		var local_pos := (get_global_mouse_position() - global_position).normalized()
 		apply_central_impulse(local_pos * 100)

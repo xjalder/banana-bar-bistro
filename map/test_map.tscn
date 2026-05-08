@@ -12,6 +12,7 @@
 [node name="TestMap" type="Node2D" unique_id=1327460236]
 
 [node name="Player" parent="." unique_id=1042275332 instance=ExtResource("1_qyrbn")]
+walkspeed = 40.0
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1716734742]
 position = Vector2(0, 366)
@@ -22,6 +23,18 @@ collision_mask = 0
 texture = ExtResource("2_67hre")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1144853885]
+scale = Vector2(5.640002, 5.880001)
+shape = SubResource("RectangleShape2D_1cmj6")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=1694467934]
+position = Vector2(938, -65)
+scale = Vector2(2.7200031, 8)
+collision_mask = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D2" unique_id=1522975652]
+texture = ExtResource("2_67hre")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1716309341]
 scale = Vector2(5.640002, 5.880001)
 shape = SubResource("RectangleShape2D_1cmj6")
 
