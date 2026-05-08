@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://cvok5ewpyc0k6"]
+
+[ext_resource type="PackedScene" uid="uid://c2bu7gqw8rbso" path="res://player/player.tscn" id="1_qyrbn"]
+[ext_resource type="Texture2D" uid="uid://bw52m2ogcluy7" path="res://icon.svg" id="2_67hre"]
+[ext_resource type="Script" uid="uid://ddy2f7g3os7wd" path="res://player/swingable.gd" id="3_67hre"]
+[ext_resource type="Texture2D" uid="uid://bk0lceil3gipo" path="res://assets/tree-branch-isolated-on-transparent-background_png.png.png" id="3_vv62k"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1cmj6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1yi38"]
+
+[node name="TestMap" type="Node2D" unique_id=1327460236]
+
+[node name="Player" parent="." unique_id=1042275332 instance=ExtResource("1_qyrbn")]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1716734742]
+position = Vector2(0, 366)
+scale = Vector2(17.720003, 2.8)
+collision_mask = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=1011172669]
+texture = ExtResource("2_67hre")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1144853885]
+scale = Vector2(5.640002, 5.880001)
+shape = SubResource("RectangleShape2D_1cmj6")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=216673192]
+position = Vector2(13.999998, -113)
+scale = Vector2(2.92, 0.88)
+collision_layer = 8
+collision_mask = 4
+script = ExtResource("3_67hre")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=624604150]
+texture = ExtResource("3_vv62k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1245552]
+scale = Vector2(20.160002, 9.080001)
+shape = SubResource("RectangleShape2D_1yi38")

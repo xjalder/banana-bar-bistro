@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://c2bu7gqw8rbso"]
+
+[ext_resource type="Script" uid="uid://dubpjnqv8tn24" path="res://player/body.gd" id="1_i3pqv"]
+[ext_resource type="PackedScene" uid="uid://nvmw36h1tqir" path="res://player/arm.tscn" id="2_yw30f"]
+
+[sub_resource type="Gradient" id="Gradient_ig7tw"]
+offsets = PackedFloat32Array(0, 0.012345679)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_0xm2m"]
+gradient = SubResource("Gradient_ig7tw")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0xm2m"]
+size = Vector2(83, 91)
+
+[node name="Player" type="Node2D" unique_id=1042275332]
+
+[node name="Body" type="RigidBody2D" parent="." unique_id=875229320 node_paths=PackedStringArray("left_arm", "right_arm")]
+collision_layer = 2
+mass = 500.0
+script = ExtResource("1_i3pqv")
+left_arm = NodePath("../LeftArm")
+right_arm = NodePath("../RightArm")
+
+[node name="Sprite2D" type="Sprite2D" parent="Body" unique_id=372254321]
+scale = Vector2(0.33203116, 91.75)
+texture = SubResource("GradientTexture1D_0xm2m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Body" unique_id=170582561]
+position = Vector2(1.5, 1.5)
+shape = SubResource("RectangleShape2D_0xm2m")
+
+[node name="Camera2D" type="Camera2D" parent="Body" unique_id=1559137683]
+zoom = Vector2(0.75, 0.75)
+
+[node name="LeftArm" parent="." unique_id=2147052751 instance=ExtResource("2_yw30f")]
+position = Vector2(0, -60)
+arm_type = 0
+
+[node name="RightArm" parent="." unique_id=275786823 instance=ExtResource("2_yw30f")]
+position = Vector2(0, -60)
