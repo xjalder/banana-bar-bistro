@@ -1,0 +1,75 @@
+[gd_scene format=3 uid="uid://nvmw36h1tqir"]
+
+[ext_resource type="Script" uid="uid://bj1qsaltbvg7c" path="res://player/arm.gd" id="1_21cvd"]
+[ext_resource type="Texture2D" uid="uid://bw52m2ogcluy7" path="res://icon.svg" id="1_mg6gp"]
+[ext_resource type="Script" uid="uid://cbialj2ijbl0m" path="res://player/hand.gd" id="2_21cvd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ig7tw"]
+size = Vector2(108, 53)
+
+[node name="Arm" type="Node2D" unique_id=2147052751 node_paths=PackedStringArray("back_arm")]
+script = ExtResource("1_21cvd")
+arm_type = 1
+back_arm = NodePath("Backarm")
+
+[node name="Forearm" type="RigidBody2D" parent="." unique_id=1625032556]
+position = Vector2(0, -120)
+collision_layer = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="Forearm" unique_id=1683809969]
+scale = Vector2(0.2, 1)
+texture = ExtResource("1_mg6gp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Forearm" unique_id=91758012]
+scale = Vector2(0.2, 2)
+shape = SubResource("RectangleShape2D_ig7tw")
+
+[node name="PinJoint2D2" type="PinJoint2D" parent="Forearm" unique_id=1770788894]
+position = Vector2(0, -50)
+node_a = NodePath("..")
+node_b = NodePath("../../Hand")
+bias = 0.6
+softness = 4.0
+
+[node name="Backarm" type="RigidBody2D" parent="." unique_id=946832784]
+collision_layer = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="Backarm" unique_id=1898911036]
+scale = Vector2(0.2, 1)
+texture = ExtResource("1_mg6gp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Backarm" unique_id=21791292]
+scale = Vector2(0.2, 2.5)
+shape = SubResource("RectangleShape2D_ig7tw")
+
+[node name="PinJoint2D" type="PinJoint2D" parent="Backarm" unique_id=1707236252]
+position = Vector2(0, -65)
+node_a = NodePath("..")
+node_b = NodePath("../../Forearm")
+bias = 0.6
+softness = 4.0
+
+[node name="Label" type="Label" parent="Backarm" unique_id=1473769511]
+offset_left = -16.294687
+offset_top = -31.850956
+offset_right = 14.705313
+offset_bottom = 23.149044
+theme_override_font_sizes/font_size = 40
+text = "Q"
+metadata/_edit_use_anchors_ = true
+
+[node name="Hand" type="RigidBody2D" parent="." unique_id=604082195]
+position = Vector2(0, -200)
+collision_layer = 4
+collision_mask = 9
+contact_monitor = true
+max_contacts_reported = 2
+script = ExtResource("2_21cvd")
+
+[node name="Sprite2D" type="Sprite2D" parent="Hand" unique_id=94727833]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_mg6gp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hand" unique_id=1388962393]
+scale = Vector2(0.5, 1)
+shape = SubResource("RectangleShape2D_ig7tw")
