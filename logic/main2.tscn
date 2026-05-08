@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://dccwjy27hoe3j"]
+
+[ext_resource type="Script" uid="uid://bpde4wlw8iibj" path="res://logic/main.gd" id="1_mq8nk"]
+[ext_resource type="Script" uid="uid://cokvl7womi7xx" path="res://logic/day_manager.gd" id="2_eakso"]
+[ext_resource type="PackedScene" uid="uid://nveywkkxaysn" path="res://map/map2.tscn" id="3_6ayjo"]
+[ext_resource type="Script" uid="uid://b4etangt7migm" path="res://logic/game_manager.gd" id="3_eakso"]
+[ext_resource type="Script" uid="uid://c2u3kt0oug3lv" path="res://logic/map_manager.gd" id="4_bwq6h"]
+
+[node name="Main" type="Node2D" unique_id=955582176]
+script = ExtResource("1_mq8nk")
+curr_lv = null
+
+[node name="DayManager" type="Node" parent="." unique_id=1217986358]
+script = ExtResource("2_eakso")
+
+[node name="GameManager" type="Node" parent="." unique_id=788481745]
+script = ExtResource("3_eakso")
+
+[node name="MapManager" parent="." unique_id=1741551779 instance=ExtResource("3_6ayjo")]
+script = ExtResource("4_bwq6h")
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=701090034]
