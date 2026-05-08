@@ -12,6 +12,9 @@ visible = false
 z_index = 1
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1281305407]
-position = Vector2(4.000061, 5.000061)
+position = Vector2(4, 5.0000005)
 scale = Vector2(0.99773073, 0.99773073)
 texture = ExtResource("3_umfmm")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=661600757]
+position = Vector2(0, -2)
