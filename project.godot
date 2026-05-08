@@ -11,8 +11,13 @@ config_version=5
 [application]
 
 config/name="Banana-Bar_Bistro"
+run/main_scene="uid://cteheyqwjxrx8"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
+
+[debug]
+
+gdscript/warnings/untyped_declaration=2
 
 [physics]
 

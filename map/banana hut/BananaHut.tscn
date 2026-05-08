@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cteheyqwjxrx8"]
+
+[ext_resource type="Script" uid="uid://cp11kr0mawftl" path="res://map/banana hut/banana_hut.gd" id="1_p72rn"]
+[ext_resource type="PackedScene" uid="uid://dlfbgyi6xh5t" path="res://map/banana hut/MonkeyCustomer.tscn" id="2_1dp3g"]
+[ext_resource type="Texture2D" uid="uid://b5xyaedviirpg" path="res://assets/banana hut/hut-clipart-md.png" id="3_umfmm"]
+
+[node name="BananaHut" type="Node2D" unique_id=2064569661]
+script = ExtResource("1_p72rn")
+
+[node name="MonkeyCustomer" parent="." unique_id=873786103 instance=ExtResource("2_1dp3g")]
+visible = false
+z_index = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1281305407]
+position = Vector2(4.000061, 5.000061)
+scale = Vector2(0.99773073, 0.99773073)
+texture = ExtResource("3_umfmm")
