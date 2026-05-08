@@ -29,7 +29,7 @@ position = Vector2(0, -50)
 node_a = NodePath("..")
 node_b = NodePath("../../Hand")
 bias = 0.6
-softness = 8.0
+softness = 4.0
 
 [node name="Backarm" type="RigidBody2D" parent="." unique_id=946832784]
 collision_layer = 0
@@ -47,7 +47,7 @@ position = Vector2(0, -65)
 node_a = NodePath("..")
 node_b = NodePath("../../Forearm")
 bias = 0.6
-softness = 8.0
+softness = 4.0
 
 [node name="Label" type="Label" parent="Backarm" unique_id=1473769511]
 offset_left = -16.294687

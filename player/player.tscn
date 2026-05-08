@@ -16,7 +16,7 @@ size = Vector2(83, 91)
 
 [node name="Player" type="Node2D" unique_id=1042275332]
 script = ExtResource("1_yw30f")
-walkspeed = 30.0
+walkspeed = 50.0
 
 [node name="Body" type="RigidBody2D" parent="." unique_id=875229320 node_paths=PackedStringArray("left_arm", "right_arm")]
 collision_layer = 2
@@ -36,13 +36,13 @@ position = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_0xm2m")
 
 [node name="Camera2D" type="Camera2D" parent="Body" unique_id=1559137683]
-zoom = Vector2(0.75, 0.75)
+zoom = Vector2(0.5, 0.5)
 position_smoothing_enabled = true
 script = ExtResource("2_g1dw6")
 
 [node name="LeftArm" parent="." unique_id=2147052751 instance=ExtResource("2_yw30f")]
-position = Vector2(0, -60)
+position = Vector2(-5, -60)
 arm_type = 0
 
 [node name="RightArm" parent="." unique_id=275786823 instance=ExtResource("2_yw30f")]
-position = Vector2(0, -60)
+position = Vector2(5, -60)

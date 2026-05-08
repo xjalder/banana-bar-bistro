@@ -16,21 +16,19 @@ func _ready() -> void:
 	SignalBus.ungrapple.connect(on_ungrapple)
 
 func _physics_process(delta: float) -> void:
-	if grappled or (walk_left_held and walk_right_held):
+	if grappled or (walk_left_held and walk_right_held) or body.get_contact_count() < 1:
 		return
 	
 	if walk_left_held:
-		body.global_position = lerp(body.global_position, body.global_position + Vector2(-walkspeed, 0), 0.1)
+		body.global_position = lerp(body.global_position, body.global_position + Vector2(-walkspeed, 0), 0.3)
 	elif walk_right_held:
-		body.global_position = lerp(body.global_position, body.global_position + Vector2(walkspeed, 0), 0.1)
+		body.global_position = lerp(body.global_position, body.global_position + Vector2(walkspeed, 0), 0.3)
 
 func on_grapple() -> void:
 	num_arms_grappled = min(2, num_arms_grappled + 1)
 	if num_arms_grappled >= 1:
 		grappled = true
-		body.mass = 2.5
-		walk_left_held = false
-		walk_right_held = false
+		body.mass = 5
 	
 func on_ungrapple() -> void:
 	num_arms_grappled = max(0, num_arms_grappled - 1)
@@ -39,14 +37,11 @@ func on_ungrapple() -> void:
 		body.mass = 500
 #
 func _input(event: InputEvent) -> void:
-	if grappled or body.get_contact_count() < 1:
-		return
-	
 	if event.is_action_pressed("walk_left"):
 		walk_left_held = true
 	elif event.is_action_pressed("walk_right"):
 		walk_right_held = true
-	
+		
 	if event.is_action_released("walk_left"):
 		walk_left_held = false
 	elif event.is_action_released("walk_right"):
