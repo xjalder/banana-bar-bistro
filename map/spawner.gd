@@ -58,6 +58,9 @@ func _ready() -> void:
 	collect.fruit_taken.connect(remove_fruit)
 
 func _regrow() -> void:
+	if num_fruits >= capacity:
+		return
+	
 	var box: Rect2 = bound_blocks[current_block]
 	current_block = (current_block + 1) % bound_blocks.size()
 	
@@ -70,8 +73,6 @@ func _regrow() -> void:
 	add_child(fruit)
 	
 	num_fruits += 1
-	if num_fruits >= capacity:
-		regrow_timer.stop()
 
 func remove_fruit() -> void:
 	if num_fruits == 0:
