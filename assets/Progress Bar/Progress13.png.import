@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://sxnsshywfnyv"
-path="res://.godot/imported/Banana.png-f8adb8da8190204b4179a7b1b182cfce.ctex"
+uid="uid://cv7nwgehfloj"
+path="res://.godot/imported/Progress13.png-82e1666ab1d163f9d597183dd1641a29.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/banana hut/Banana.png"
-dest_files=["res://.godot/imported/Banana.png-f8adb8da8190204b4179a7b1b182cfce.ctex"]
+source_file="res://assets/Progress Bar/Progress13.png"
+dest_files=["res://.godot/imported/Progress13.png-82e1666ab1d163f9d597183dd1641a29.ctex"]
 
 [params]
 

@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://b5p6v22wlsuie" path="res://assets/player/Sprite-0017.png" id="3_hg6s5"]
 [ext_resource type="PackedScene" uid="uid://b77piyew4gukw" path="res://ui/buy_screen.tscn" id="4_rgyib"]
 [ext_resource type="PackedScene" uid="uid://e73ewxlcxswc" path="res://ui/pause_screen.tscn" id="5_hg6s5"]
-[ext_resource type="PackedScene" uid="uid://cpytfc87fdm8u" path="res://ui/order_card.tscn" id="6_8t03j"]
+[ext_resource type="PackedScene" uid="uid://cpytfc87fdm8u" path="res://ui/order_manager.tscn" id="6_8t03j"]
 [ext_resource type="PackedScene" uid="uid://caini1s7nis7r" path="res://ui/money.tscn" id="7_2ieo8"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hg6s5"]
@@ -59,24 +59,6 @@ zoom = Vector2(0.5, 0.5)
 position_smoothing_enabled = true
 script = ExtResource("2_g1dw6")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="Body/Camera2D" unique_id=976656624]
-
-[node name="BuyScreen" parent="Body/Camera2D/CanvasLayer" unique_id=416333969 instance=ExtResource("4_rgyib")]
-visible = false
-offset_left = 687.0
-offset_top = 324.0
-offset_right = 687.0
-offset_bottom = 324.0
-
-[node name="PauseScreen" parent="Body/Camera2D/CanvasLayer" unique_id=1101154008 instance=ExtResource("5_hg6s5")]
-visible = false
-
-[node name="Orders" parent="Body/Camera2D/CanvasLayer" unique_id=1990255410 instance=ExtResource("6_8t03j")]
-visible = false
-
-[node name="Money" parent="Body/Camera2D/CanvasLayer" unique_id=478792395 instance=ExtResource("7_2ieo8")]
-position = Vector2(127, 47)
-
 [node name="LeftArm" parent="." unique_id=2147052751 instance=ExtResource("2_yw30f")]
 z_index = -1
 position = Vector2(-5, -50)
@@ -84,3 +66,20 @@ arm_type = 0
 
 [node name="RightArm" parent="." unique_id=275786823 instance=ExtResource("2_yw30f")]
 position = Vector2(5, -50)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=976656624]
+
+[node name="BuyScreen" parent="CanvasLayer" unique_id=416333969 instance=ExtResource("4_rgyib")]
+visible = false
+offset_left = 687.0
+offset_top = 324.0
+offset_right = 687.0
+offset_bottom = 324.0
+
+[node name="PauseScreen" parent="CanvasLayer" unique_id=1101154008 instance=ExtResource("5_hg6s5")]
+visible = false
+
+[node name="OrderManager" parent="CanvasLayer" unique_id=1990255410 instance=ExtResource("6_8t03j")]
+
+[node name="Money" parent="CanvasLayer" unique_id=478792395 instance=ExtResource("7_2ieo8")]
+position = Vector2(127, 47)
