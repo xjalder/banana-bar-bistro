@@ -5,4 +5,4 @@ func _ready() -> void:
 	body_entered.connect(_on_area_2d_body_entered)
 	
 func _on_area_2d_body_entered(body):
-	banana_hut._remove_monkey_with_order(banana_hut.left_hand)
+	banana_hut._remove_monkey_with_order(Enums.Order.BANANA_SMOOTHIE)
