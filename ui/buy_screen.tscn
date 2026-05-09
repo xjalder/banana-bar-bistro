@@ -1,46 +1,44 @@
 [gd_scene format=3 uid="uid://b77piyew4gukw"]
 
-[ext_resource type="Script" uid="uid://e6fw7mmqkpep" path="res://logic/buy_screen.gd" id="1_6s6f3"]
-[ext_resource type="Texture2D" uid="uid://ntkdcck5cq4g" path="res://assets/upgrades/brown.png" id="2_sx2df"]
-[ext_resource type="Texture2D" uid="uid://8ybhbxhdmfll" path="res://assets/food/BananaSmoothieSlim.png" id="2_wxqgv"]
-[ext_resource type="Script" uid="uid://bghaag3paxmbh" path="res://ui/item_one.gd" id="3_uffs1"]
-[ext_resource type="Texture2D" uid="uid://cfb2gmkfjbjra" path="res://assets/upgrades/green.png" id="4_wixkr"]
-[ext_resource type="Texture2D" uid="uid://c5uwrv8kcvdud" path="res://assets/upgrades/red.png" id="5_brqxh"]
+[ext_resource type="Texture2D" uid="uid://bfhagmhhag470" path="res://assets/ui/ShopMenu.png" id="2_dge2v"]
+[ext_resource type="Script" uid="uid://cllfogj15o0xg" path="res://ui/exit.gd" id="3_td7va"]
+[ext_resource type="PackedScene" uid="uid://cr4rv8frubllr" path="res://ui/item.tscn" id="3_y8qtc"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_6s6f3"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("4_wixkr")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_brqxh")
-}],
-"loop": true,
-"name": &"OnOff",
-"speed": 5.0
-}]
-
-[node name="BuyScreen" type="Node2D" unique_id=416333969]
-script = ExtResource("1_6s6f3")
+[node name="BuyScreen" type="Control" unique_id=817242226]
+layout_mode = 3
+anchors_preset = 0
+mouse_filter = 1
 
 [node name="Background" type="Sprite2D" parent="." unique_id=654020622]
-position = Vector2(-124, 11)
-texture = ExtResource("2_sx2df")
+position = Vector2(-200, 4)
+scale = Vector2(1.296875, 1.0273438)
+texture = ExtResource("2_dge2v")
 
-[node name="ItemOne" type="Button" parent="." unique_id=1845758924]
+[node name="ItemOne" parent="." unique_id=851644414 instance=ExtResource("3_y8qtc")]
+layout_mode = 0
+offset_left = -489.0
+offset_top = -114.0
+offset_right = -281.0
+offset_bottom = 235.0
+
+[node name="ItemTwo" parent="." unique_id=1280744984 instance=ExtResource("3_y8qtc")]
+layout_mode = 0
+offset_left = -489.0
+offset_top = -114.0
+offset_right = -281.0
+offset_bottom = 235.0
+
+[node name="ItemThree" parent="." unique_id=2074387446 instance=ExtResource("3_y8qtc")]
+layout_mode = 0
+offset_left = -489.0
+offset_top = -114.0
+offset_right = -281.0
+offset_bottom = 235.0
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=530582969]
+
+[node name="Exit" type="Button" parent="." unique_id=70274004]
+layout_mode = 0
 offset_right = 8.0
 offset_bottom = 8.0
-script = ExtResource("3_uffs1")
-
-[node name="OnOff" type="AnimatedSprite2D" parent="ItemOne" unique_id=1124011220]
-position = Vector2(-275.5, 8)
-scale = Vector2(0.25465116, 1.0211481)
-sprite_frames = SubResource("SpriteFrames_6s6f3")
-animation = &"OnOff"
-
-[node name="Item" type="Sprite2D" parent="ItemOne" unique_id=554165661]
-position = Vector2(-282, -84)
-texture = ExtResource("2_wxqgv")
-
-[node name="Sold" type="Sprite2D" parent="ItemOne" unique_id=308095621]
+script = ExtResource("3_td7va")

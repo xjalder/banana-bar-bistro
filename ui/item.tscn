@@ -1,0 +1,76 @@
+[gd_scene format=3 uid="uid://cr4rv8frubllr"]
+
+[ext_resource type="Script" uid="uid://bghaag3paxmbh" path="res://ui/item_one.gd" id="1_6h18m"]
+[ext_resource type="Texture2D" uid="uid://cfdqo4cdyfhy3" path="res://assets/ui/ItemFrameV1.png" id="2_qbdqg"]
+[ext_resource type="Texture2D" uid="uid://26kckkpch3la" path="res://assets/ui/ItemFrameV2.png" id="3_hai2l"]
+[ext_resource type="Texture2D" uid="uid://djmhoa3gf0s2o" path="res://assets/ui/ItemFrameV3.png" id="4_f37ge"]
+[ext_resource type="Texture2D" uid="uid://8ybhbxhdmfll" path="res://assets/food/BananaSmoothieSlim.png" id="5_uq62f"]
+[ext_resource type="Texture2D" uid="uid://dqc6x1sifhcw1" path="res://assets/ui/soldStamp.png" id="6_qbdqg"]
+[ext_resource type="FontFile" uid="uid://bhjumwa63yq50" path="res://assets/fonts/daydream_3/Daydream DEMO.otf" id="6_rrea6"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6s6f3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_qbdqg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_hai2l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_f37ge")
+}],
+"loop": true,
+"name": &"OnOff",
+"speed": 5.0
+}]
+
+[node name="ItemOne" type="Button" unique_id=851644414]
+offset_right = 189.0
+offset_bottom = 292.0
+script = ExtResource("1_6h18m")
+
+[node name="OnOff" type="AnimatedSprite2D" parent="." unique_id=454712299]
+position = Vector2(94.50001, 146.5)
+scale = Vector2(1.4765625, 2.2734375)
+sprite_frames = SubResource("SpriteFrames_6s6f3")
+animation = &"OnOff"
+
+[node name="Item" type="Sprite2D" parent="." unique_id=1908814541]
+position = Vector2(92, 74)
+texture = ExtResource("5_uq62f")
+
+[node name="Sold" type="Sprite2D" parent="." unique_id=1519364635]
+z_index = 1
+position = Vector2(95, 128)
+texture = ExtResource("6_qbdqg")
+
+[node name="Description" type="Label" parent="." unique_id=528456108]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -48.375004
+anchor_top = 11.125001
+anchor_right = -48.375004
+anchor_bottom = 11.125001
+offset_left = 9154.876
+offset_top = -3108.5002
+offset_right = 9318.876
+offset_bottom = -3049.5002
+theme_override_fonts/font = ExtResource("6_rrea6")
+text = "BBG"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Cost" type="Label" parent="." unique_id=1994200742]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -47.687004
+anchor_top = 20.0
+anchor_right = -47.687004
+anchor_bottom = 20.0
+offset_left = 9050.844
+offset_top = -5624.0
+offset_right = 9175.844
+offset_bottom = -5581.0
+theme_override_fonts/font = ExtResource("6_rrea6")
+text = "Cost 69 "
