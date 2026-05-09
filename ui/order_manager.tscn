@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cpuimiqr2uqqw"]
+
+[ext_resource type="Script" uid="uid://dcn20i6v6c0pg" path="res://logic/order_manager.gd" id="1_c7j4g"]
+
+[node name="OrderManager" type="Control" unique_id=118924290]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_c7j4g")

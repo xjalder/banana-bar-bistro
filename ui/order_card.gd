@@ -1,11 +1,11 @@
-extends Node2D
+class_name OrderCard extends Control
 
+@onready var monkey_name : Label = $Label
+@onready var patience : AnimatedSprite2D = $AnimatedSprite2D
+@onready var left_item : Sprite2D = $LeftItem
+@onready var right_item : Sprite2D = $RightItem
+var monkey : MonkeyCustomer
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func _start() -> void:
+	patience.sprite_frames.set_animation_speed("default", patience.sprite_frames.get_frame_count("default") / float(monkey.time_to_unhappy))
+	patience.play("default")

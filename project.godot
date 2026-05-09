@@ -20,11 +20,19 @@ config/icon="res://icon.svg"
 Enums="*uid://b5g650wikhmma"
 SignalBus="*uid://bhq51dwmcoap8"
 GameManager="*res://logic/game_manager.gd"
-InputHandler="*res://logic/input_handler.gd"
 PlayerManager="*res://logic/player_manager.gd"
 DayManager="*uid://cokvl7womi7xx"
 AudioManager="*uid://bcplgfqsjy3su"
 SfxManager="*uid://85i436bu54sn"
+InputHandler="*uid://bpatea0ka01ri"
+
+[display]
+
+window/size/viewport_width=1440
+window/size/viewport_height=1080
+window/size/mode=2
+window/stretch/mode="viewport"
+window/stretch/aspect="expand"
 
 [dotnet]
 

@@ -9,40 +9,34 @@ var progress_bar_value : float = 0
 var upgrades : Dictionary = GameManager.upgrades
 var time_to_unhappy : int = upgrades["time_to_unhappy"];
 
-
-
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	var values := Enums.Order.values()
 	
 	var x: int = randi_range(0, values.size() - 1)
 	if (values[x] == Enums.Order.BANANA):
-		_spawn_sprite(order_sprite, "res://assets/banana hut/banana.png")
 		order = Enums.Order.BANANA
+		_spawn_sprite(order_sprite, "res://assets/banana hut/banana.png")
 	elif (values[x] == Enums.Order.BANANA_BREAD):
-		_spawn_sprite(order_sprite, "res://assets/banana hut/banana_bread.png")
 		order = Enums.Order.BANANA_BREAD
+		_spawn_sprite(order_sprite, "res://assets/banana hut/banana_bread.png")
 	elif (values[x] == Enums.Order.BANANA_SMOOTHIE):
-		_spawn_sprite(order_sprite, "res://assets/banana hut/BananaSmoothieSlim.png")
 		order = Enums.Order.BANANA_SMOOTHIE
+		_spawn_sprite(order_sprite, "res://assets/banana hut/BananaSmoothieSlim.png")
 	elif (values[x] == Enums.Order.BANANA_ICECREAM):
-		_spawn_sprite(order_sprite, "res://assets/banana hut/BananaSplit.webp")
 		order = Enums.Order.BANANA_ICECREAM
-		
+		_spawn_sprite(order_sprite, "res://assets/banana hut/BananaSplit.webp")
 
-func _spawn_sprite(scene : PackedScene, path :String) -> void:
-	var order := scene.instantiate()
+func _spawn_sprite(scene : PackedScene, path : String) -> void:
+	var order_sprite := scene.instantiate()
 	var parent_size : Vector2 = sprite_2d.get_rect().size
-	order.position = Vector2(0,0)
-	order.get_node("Sprite2D").texture = load(path)
-	var order_size : Vector2 = order.get_node("Sprite2D").get_rect().size
+	order_sprite.position = Vector2(0,0)
+	order_sprite.get_node("Sprite2D").texture = load(path)
+	var order_size : Vector2 = order_sprite.get_node("Sprite2D").get_rect().size
 	#print(order_size,parent_size)
-	order.get_node("Sprite2D").scale= Vector2(parent_size.x / (2 *order_size.x), parent_size.y/ (2 * order_size.y))
-	add_child(order)
-	
-	
-
-	
+	order_sprite.get_node("Sprite2D").scale= Vector2(parent_size.x / (2 *order_size.x), parent_size.y/ (2 * order_size.y))
+	add_child(order_sprite)
+	SignalBus.new_customer.emit(self)
 	
 # Called every frame. 'delta' is the elapsed timprogress_bar_valuee since the previous frame.
 func _process(delta: float) -> void:

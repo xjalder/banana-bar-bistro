@@ -1,18 +1,8 @@
 [gd_scene format=3 uid="uid://dccwjy27hoe3j"]
 
-[ext_resource type="PackedScene" uid="uid://cvok5ewpyc0k6" path="res://map/map.tscn" id="1_uakhj"]
-[ext_resource type="Script" uid="uid://cokvl7womi7xx" path="res://logic/day_manager.gd" id="2_ki0ac"]
-[ext_resource type="Script" uid="uid://ctal5tdtd6vln" path="res://logic/game_manager.gd" id="3_aamnr"]
 [ext_resource type="PackedScene" uid="uid://c2bu7gqw8rbso" path="res://player/player.tscn" id="8_b2foh"]
 
 [node name="Main" type="Node" unique_id=738397567]
 
-[node name="Map" parent="." unique_id=1327460236 instance=ExtResource("1_uakhj")]
-
-[node name="DayManager" type="Node" parent="." unique_id=774640411]
-script = ExtResource("2_ki0ac")
-
-[node name="GameManager" type="Node" parent="." unique_id=289629940]
-script = ExtResource("3_aamnr")
-
 [node name="Player" parent="." unique_id=1042275332 instance=ExtResource("8_b2foh")]
+position = Vector2(249, -2974)
