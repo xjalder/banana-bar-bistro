@@ -8,9 +8,10 @@
 script = ExtResource("1_utneh")
 
 [node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=1925136345]
+collision_layer = 0
 
 [node name="Sprite2D" type="Sprite2D" parent="RigidBody2D" unique_id=1758117453]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=240905812]
-position = Vector2(-6, -8)
+z_index = 5
 shape = SubResource("RectangleShape2D_c0jnu")

@@ -16,3 +16,4 @@ script = ExtResource("2_ki0ac")
 script = ExtResource("3_aamnr")
 
 [node name="Player" parent="." unique_id=1042275332 instance=ExtResource("8_b2foh")]
+z_index = 5

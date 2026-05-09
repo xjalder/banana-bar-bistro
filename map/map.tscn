@@ -11,6 +11,9 @@ size = Vector2(20.946732, 29.903465)
 
 [node name="Map" type="Node2D" unique_id=1327460236]
 
+[node name="DroppedItems" type="Node2D" parent="." unique_id=286471115]
+script = ExtResource("5_kffv2")
+
 [node name="Floor" type="StaticBody2D" parent="." unique_id=1716734742]
 position = Vector2(0, 366)
 scale = Vector2(17.720003, 2.8)
@@ -32,6 +35,3 @@ scale = Vector2(0.68, 2)
 
 [node name="FoodMixer" parent="." unique_id=1728145295 instance=ExtResource("4_lgq1i")]
 position = Vector2(-767, -203)
-
-[node name="DroppedItems" type="Node2D" parent="." unique_id=286471115]
-script = ExtResource("5_kffv2")

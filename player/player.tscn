@@ -19,6 +19,7 @@ gradient = SubResource("Gradient_ig7tw")
 size = Vector2(83, 91)
 
 [node name="Player" type="Node2D" unique_id=1042275332]
+z_index = 5
 script = ExtResource("1_yw30f")
 walkspeed = 50.0
 

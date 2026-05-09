@@ -15,8 +15,8 @@ var current_block: int = randi_range(0,2)
 
 var growable_textures : Dictionary[Enums.Growables, Texture] = {
 	Enums.Growables.Banana: preload("res://assets/banana hut/banana.png"),
-	Enums.Growables.Bread: preload("res://assets/banana hut/banana_bread.png"),
-	Enums.Growables.Milk: preload("res://assets/banana hut/smoothie.png"),
+	Enums.Growables.Bread: preload("res://assets/banana hut/Bread.png"),
+	Enums.Growables.Milk: preload("res://assets/banana hut/BananaSmoothieSlim.png"),
 	Enums.Growables.Ice: preload("res://assets/banana hut/banana.png")
 }
 
@@ -63,7 +63,7 @@ func _regrow() -> void:
 	
 	var fruit := Sprite2D.new()
 	fruit.texture = texture
-	fruit.scale *= 0.05
+	fruit.scale *= 1
 	fruit.position = Vector2(
 		randf_range(box.position.x, box.position.x + box.size.x),
 		randf_range(box.position.y, box.position.y + box.size.y)

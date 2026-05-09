@@ -49,7 +49,7 @@ func _make_product() -> void:
 func _spawn_product(product : Enums.Holdables) -> void:
 	var dropped : Droppable= droppable_scene.instantiate()
 	PlayerManager.add_child(dropped)
-	dropped._create_droppable_no_sprite(product)
+	dropped._create_droppable_no_sprite(product, self.position)
 	
 	
 	

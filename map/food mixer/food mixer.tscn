@@ -13,4 +13,5 @@ texture = ExtResource("2_1a3wy")
 position = Vector2(-75, -50)
 
 [node name="RightEye" type="Sprite2D" parent="FaceSprite" unique_id=602810433]
+z_as_relative = false
 position = Vector2(94, -52)
