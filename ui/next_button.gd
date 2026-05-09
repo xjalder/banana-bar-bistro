@@ -1,10 +1,12 @@
 extends Button
 
-signal close_shop
+signal next_pressed
 
-func _end_shop() -> void:
-	close_shop.emit()
+func _next() -> void:
+	next_pressed.emit()
+	
+	
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	self.pressed.connect(_end_shop)
+	self.pressed.connect(_next)

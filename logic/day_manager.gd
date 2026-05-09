@@ -1,19 +1,17 @@
 extends Node
 
 var money: int
-
-enum Level {LV1, LV2, LV3, LV4, LV5}
-@export var curr_lv: Level
+@export var curr_lv: Enums.Level
 
 var level_limit: Dictionary = {
-	Level.LV1: 1, # one monkey order completed to finish day 
-	Level.LV2: 2, #etc
-	Level.LV3: 3,
-	Level.LV4: 3,
-	Level.LV5: 4
+	Enums.Level.LV1: 1, # one monkey order completed to finish day 
+	Enums.Level.LV2: 2, #etc
+	Enums.Level.LV3: 3,
+	Enums.Level.LV4: 3,
+	Enums.Level.LV5: 4
 }
 
-signal change_map(curr_lv: Level)
+signal change_map(curr_lv: Enums.Level)
 
 var monkeys_fed : int = 0
 
@@ -24,20 +22,24 @@ func _iterate_monkey_fed() ->void:
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	curr_lv = Level.LV1
+	curr_lv = Enums.Level.LV1
+	SignalBus.end_day.connect(_next_level)
 	money = 0
-	#MonkeyCustomer.connect(_iterate_monkey_fed)
-	
 
-func get_lv() -> Level:
+func get_lv() -> Enums.Level:
 	return curr_lv
 
 
 func _next_level() -> void:
-	if curr_lv == Level.LV5:
-		curr_lv = Level.LV1
+	if curr_lv == Enums.Level.LV5:
+		curr_lv = Enums.Level.LV1
 	else:
 		curr_lv += 1
+
+func _end_day() -> void:
+	SignalBus.end_lv.emit()
+	
+	
 
 func _start_next_day() -> void:
 	_next_level()
@@ -51,6 +53,6 @@ func get_lv_lim() -> int:
 func _process(delta: float) -> void:
 	#send signal to change to next level
 	if monkeys_fed >= get_lv_lim():
-		_start_next_day()
+		_end_day()
 	
 	

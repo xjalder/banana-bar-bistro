@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cpytfc87fdm8u"]
 
-[ext_resource type="Texture2D" uid="uid://chqbbw53ot2bw" path="res://assets/Bark1.png" id="1_2rm2a"]
+[ext_resource type="Texture2D" uid="uid://chqbbw53ot2bw" path="res://assets/ui/Bark1.png" id="1_2rm2a"]
 [ext_resource type="Script" uid="uid://dh168i65vch2t" path="res://ui/order_card.gd" id="1_d1cjd"]
 [ext_resource type="Texture2D" uid="uid://dwpuu47iharbl" path="res://assets/Blue Banana.png" id="3_iy7uw"]
 [ext_resource type="Texture2D" uid="uid://c0vibvthn4dwd" path="res://assets/Red Bannana.png" id="4_vu6y3"]
