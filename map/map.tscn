@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://cvok5ewpyc0k6"]
 
+[ext_resource type="PackedScene" uid="uid://cteheyqwjxrx8" path="res://map/banana hut/BananaHut.tscn" id="1_7lyie"]
 [ext_resource type="PackedScene" uid="uid://c2bu7gqw8rbso" path="res://player/player.tscn" id="1_kffv2"]
 [ext_resource type="Texture2D" uid="uid://bw52m2ogcluy7" path="res://icon.svg" id="2_7lyie"]
 [ext_resource type="PackedScene" uid="uid://qcg3f5otv3dp" path="res://map/platform.tscn" id="3_5jdw0"]
@@ -12,6 +13,10 @@ size = Vector2(20.946732, 29.903465)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1yi38"]
 
 [node name="Map" type="Node2D" unique_id=1327460236]
+
+[node name="BananaHut" parent="." unique_id=2064569661 instance=ExtResource("1_7lyie")]
+position = Vector2(-854.0001, -248.00002)
+scale = Vector2(0.53559285, 0.53559285)
 
 [node name="Player" parent="." unique_id=1042275332 instance=ExtResource("1_kffv2")]
 walkspeed = 40.0

@@ -7,9 +7,9 @@ var order_sprite : PackedScene = preload("res://map/banana hut/food orders/order
 var order : Order
 var order_type : String
 @onready var texture_progress_bar: TextureProgressBar = $TextureProgressBar
-var time_to_unhappy : int = 5;
 var progress_bar_value : float = 0
-
+var upgrades : Dictionary = GameManager.upgrades
+var time_to_unhappy : int = upgrades["time_to_unhappy"];
 
 
 
@@ -18,7 +18,6 @@ func _ready() -> void:
 	var values := Order.values()
 	
 	var x: int = randi_range(0, values.size() - 1)
-	print(values[x])
 	if (values[x] == Order.BANANA):
 		_spawn_sprite(order_sprite, "res://assets/banana hut/banana.png")
 		order_type = "banana"

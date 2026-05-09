@@ -2,8 +2,10 @@ class_name BananaHut extends Node2D
 
 var monkey_scene : PackedScene = preload("/Users/ben/Desktop/banana-bar-bistro/map/banana hut/MonkeyCustomer.tscn")
 @onready var sprite_2d: Sprite2D = $Sprite2D
-var MAX_MONKEYS : int = 5
 var current_monkey_count : int = 0
+var upgrades : Dictionary= GameManager.upgrades 
+var MAX_MONKEYS : int = upgrades['capacity']
+
 
 
 var monkeys: Array[MonkeyCustomer] = []
@@ -25,9 +27,6 @@ func _unhappy_monkey_leave(unhappy_monkey : MonkeyCustomer) -> void:
 	
 func _spawn_new_monkey() -> void:
 	if (current_monkey_count >= MAX_MONKEYS):
-		var i : int = randi_range(0, MAX_MONKEYS - 1)
-		_delete_monkey_at_index(i)
-		current_monkey_count -= 1
 		return
 		
 	var null_count : int = 0;
@@ -61,6 +60,7 @@ func _deleted_monkey() -> void:
 	
 func _delete_monkey_at_index(index :int) -> void:
 	monkeys.get(index).queue_free()
+	current_monkey_count -= 1
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
