@@ -1,7 +1,5 @@
 [gd_scene format=3 uid="uid://cvok5ewpyc0k6"]
 
-[ext_resource type="PackedScene" uid="uid://cteheyqwjxrx8" path="res://map/banana hut/BananaHut.tscn" id="1_7lyie"]
-[ext_resource type="PackedScene" uid="uid://c2bu7gqw8rbso" path="res://player/player.tscn" id="1_kffv2"]
 [ext_resource type="Texture2D" uid="uid://bw52m2ogcluy7" path="res://icon.svg" id="2_7lyie"]
 [ext_resource type="PackedScene" uid="uid://c5d5sejcrnet8" path="res://map/tree.tscn" id="3_7lyie"]
 
@@ -9,10 +7,6 @@
 size = Vector2(20.946732, 29.903465)
 
 [node name="Map" type="Node2D" unique_id=1327460236]
-
-[node name="Player" parent="." unique_id=1042275332 instance=ExtResource("1_kffv2")]
-z_index = 1
-walkspeed = 40.0
 
 [node name="Floor" type="StaticBody2D" parent="." unique_id=1716734742]
 position = Vector2(0, 366)

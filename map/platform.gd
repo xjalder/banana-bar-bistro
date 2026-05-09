@@ -56,5 +56,5 @@ func _input(event: InputEvent) -> void:
 	
 	if event.is_action_released("crouch"):
 		crouching = false
-		if not grappling and not queued_collision:
+		if not grappling:
 			_enable_collision()

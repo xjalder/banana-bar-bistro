@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c5uwrv8kcvdud"
-path="res://.godot/imported/red.png-856c88d5011af6c506391204077f6a11.ctex"
+uid="uid://8ybhbxhdmfll"
+path="res://.godot/imported/BananaSmoothieSlim.png-5f3b32ed22cb513a1bf5372a524ef47d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Upgrades/red.png"
-dest_files=["res://.godot/imported/red.png-856c88d5011af6c506391204077f6a11.ctex"]
+source_file="res://assets/food/BananaSmoothieSlim.png"
+dest_files=["res://.godot/imported/BananaSmoothieSlim.png-5f3b32ed22cb513a1bf5372a524ef47d.ctex"]
 
 [params]
 
