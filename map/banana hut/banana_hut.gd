@@ -28,7 +28,7 @@ func _create_stool() -> void:
 	var parent_size : Vector2 = sprite_2d.texture.get_size()
 	for i in range(MAX_MONKEYS):
 		var x_pos: float = -parent_size.x / 2.0 + (parent_size.x * i) / (MAX_MONKEYS - 1)
-		var y_pos : int = parent_size.y/2 - parent_size.y/9
+		var y_pos : int = parent_size.y/2 - parent_size.y/30
 		var new_sprite = Sprite2D.new()
 		new_sprite.texture = load("res://assets/banana hut/WoodenStoolV2.webp")
 		new_sprite.position = Vector2(x_pos, y_pos)
@@ -62,7 +62,7 @@ func _spawn_new_monkey() -> void:
 		if null_count == index_for_monkey:
 			var parent_size : Vector2 = sprite_2d.texture.get_size()
 			var x_pos: float = -parent_size.x / 2.0 + (parent_size.x * i) / (MAX_MONKEYS - 1)
-			var y_pos : int = parent_size.y/4
+			var y_pos : int = parent_size.y/4 + parent_size.y/30
 			var monkey : MonkeyCustomer = _spawn_monkey_customer_at_position(Vector2(x_pos, y_pos))
 			add_child(monkey)
 			monkeys[i] = monkey
@@ -95,7 +95,7 @@ func _remove_monkey_with_order(order : Enums.Holdables) -> bool:
 	for i in range(len(monkeys)):
 		if monkeys[i] != null and monkeys[i].order == order:
 			_delete_monkey_at_index(i)
-			SignalBus.happy_customer.emit(monkeys[i])
+			SignalBus.happy_customer.emit(self)
 			SignalBus.add_money.emit(Enums.OrderCost[order] * upgrades["money_multiplier"])
 			return true
 	return false

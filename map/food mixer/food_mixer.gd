@@ -10,11 +10,11 @@ var types: Array[Enums.Holdables] = [0, 0]
 var holdable_textures: Dictionary[Enums.Holdables, Texture] = {
 	Enums.Holdables.BANANA: preload("res://assets/banana hut/banana.png"),
 	Enums.Holdables.BREAD: preload("res://assets/banana hut/Bread.png"),
-	Enums.Holdables.MILK: preload("res://assets/banana hut/BananaSmoothieSlim.png"),
-	Enums.Holdables.ICE: preload("res://assets/banana hut/banana.png"),
+	Enums.Holdables.MILK: preload("res://assets/banana hut/MilkBottle.webp"),
+	Enums.Holdables.ICE: preload("res://assets/Ice.webp"),
 	Enums.Holdables.BANANA_SMOOTHIE: preload("res://assets/banana hut/BananaSmoothieSlim.png"),
 	Enums.Holdables.BANANA_BREAD: preload("res://assets/banana hut/Bread.png"),
-	Enums.Holdables.BANANA_ICECREAM: preload("res://assets/banana hut/BananaSmoothieSlim.png"),
+	Enums.Holdables.BANANA_ICECREAM: preload("res://assets/banana hut/BananaSplit.png"),
 }
 
 # Shake state
@@ -104,7 +104,7 @@ func _make_product() -> void:
 		_spawn_product(Enums.Holdables.BANANA_BREAD)
 	elif types == [Enums.Holdables.BANANA, Enums.Holdables.MILK] or types == [Enums.Holdables.MILK, Enums.Holdables.BANANA]:
 		_spawn_product(Enums.Holdables.BANANA_SMOOTHIE)
-	elif types == [Enums.Holdables.BANANA_SMOOTHIE, Enums.Holdables.ICE] or types == [Enums.Holdables.ICE, Enums.Holdables.BANANA_SMOOTHIE]:
+	elif types == [Enums.Holdables.BANANA, Enums.Holdables.ICE] or types == [Enums.Holdables.ICE, Enums.Holdables.BANANA]:
 		_spawn_product(Enums.Holdables.BANANA_ICECREAM)
 	else:
 		_spawn_product(types.pick_random())

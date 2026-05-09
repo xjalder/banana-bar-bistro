@@ -25,16 +25,16 @@ func _ready() -> void:
 		_spawn_sprite(order_sprite, "res://assets/banana hut/BananaSmoothieSlim.png")
 	elif (values[x] == Enums.Order.BANANA_ICECREAM):
 		order = Enums.Order.BANANA_ICECREAM
-		_spawn_sprite(order_sprite, "res://assets/banana hut/BananaSplit.webp")
+		_spawn_sprite(order_sprite, "res://assets/banana hut/BananaSplit.png")
 
 func _spawn_sprite(scene : PackedScene, path : String) -> void:
 	var order_sprite := scene.instantiate()
 	var parent_size : Vector2 = sprite_2d.get_rect().size
-	order_sprite.position = Vector2(0,0)
+	order_sprite.position = Vector2(-parent_size.x,0)
 	order_sprite.get_node("Sprite2D").texture = load(path)
 	var order_size : Vector2 = order_sprite.get_node("Sprite2D").get_rect().size
 	#print(order_size,parent_size)
-	order_sprite.get_node("Sprite2D").scale= Vector2(parent_size.x / (2 *order_size.x), parent_size.y/ (2 * order_size.y))
+	order_sprite.get_node("Sprite2D").scale= Vector2(parent_size.x / (order_size.x), parent_size.y/ (order_size.y))
 	add_child(order_sprite)
 	SignalBus.new_customer.emit(self)
 	

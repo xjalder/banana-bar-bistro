@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://sxnsshywfnyv"
-path="res://.godot/imported/banana.png-84b6616c778d3a74eeb050cadcb3fbca.ctex"
+uid="uid://dn3vm51fqrij6"
+path="res://.godot/imported/BananaSplit.png-ac89d5a8259aff19b0c4f439ba4fffbb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/banana hut/banana.png"
-dest_files=["res://.godot/imported/banana.png-84b6616c778d3a74eeb050cadcb3fbca.ctex"]
+source_file="res://assets/banana hut/BananaSplit.png"
+dest_files=["res://.godot/imported/BananaSplit.png-ac89d5a8259aff19b0c4f439ba4fffbb.ctex"]
 
 [params]
 

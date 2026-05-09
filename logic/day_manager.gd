@@ -40,7 +40,6 @@ func _next_level() -> void:
 	GameManager.upgrades['capacity'] += 1
 
 func _add_money(x :float) -> void:
-	print("yes")
 	happy_customer_count += 1
 	if (happy_customer_count == customers_per_level[curr_lv]):
 		_reload_map()
