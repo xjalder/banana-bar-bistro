@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://c5pce0jwehm4q"]
+
+[ext_resource type="Texture2D" uid="uid://bfhagmhhag470" path="res://assets/ui/ShopMenu.png" id="1_8cpes"]
+[ext_resource type="Texture2D" uid="uid://c71y7ib4k28hr" path="res://assets/ui/MenuBack.png" id="2_q260t"]
+[ext_resource type="Texture2D" uid="uid://bju3v52mvp7h6" path="res://assets/ui/Title.png" id="3_tgpwp"]
+[ext_resource type="Texture2D" uid="uid://bqfsisotst0kx" path="res://assets/ui/Guy.png" id="4_65fpc"]
+[ext_resource type="Script" uid="uid://b5lxl4vg14in4" path="res://ui/start_button.gd" id="5_0gt6g"]
+[ext_resource type="Texture2D" uid="uid://cfdqo4cdyfhy3" path="res://assets/ui/ItemFrameV1.png" id="6_7n3jn"]
+[ext_resource type="Texture2D" uid="uid://26kckkpch3la" path="res://assets/ui/ItemFrameV2.png" id="7_vdmp8"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8w0ly"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_7n3jn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_vdmp8")
+}],
+"loop": true,
+"name": &"hover",
+"speed": 5.0
+}]
+
+[node name="StartScreen" type="Control" unique_id=1308811960]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TitleCard" type="Sprite2D" parent="." unique_id=752919301]
+position = Vector2(86.75, 106.49999)
+scale = Vector2(0.99316406, 0.84179693)
+texture = ExtResource("1_8cpes")
+
+[node name="ButtonCard" type="Sprite2D" parent="." unique_id=296926601]
+position = Vector2(86.73429, 565.00006)
+scale = Vector2(1.0010377, 0.8602911)
+texture = ExtResource("2_q260t")
+
+[node name="Title" type="Sprite2D" parent="." unique_id=440436827]
+position = Vector2(112.00003, 163.50002)
+scale = Vector2(2.4609377, 2.664063)
+texture = ExtResource("3_tgpwp")
+
+[node name="Guy" type="Sprite2D" parent="." unique_id=1651940056]
+position = Vector2(-99, 737)
+texture = ExtResource("4_65fpc")
+
+[node name="StartButton" type="Button" parent="." unique_id=1653868419]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+script = ExtResource("5_0gt6g")
+
+[node name="StartCard" type="AnimatedSprite2D" parent="StartButton" unique_id=2008593429]
+position = Vector2(87, 473)
+scale = Vector2(3.09375, 1.2265623)
+sprite_frames = SubResource("SpriteFrames_8w0ly")
+animation = &"hover"
