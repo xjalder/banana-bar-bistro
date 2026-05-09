@@ -49,7 +49,10 @@ script = ExtResource("2_g1dw6")
 
 [node name="BuyScreen" parent="Body/Camera2D/CanvasLayer" unique_id=416333969 instance=ExtResource("4_rgyib")]
 visible = false
-position = Vector2(687, 324)
+offset_left = 687.0
+offset_top = 324.0
+offset_right = 687.0
+offset_bottom = 324.0
 
 [node name="PauseScreen" parent="Body/Camera2D/CanvasLayer" unique_id=1101154008 instance=ExtResource("5_hg6s5")]
 visible = false
