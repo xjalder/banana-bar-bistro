@@ -5,6 +5,7 @@ var monkey_scene : PackedScene = preload("/Users/ben/Desktop/banana-bar-bistro/m
 var current_monkey_count : int = 0
 var upgrades : Dictionary= GameManager.upgrades 
 var MAX_MONKEYS : int = upgrades['capacity']
+@onready var timer_to_new_customer: Timer = $Timer
 
 
 
@@ -17,8 +18,14 @@ signal deleted_monkey
 func _ready() -> void:
 	monkeys.resize(MAX_MONKEYS)
 	SignalBus.unhappy_customer.connect(_unhappy_monkey_leave)
-		
+	timer_to_new_customer.wait_time = upgrades["time_to_new_customer"]
+	timer_to_new_customer.one_shot = false
+	timer_to_new_customer.start()
 	
+		
+func _on_timer_timeout():
+	_spawn_new_monkey()
+		
 func _unhappy_monkey_leave(unhappy_monkey : MonkeyCustomer) -> void:
 	for i in range(len(monkeys)):
 		

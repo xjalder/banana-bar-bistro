@@ -14,12 +14,12 @@ size = Vector2(20.946732, 29.903465)
 
 [node name="Map" type="Node2D" unique_id=1327460236]
 
+[node name="Player" parent="." unique_id=1042275332 instance=ExtResource("1_kffv2")]
+walkspeed = 40.0
+
 [node name="BananaHut" parent="." unique_id=2064569661 instance=ExtResource("1_7lyie")]
 position = Vector2(-854.0001, -248.00002)
 scale = Vector2(0.53559285, 0.53559285)
-
-[node name="Player" parent="." unique_id=1042275332 instance=ExtResource("1_kffv2")]
-walkspeed = 40.0
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1716734742]
 position = Vector2(0, 366)
