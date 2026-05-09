@@ -19,11 +19,11 @@ position = Vector2(0, -64)
 texture = ExtResource("2_1a3wy")
 
 [node name="LeftEye" type="Sprite2D" parent="FaceSprite" unique_id=1365279197]
-position = Vector2(-75, -50)
+position = Vector2(-19, 3)
 
 [node name="RightEye" type="Sprite2D" parent="FaceSprite" unique_id=602810433]
 z_as_relative = false
-position = Vector2(94, -52)
+position = Vector2(16, 2)
 
 [node name="Collector" type="Area2D" parent="." unique_id=1467499078]
 collision_layer = 0

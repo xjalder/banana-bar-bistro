@@ -1,8 +1,8 @@
 extends AudioStreamPlayer
 
 var songs : Array[String] = ["res://assets/music/music1.mp3", "res://assets/music/music2.mp3", "res://assets/music/music3.mp3"]
-
 var timer : Timer
+
 
 func _ready():
 	# Plays the music if it wasn't set to Autoplay

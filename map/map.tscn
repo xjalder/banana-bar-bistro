@@ -17,9 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://de1gjq27tx834" path="res://assets/map/Bush_2.png" id="13_58xwf"]
 [ext_resource type="Texture2D" uid="uid://b1iqq726ultwh" path="res://assets/map/Fern.png" id="14_w1ifk"]
 [ext_resource type="Texture2D" uid="uid://bsl068aqbtwfn" path="res://assets/map/Bush_1.1.png" id="15_sjjp3"]
-[ext_resource type="Texture2D" uid="uid://b5xyaedviirpg" path="res://assets/banana hut/hut-clipart-md.png" id="18_g0u07"]
 [ext_resource type="Texture2D" uid="uid://4bxssffpjnfs" path="res://assets/Jungle/cobble.webp" id="18_sjjp3"]
-[ext_resource type="Texture2D" uid="uid://cpqt4i6mv6hq8" path="res://assets/banana hut/monkey-cute-sticker-transparent-free-png.webp" id="19_8lto5"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_5jdw0"]
 
@@ -167,16 +165,6 @@ texture = ExtResource("14_w1ifk")
 
 [node name="DroppedItems" type="Node2D" parent="." unique_id=1385494066]
 script = ExtResource("5_kffv2")
-
-[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1817694307]
-position = Vector2(-5409, 107)
-scale = Vector2(0.26360357, 0.26360357)
-texture = ExtResource("18_g0u07")
-
-[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=1291877769]
-position = Vector2(-5447, 155.00002)
-scale = Vector2(0.26360357, 0.26360357)
-texture = ExtResource("19_8lto5")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1690815246]
 position = Vector2(-5360, 159)

@@ -6,6 +6,10 @@
 [ext_resource type="Texture2D" uid="uid://20y5aac4j1fu" path="res://assets/map/top.webp" id="4_1wlsi"]
 [ext_resource type="PackedScene" uid="uid://cx2ds36vn501" path="res://map/branch.tscn" id="5_ou6lv"]
 [ext_resource type="PackedScene" uid="uid://qcg3f5otv3dp" path="res://map/platform.tscn" id="6_igw4o"]
+[ext_resource type="Script" uid="uid://ddy2f7g3os7wd" path="res://player/swingable.gd" id="7_83yov"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y6aow"]
+size = Vector2(187.5, 1870.875)
 
 [node name="Tree" type="Node2D" unique_id=1494285108]
 position = Vector2(3, -246)
@@ -131,6 +135,14 @@ texture = ExtResource("2_u4n0d")
 [node name="Platform4" parent="." unique_id=634216412 instance=ExtResource("6_igw4o")]
 position = Vector2(412, -3468)
 scale = Vector2(2, 2)
+
+[node name="Swingable2" type="Area2D" parent="Platform4" unique_id=1686660651]
+script = ExtResource("7_83yov")
+metadata/_custom_type_script = "uid://ddy2f7g3os7wd"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform4/Swingable2" unique_id=1934532069]
+position = Vector2(-221, 931.5)
+shape = SubResource("RectangleShape2D_y6aow")
 
 [node name="Platform5" parent="." unique_id=1009470602 instance=ExtResource("6_igw4o")]
 position = Vector2(-467, -3474)

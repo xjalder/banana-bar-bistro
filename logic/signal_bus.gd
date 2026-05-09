@@ -6,3 +6,4 @@ signal falling_held
 signal falling_released
 signal unhappy_customer(monkey : MonkeyCustomer)
 signal add_money(amount : int)
+signal play_grapple_sound
