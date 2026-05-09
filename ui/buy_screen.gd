@@ -5,10 +5,10 @@ signal shop_done
 var active : bool = false
 
 @onready var icons = {
-'capacity': preload("res://assets/food/Banana.png"),
-'time_to_unhappy': preload("res://assets/food/Banana.png"),
-'time_to_new_customer': preload("res://assets/food/Banana.png"),
-'money_multiplier': preload("res://assets/food/Banana.png"),
+'capacity': preload("res://assets/banana hut/banana.png"),
+'time_to_unhappy': preload("res://assets/banana hut/banana.png"),
+'time_to_new_customer': preload("res://assets/banana hut/banana.png"),
+'money_multiplier': preload("res://assets/banana hut/banana.png"),
 }
 
 @onready var texts = {

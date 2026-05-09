@@ -3,8 +3,8 @@
 [ext_resource type="Script" uid="uid://ck8rj2o3pfb1x" path="res://ui/buy_screen.gd" id="1_td7va"]
 [ext_resource type="Texture2D" uid="uid://bfhagmhhag470" path="res://assets/ui/ShopMenu.png" id="2_dge2v"]
 [ext_resource type="PackedScene" uid="uid://cr4rv8frubllr" path="res://ui/item.tscn" id="3_y8qtc"]
-[ext_resource type="Texture2D" uid="uid://8ybhbxhdmfll" path="res://assets/food/BananaSmoothieSlim.png" id="5_3a4mh"]
-[ext_resource type="Texture2D" uid="uid://crocfvd856ice" path="res://assets/food/Banana.png" id="6_dge2v"]
+[ext_resource type="Texture2D" uid="uid://8ybhbxhdmfll" path="res://assets/banana hut/BananaSmoothieSlim.png" id="5_3a4mh"]
+[ext_resource type="Texture2D" uid="uid://cmf8k8opcr132" path="res://assets/banana.png" id="6_dge2v"]
 [ext_resource type="Texture2D" uid="uid://fvrl4bocpg8h" path="res://assets/ui/MonkeyMarketSign.png" id="7_dge2v"]
 
 [node name="BuyScreen" type="Control" unique_id=817242226]

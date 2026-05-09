@@ -38,7 +38,6 @@ func _go_shop() -> void:
 	screen_done.emit()
 	
 func _process(delta: float) -> void:
-	print(is_active)
 	if Input.is_action_just_pressed("test") && is_active:
 		_go_shop()
 		
