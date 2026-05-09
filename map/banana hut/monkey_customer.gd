@@ -18,10 +18,13 @@ func _ready() -> void:
 	var x: int = randi_range(0, values.size() - 1)
 	if (values[x] == Enums.Order.BANANA):
 		_spawn_sprite(order_sprite, "res://assets/banana hut/banana.png")
+		order = Enums.Order.BANANA
 	elif (values[x] == Enums.Order.BANANA_BREAD):
 		_spawn_sprite(order_sprite, "res://assets/banana hut/banana_bread.png")
+		order = Enums.Order.BANANA_BREAD
 	elif (values[x] == Enums.Order.BANANA_SMOOTHIE):
 		_spawn_sprite(order_sprite, "res://assets/banana hut/smoothie.png")
+		order = Enums.Order.BANANA_SMOOTHIE
 		
 
 func _spawn_sprite(scene : PackedScene, path :String) -> void:

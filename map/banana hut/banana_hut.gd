@@ -77,11 +77,10 @@ func _delete_monkey_at_index(index :int) -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	pass
 		
 func _remove_monkey_with_order(order : Enums.Order) -> void:
 	for i in range(len(monkeys)):
 		if monkeys[i] != null and monkeys[i].order == order:
 			_delete_monkey_at_index(i)
 			SignalBus.add_money.emit(Enums.OrderCost[order])
-			
-			
