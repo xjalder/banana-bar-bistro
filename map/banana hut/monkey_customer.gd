@@ -1,10 +1,9 @@
 class_name MonkeyCustomer extends Node2D
 
 #currenly 0, 1, 2 should change later to have what each is make of maybe??
-enum Order {BANANA, BANANA_BREAD, BANANA_SMOOTHIE}
 var order_sprite : PackedScene = preload("res://map/banana hut/food orders/order_sprite.tscn")
 @onready var sprite_2d: Sprite2D = $Sprite2D
-var order : Order
+var order : Enums.Order
 var order_type : String
 @onready var texture_progress_bar: TextureProgressBar = $TextureProgressBar
 var progress_bar_value : float = 0
@@ -15,16 +14,16 @@ var time_to_unhappy : int = upgrades["time_to_unhappy"];
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	var values := Order.values()
+	var values := Enums.Order.values()
 	
 	var x: int = randi_range(0, values.size() - 1)
-	if (values[x] == Order.BANANA):
+	if (values[x] == Enums.Order.BANANA):
 		_spawn_sprite(order_sprite, "res://assets/banana hut/banana.png")
 		order_type = "banana"
-	elif (values[x] == Order.BANANA_BREAD):
+	elif (values[x] == Enums.Order.BANANA_BREAD):
 		_spawn_sprite(order_sprite, "res://assets/banana hut/banana_bread.png")
 		order_type = "banana_bread"
-	elif (values[x] == Order.BANANA_SMOOTHIE):
+	elif (values[x] == Enums.Order.BANANA_SMOOTHIE):
 		_spawn_sprite(order_sprite, "res://assets/banana hut/smoothie.png")
 		order_type = "smoothie"
 		

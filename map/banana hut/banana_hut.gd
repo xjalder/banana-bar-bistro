@@ -8,7 +8,6 @@ var MAX_MONKEYS : int = upgrades['capacity']
 @onready var timer_to_new_customer: Timer = $Timer
 
 
-
 var monkeys: Array[MonkeyCustomer] = []
 
 signal deleted_monkey
@@ -22,7 +21,9 @@ func _ready() -> void:
 	timer_to_new_customer.one_shot = false
 	timer_to_new_customer.start()
 	
-		
+	
+
+
 func _on_timer_timeout():
 	_spawn_new_monkey()
 		
