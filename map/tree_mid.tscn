@@ -137,6 +137,7 @@ position = Vector2(412, -3468)
 scale = Vector2(2, 2)
 
 [node name="Swingable2" type="Area2D" parent="Platform4" unique_id=1686660651]
+collision_mask = 4
 script = ExtResource("7_83yov")
 metadata/_custom_type_script = "uid://ddy2f7g3os7wd"
 

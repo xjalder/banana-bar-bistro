@@ -22,8 +22,9 @@ SignalBus="*uid://bhq51dwmcoap8"
 GameManager="*res://logic/game_manager.gd"
 InputHandler="*res://logic/input_handler.gd"
 PlayerManager="*res://logic/player_manager.gd"
-InputHandler="*res://logic/input_handler.gd"
 DayManager="*uid://cokvl7womi7xx"
+AudioManager="*uid://bcplgfqsjy3su"
+SfxManager="*uid://85i436bu54sn"
 
 [dotnet]
 

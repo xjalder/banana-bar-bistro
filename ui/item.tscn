@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://cr4rv8frubllr"]
 
-[ext_resource type="Script" uid="uid://bghaag3paxmbh" path="res://ui/item_card.gd" id="1_6h18m"]
+[ext_resource type="Script" path="res://ui/item_card.gd" id="1_qbdqg"]
 [ext_resource type="Texture2D" uid="uid://cfdqo4cdyfhy3" path="res://assets/ui/ItemFrameV1.png" id="2_qbdqg"]
 [ext_resource type="Texture2D" uid="uid://26kckkpch3la" path="res://assets/ui/ItemFrameV2.png" id="3_hai2l"]
 [ext_resource type="Texture2D" uid="uid://djmhoa3gf0s2o" path="res://assets/ui/ItemFrameV3.png" id="4_f37ge"]
-[ext_resource type="Texture2D" uid="uid://8ybhbxhdmfll" path="res://assets/food/BananaSmoothieSlim.png" id="5_uq62f"]
+[ext_resource type="Texture2D" uid="uid://8ybhbxhdmfll" path="res://assets/banana hut/BananaSmoothieSlim.png" id="5_uq62f"]
 [ext_resource type="Texture2D" uid="uid://dqc6x1sifhcw1" path="res://assets/ui/soldStamp.png" id="6_qbdqg"]
 [ext_resource type="FontFile" uid="uid://bhjumwa63yq50" path="res://assets/fonts/daydream_3/Daydream DEMO.otf" id="6_rrea6"]
 
@@ -28,7 +28,7 @@ animations = [{
 [node name="ItemOne" type="Button" unique_id=851644414]
 offset_right = 189.0
 offset_bottom = 292.0
-script = ExtResource("1_6h18m")
+script = ExtResource("1_qbdqg")
 
 [node name="OnOff" type="AnimatedSprite2D" parent="." unique_id=454712299]
 position = Vector2(104.50001, 174.50002)

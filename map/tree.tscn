@@ -112,6 +112,8 @@ scale = Vector2(3.1048908, 1)
 texture = ExtResource("2_xcdkv")
 
 [node name="Swingable" type="Area2D" parent="." unique_id=294573093]
+position = Vector2(4, 2)
+collision_mask = 4
 script = ExtResource("6_xcdkv")
 metadata/_custom_type_script = "uid://ddy2f7g3os7wd"
 
