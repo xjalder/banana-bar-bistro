@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://cm17br2xq78ng"]
+
+[ext_resource type="Script" uid="uid://cb6rilknnse3g" path="res://ui/ui_node.gd" id="1_hp71t"]
+[ext_resource type="PackedScene" uid="uid://b77piyew4gukw" path="res://ui/buy_screen.tscn" id="1_phkqq"]
+[ext_resource type="PackedScene" uid="uid://cbhudo0l0qiar" path="res://ui/end_day.tscn" id="2_hp71t"]
+[ext_resource type="PackedScene" uid="uid://c5pce0jwehm4q" path="res://ui/start_screen.tscn" id="4_42b38"]
+[ext_resource type="Script" uid="uid://qdg4t5lpvl0r" path="res://ui/start_screen.gd" id="5_xevv4"]
+
+[node name="UiNode" type="Control" unique_id=559920873]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hp71t")
+
+[node name="BuyScreen" parent="." unique_id=817242226 instance=ExtResource("1_phkqq")]
+layout_mode = 0
+
+[node name="EndDay" parent="." unique_id=1600946165 instance=ExtResource("2_hp71t")]
+layout_mode = 1
+
+[node name="StartScreen" parent="." unique_id=1308811960 instance=ExtResource("4_42b38")]
+layout_mode = 0
+script = ExtResource("5_xevv4")
