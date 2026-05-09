@@ -1,11 +1,17 @@
 class_name MonkeyCustomer extends Node2D
 
-# currenly 0, 1, 2 should change later to have what each is make of maybe??
+#currenly 0, 1, 2 should change later to have what each is make of maybe??
 enum Order {BANANA, BANANA_BREAD, BANANA_SMOOTHIE}
 var order_sprite : PackedScene = preload("res://map/banana hut/food orders/order_sprite.tscn")
 @onready var sprite_2d: Sprite2D = $Sprite2D
 var order : Order
 var order_type : String
+@onready var texture_progress_bar: TextureProgressBar = $TextureProgressBar
+var time_to_unhappy : int = 5;
+var progress_bar_value : float = 0
+
+
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -38,6 +44,10 @@ func _spawn_sprite(scene : PackedScene, path :String) -> void:
 
 	
 	
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+# Called every frame. 'delta' is the elapsed timprogress_bar_valuee since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	progress_bar_value += float(100/time_to_unhappy) * delta
+	texture_progress_bar.value = floor(progress_bar_value)
+	if (progress_bar_value >= 100):
+		SignalBus.unhappy_customer.emit(self)
+		

@@ -4,3 +4,4 @@ signal grapple
 signal ungrapple
 signal falling_held
 signal falling_released
+signal unhappy_customer(monkey : MonkeyCustomer)

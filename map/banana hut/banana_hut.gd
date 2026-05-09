@@ -10,11 +10,18 @@ var monkeys: Array[MonkeyCustomer] = []
 
 signal deleted_monkey
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	monkeys.resize(MAX_MONKEYS)
+	SignalBus.unhappy_customer.connect(_unhappy_monkey_leave)
 		
 	
+func _unhappy_monkey_leave(unhappy_monkey : MonkeyCustomer) -> void:
+	for i in range(len(monkeys)):
+		
+		if (monkeys.get(i) == unhappy_monkey):
+			_delete_monkey_at_index(i)
 	
 func _spawn_new_monkey() -> void:
 	if (current_monkey_count >= MAX_MONKEYS):
@@ -57,5 +64,5 @@ func _delete_monkey_at_index(index :int) -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if Input.is_action_just_pressed("Spawn Monkey"):
+	if Input.is_action_just_pressed("spawn_monkey"):
 		_spawn_new_monkey()
