@@ -10,7 +10,8 @@ var items = {"SEATS":100, "MAGIC":50, "DECO":120}
 var upgrades = {
 	"capacity": 3,
 	"time_to_unhappy": 3,
-	"time_to_new_customer" : 4}
+	"time_to_new_customer" : 4,
+	"money_multiplier" : 1.0}
 
 var owned_items = []
 

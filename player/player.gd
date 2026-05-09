@@ -16,7 +16,7 @@ func _ready() -> void:
 	SignalBus.ungrapple.connect(on_ungrapple)
 
 func _physics_process(delta: float) -> void:
-	if grappled or (walk_left_held and walk_right_held):
+	if body.get_contact_count() < 1 or (grappled or (walk_left_held and walk_right_held)):
 		return
 	
 	if walk_left_held:

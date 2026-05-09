@@ -24,7 +24,6 @@ growable = 2
 [node name="Branch7" parent="." unique_id=1440954605 instance=ExtResource("2_g2vli")]
 position = Vector2(1378.3071, 477.5)
 scale = Vector2(5, 0.5)
-growable = 2
 
 [node name="Branch2" parent="." unique_id=637252882 instance=ExtResource("2_g2vli")]
 position = Vector2(-1330.1455, -267.125)
