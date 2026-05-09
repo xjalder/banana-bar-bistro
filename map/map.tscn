@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://cvok5ewpyc0k6"]
 
+[ext_resource type="PackedScene" uid="uid://cteheyqwjxrx8" path="res://map/banana hut/BananaHut.tscn" id="2_4hjbm"]
 [ext_resource type="Texture2D" uid="uid://bw52m2ogcluy7" path="res://icon.svg" id="2_7lyie"]
 [ext_resource type="PackedScene" uid="uid://c5d5sejcrnet8" path="res://map/tree.tscn" id="3_7lyie"]
 
@@ -19,6 +20,9 @@ texture = ExtResource("2_7lyie")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor" unique_id=1144853885]
 scale = Vector2(5.640002, 5.880001)
 shape = SubResource("RectangleShape2D_1cmj6")
+
+[node name="BananaHut" parent="." unique_id=2064569661 instance=ExtResource("2_4hjbm")]
+position = Vector2(1286, -577)
 
 [node name="Tree" parent="." unique_id=1494260739 instance=ExtResource("3_7lyie")]
 position = Vector2(60, -1153)
