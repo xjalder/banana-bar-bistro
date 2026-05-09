@@ -2,12 +2,16 @@
 
 [ext_resource type="Script" uid="uid://du5rulgaa3yxn" path="res://map/platform.gd" id="1_wflxl"]
 [ext_resource type="Texture2D" uid="uid://ckv1pi02dc8o8" path="res://assets/pngegg.png" id="2_wflxl"]
+[ext_resource type="Script" uid="uid://ddy2f7g3os7wd" path="res://player/swingable.gd" id="3_e0dfi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1cmj6"]
 size = Vector2(20.946732, 29.903465)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_67hre"]
 size = Vector2(112.54291, 118.417725)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x818u"]
+size = Vector2(118.74794, 168.65555)
 
 [node name="Platform" type="Area2D" unique_id=626660404]
 scale = Vector2(-8.2190895, 0.55734897)
@@ -32,3 +36,13 @@ collision_mask = 0
 position = Vector2(-0.060833067, 3.58844)
 scale = Vector2(0.99999976, 1)
 shape = SubResource("RectangleShape2D_67hre")
+
+[node name="Swingable" type="Area2D" parent="." unique_id=221378467]
+collision_layer = 8
+collision_mask = 4
+script = ExtResource("3_e0dfi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Swingable" unique_id=1453504885]
+position = Vector2(0.24333407, 5.382624)
+scale = Vector2(0.9999998, 1)
+shape = SubResource("RectangleShape2D_x818u")
