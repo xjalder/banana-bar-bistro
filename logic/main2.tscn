@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://nveywkkxaysn" path="res://map/map2.tscn" id="3_6ayjo"]
 [ext_resource type="Script" uid="uid://b4etangt7migm" path="res://logic/game_manager.gd" id="3_eakso"]
 [ext_resource type="Script" uid="uid://c2u3kt0oug3lv" path="res://logic/map_manager.gd" id="4_bwq6h"]
+[ext_resource type="Texture2D" uid="uid://chqbbw53ot2bw" path="res://assets/Bark1.png" id="6_6ayjo"]
 
 [node name="Main" type="Node2D" unique_id=955582176]
 script = ExtResource("1_mq8nk")
@@ -20,3 +21,14 @@ script = ExtResource("3_eakso")
 script = ExtResource("4_bwq6h")
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=701090034]
+
+[node name="Orders" type="Node2D" parent="UI" unique_id=945318736]
+
+[node name="Sprite2D" type="Sprite2D" parent="UI/Orders" unique_id=20500346]
+texture = ExtResource("6_6ayjo")
+
+[node name="Money" type="Node2D" parent="UI" unique_id=1808939643]
+
+[node name="PauseScreen" type="Node2D" parent="UI" unique_id=1592898906]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=445362657]
