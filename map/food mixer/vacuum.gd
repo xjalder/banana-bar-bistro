@@ -35,3 +35,4 @@ func _physics_process(delta: float) -> void:
 		# Strengthen pull as it gets closer
 		var force : Vector2 = direction * PULL_STRENGTH * (1.0 / max(distance, 1.0)) * 1000.0
 		body.apply_central_force(force)
+		body.modulate = lerp(body.modulate, Color(0.773, 0.773, 0.773, 0.898),0.2)

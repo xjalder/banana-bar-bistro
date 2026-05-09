@@ -83,7 +83,7 @@ position = Vector2(2361, -837)
 position = Vector2(-2124, -842)
 
 [node name="FoodMixer" parent="." unique_id=1728145295 instance=ExtResource("4_lgq1i")]
-position = Vector2(27, -570)
+position = Vector2(27, 127)
 scale = Vector2(3.9854012, 3.9854012)
 
 [node name="Parallax2D2" type="Parallax2D" parent="." unique_id=267267703]

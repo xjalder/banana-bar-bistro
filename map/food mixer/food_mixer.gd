@@ -28,8 +28,8 @@ var idle_shake_speed: float = 0.5
 var idle_shake_amount: float = 15.0
 
 # Active shake (fast, frantic)
-var active_shake_speed: float = 7.0
-var active_shake_amount: float = 10.0
+var active_shake_speed: float = 5.0
+var active_shake_amount: float = 8.0
 
 func _ready() -> void:
 	face_origin = face_sprite.position
@@ -80,8 +80,8 @@ func _finish_and_spawn() -> void:
 	await get_tree().create_timer(0.3).timeout
 
 	var tween := create_tween()
-	tween.tween_property(face_sprite, "scale", Vector2(1.3, 0.7), 0.08)
-	tween.tween_property(face_sprite, "scale", Vector2(0.7, 1.3), 0.08)
+	tween.tween_property(face_sprite, "scale", Vector2(1.2, 0.9), 0.15)
+	tween.tween_property(face_sprite, "scale", Vector2(0.9, 1.2), 0.15)
 	tween.tween_property(face_sprite, "scale", Vector2(1.0, 1.0), 0.12)
 
 	await get_tree().create_timer(0.08).timeout
@@ -112,4 +112,4 @@ func _make_product() -> void:
 func _spawn_product(product: Enums.Holdables) -> void:
 	var dropped: Droppable = droppable_scene.instantiate()
 	PlayerManager.dropped_items.add_child(dropped)
-	dropped._create_droppable_no_sprite(product, self.global_position + Vector2(20, 120))
+	dropped._create_droppable_no_sprite(product, self.global_position + Vector2(0, -20))
