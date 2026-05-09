@@ -7,6 +7,8 @@ class_name Arm extends Node2D
 
 @onready var arm_label := $Backarm/Label # DO WE WANT TODO
 
+var last_global_pos : Vector2
+
 func _ready() -> void:
 	# Also part of the helper text TODO
 	if arm_type == Enums.ArmType.Left:
