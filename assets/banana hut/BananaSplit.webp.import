@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://crocfvd856ice"
-path="res://.godot/imported/Banana.png-80f7fc4dbd487d590c41a4f9058444a7.ctex"
+uid="uid://beysjhebn2fq6"
+path="res://.godot/imported/BananaSplit.webp-d78c293757eb0305874fb29040d43c22.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/food/Banana.png"
-dest_files=["res://.godot/imported/Banana.png-80f7fc4dbd487d590c41a4f9058444a7.ctex"]
+source_file="res://assets/banana hut/BananaSplit.webp"
+dest_files=["res://.godot/imported/BananaSplit.webp-d78c293757eb0305874fb29040d43c22.ctex"]
 
 [params]
 

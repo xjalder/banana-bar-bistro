@@ -4,21 +4,33 @@
 [ext_resource type="Script" uid="uid://2sop8jeytx05" path="res://player/player.gd" id="1_yw30f"]
 [ext_resource type="Script" uid="uid://cf64h7p18bjq" path="res://player/camera.gd" id="2_g1dw6"]
 [ext_resource type="PackedScene" uid="uid://nvmw36h1tqir" path="res://player/arm.tscn" id="2_yw30f"]
+[ext_resource type="Texture2D" uid="uid://b5p6v22wlsuie" path="res://assets/player/Sprite-0017.png" id="3_hg6s5"]
 [ext_resource type="PackedScene" uid="uid://b77piyew4gukw" path="res://ui/buy_screen.tscn" id="4_rgyib"]
 [ext_resource type="PackedScene" uid="uid://e73ewxlcxswc" path="res://ui/pause_screen.tscn" id="5_hg6s5"]
 [ext_resource type="PackedScene" uid="uid://cpytfc87fdm8u" path="res://ui/order_card.tscn" id="6_8t03j"]
 [ext_resource type="PackedScene" uid="uid://caini1s7nis7r" path="res://ui/money.tscn" id="7_2ieo8"]
 
-[sub_resource type="Gradient" id="Gradient_ig7tw"]
-offsets = PackedFloat32Array(0, 0.012345679)
-
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_0xm2m"]
-gradient = SubResource("Gradient_ig7tw")
+[sub_resource type="SpriteFrames" id="SpriteFrames_hg6s5"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_hg6s5")
+}],
+"loop": true,
+"name": &"hanging",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0xm2m"]
 size = Vector2(83, 91)
 
 [node name="Player" type="Node2D" unique_id=1042275332]
+z_index = 5
 script = ExtResource("1_yw30f")
 walkspeed = 50.0
 
@@ -32,12 +44,14 @@ script = ExtResource("1_i3pqv")
 left_arm = NodePath("../LeftArm")
 right_arm = NodePath("../RightArm")
 
-[node name="Sprite2D" type="Sprite2D" parent="Body" unique_id=372254321]
-scale = Vector2(0.33203116, 91.75)
-texture = SubResource("GradientTexture1D_0xm2m")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Body" unique_id=1618738884]
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_hg6s5")
+animation = &"hanging"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Body" unique_id=170582561]
 position = Vector2(1.5, 1.5)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_0xm2m")
 
 [node name="Camera2D" type="Camera2D" parent="Body" unique_id=1238034262]
@@ -64,8 +78,9 @@ visible = false
 position = Vector2(127, 47)
 
 [node name="LeftArm" parent="." unique_id=2147052751 instance=ExtResource("2_yw30f")]
-position = Vector2(-5, -60)
+z_index = -1
+position = Vector2(-5, -50)
 arm_type = 0
 
 [node name="RightArm" parent="." unique_id=275786823 instance=ExtResource("2_yw30f")]
-position = Vector2(5, -60)
+position = Vector2(5, -50)

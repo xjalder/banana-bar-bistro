@@ -4,7 +4,7 @@ var monkey_scene : PackedScene = preload("res://map/banana hut/MonkeyCustomer.ts
 @onready var sprite_2d: Sprite2D = $Sprite2D
 var current_monkey_count : int = 0
 var upgrades : Dictionary= GameManager.upgrades 
-var MAX_MONKEYS : int = upgrades['capacity']
+var MAX_MONKEYS : int = GameManager.upgrades['capacity']
 @onready var timer_to_new_customer: Timer = $Timer
 
 var left_hand : Enums.Holdables = Enums.Holdables.BANANA
@@ -51,7 +51,7 @@ func _spawn_new_monkey() -> void:
 			
 		if null_count == index_for_monkey:
 			var parent_size : Vector2 = sprite_2d.texture.get_size()
-			var x_pos : int =  -parent_size.x/2 + ((parent_size.x * (i+0.5))/MAX_MONKEYS)
+			var x_pos: float = -parent_size.x / 2.0 + (parent_size.x * i) / (MAX_MONKEYS - 1)
 			var y_pos : int = parent_size.y/4
 			var monkey : MonkeyCustomer = _spawn_monkey_customer_at_position(Vector2(x_pos, y_pos))
 			add_child(monkey)
@@ -64,6 +64,8 @@ func _spawn_new_monkey() -> void:
 
 func _spawn_monkey_customer_at_position(position : Vector2) -> MonkeyCustomer:
 	var monkey : MonkeyCustomer = monkey_scene.instantiate()
+	var skin : int = randi_range(1, 4)
+	monkey.get_node("Sprite2D").texture = load("res://assets/banana hut/MonkeyCustomer%s.webp" % skin)
 	monkey.position = Vector2(position)
 	return monkey
 	

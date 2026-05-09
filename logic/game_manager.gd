@@ -9,10 +9,10 @@ var items = {'capacity': 100, 'time_to_new_customer':50, 'money_multiplier':120,
 var increases = {'capacity': 2, 'time_to_new_customer': 5, 'money_multiplier': 3, "time_to_unhappy": 90}
 
 var upgrades = {
-	'capacity': 3,
-	'time_to_new_customer': 3,
+	'capacity': 5,
+	'time_to_new_customer':2,
 	'money_multiplier': 4,
-	'time_to_unhappy': 10}
+	'time_to_unhappy': 15}
 
 signal show_cash(money : int)
 
@@ -32,16 +32,14 @@ func buy_item(item: String)->bool:
 		return true
 	print("FAILED!", money)
 	return false
-	 
 
-# Called when the node enters the scene tree for the first time.
+
+#Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	money = 500
-	
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+
+#Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("pause"):
 		is_paused = true
-		
-	

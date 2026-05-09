@@ -1,59 +1,102 @@
 [gd_scene format=3 uid="uid://c5d5sejcrnet8"]
 
-[ext_resource type="Texture2D" uid="uid://ckv1pi02dc8o8" path="res://assets/pngegg.png" id="1_xyaq1"]
+[ext_resource type="Texture2D" uid="uid://6au2tyd0ybjb" path="res://assets/map/tree1stump.webp" id="1_xcdkv"]
 [ext_resource type="PackedScene" uid="uid://cx2ds36vn501" path="res://map/branch.tscn" id="2_g2vli"]
+[ext_resource type="Texture2D" uid="uid://wdam1rf0oymt" path="res://assets/Jungle/TreeMidd.png" id="2_xcdkv"]
 [ext_resource type="PackedScene" uid="uid://qcg3f5otv3dp" path="res://map/platform.tscn" id="3_3puuq"]
+[ext_resource type="Texture2D" uid="uid://20y5aac4j1fu" path="res://assets/map/top.webp" id="3_tomtr"]
 
 [node name="Tree" type="Node2D" unique_id=1494285108]
-scale = Vector2(2.7200031, 8)
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=174873766]
-rotation = 1.5707964
-scale = Vector2(1.5, 4)
-texture = ExtResource("1_xyaq1")
 
 [node name="Branch" parent="." unique_id=1836666708 instance=ExtResource("2_g2vli")]
-position = Vector2(1378.3071, 0)
-scale = Vector2(5, 0.5)
+position = Vector2(454.00006, -67)
+scale = Vector2(3.0505292, 1.0696808)
 
 [node name="Branch6" parent="." unique_id=2126246900 instance=ExtResource("2_g2vli")]
-position = Vector2(1378.3071, -333.5)
-scale = Vector2(5, 0.5)
-growable = 2
+position = Vector2(409.00003, -612)
+scale = Vector2(2.8231685, 2.0882418)
 
 [node name="Branch7" parent="." unique_id=1440954605 instance=ExtResource("2_g2vli")]
-position = Vector2(1378.3071, 477.5)
-scale = Vector2(5, 0.5)
-
-[node name="Branch2" parent="." unique_id=637252882 instance=ExtResource("2_g2vli")]
-position = Vector2(-1330.1455, -267.125)
-scale = Vector2(-5, 0.5)
-growable = 3
+position = Vector2(371, 619)
+scale = Vector2(2.5961075, 1.4206135)
+holdable = 5
 
 [node name="Branch3" parent="." unique_id=1712799913 instance=ExtResource("2_g2vli")]
-position = Vector2(-1326.1013, 32.25)
-scale = Vector2(-5, 0.5)
-growable = 4
+position = Vector2(-488, -24)
+scale = Vector2(-2.8498545, 1.2551674)
 
 [node name="Branch4" parent="." unique_id=395617969 instance=ExtResource("2_g2vli")]
-position = Vector2(-1326.1013, 334.5)
-scale = Vector2(-5, 0.5)
-
-[node name="Branch5" parent="." unique_id=791125992 instance=ExtResource("2_g2vli")]
-position = Vector2(-1326.1013, -550.875)
-scale = Vector2(-5, 0.5)
+position = Vector2(-486.00006, 772.00006)
+scale = Vector2(2.073565, 4.490211)
 
 [node name="Platform" parent="." unique_id=626660404 instance=ExtResource("3_3puuq")]
-position = Vector2(1378.3071, 111.25)
+position = Vector2(490, 225)
 rotation = 3.1415927
-scale = Vector2(22.5, -0.5)
+scale = Vector2(-2.531763, -1.0718231)
 
 [node name="Platform2" parent="." unique_id=1430930194 instance=ExtResource("3_3puuq")]
-position = Vector2(-1309.5576, 194.125)
+position = Vector2(-569.00006, 370)
 rotation = 3.1415927
-scale = Vector2(22.5, -0.5)
+scale = Vector2(2.8536787, -2.2108514)
 
 [node name="Platform3" parent="." unique_id=1497843977 instance=ExtResource("3_3puuq")]
-position = Vector2(-1431.6161, -150.5)
-rotation = 3.1415927
-scale = Vector2(22.5, -0.5)
+position = Vector2(292, -298)
+scale = Vector2(2, 2)
+
+[node name="Platform4" parent="." unique_id=2139933727 instance=ExtResource("3_3puuq")]
+position = Vector2(-410, -390)
+scale = Vector2(-2.5141175, 2)
+
+[node name="Trunk" type="Node2D" parent="." unique_id=425526058]
+position = Vector2(3, -3)
+scale = Vector2(0.99999994, 1.7859447)
+
+[node name="Sprite2D" type="Sprite2D" parent="Trunk" unique_id=174873766]
+position = Vector2(-23.000002, 482.09778)
+scale = Vector2(3.1210938, 1.5605469)
+texture = ExtResource("1_xcdkv")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Trunk" unique_id=691044379]
+position = Vector2(-21.139677, 318.375)
+scale = Vector2(3.1048908, 1)
+texture = ExtResource("2_xcdkv")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Trunk" unique_id=967990971]
+position = Vector2(-24.632324, 63)
+scale = Vector2(3.1048908, 1)
+texture = ExtResource("2_xcdkv")
+
+[node name="Sprite2D5" type="Sprite2D" parent="Trunk" unique_id=1862125651]
+position = Vector2(-21.139677, -63.125)
+scale = Vector2(3.1048908, 1)
+texture = ExtResource("2_xcdkv")
+
+[node name="Sprite2D6" type="Sprite2D" parent="Trunk" unique_id=1230078660]
+position = Vector2(-21.139677, -190.875)
+scale = Vector2(3.1048908, 1)
+texture = ExtResource("2_xcdkv")
+
+[node name="Sprite2D7" type="Sprite2D" parent="Trunk" unique_id=1273059539]
+position = Vector2(-21.139677, -318.625)
+scale = Vector2(3.1048908, 1)
+texture = ExtResource("2_xcdkv")
+
+[node name="Sprite2D8" type="Sprite2D" parent="Trunk" unique_id=2018215386]
+position = Vector2(-21.139677, -444.625)
+scale = Vector2(3.1048908, 1)
+texture = ExtResource("2_xcdkv")
+
+[node name="Sprite2D9" type="Sprite2D" parent="Trunk" unique_id=1429109684]
+position = Vector2(-21.139677, -570.125)
+scale = Vector2(3.1048908, 1)
+texture = ExtResource("2_xcdkv")
+
+[node name="Sprite2D10" type="Sprite2D" parent="Trunk" unique_id=1369836540]
+position = Vector2(25.000002, -660.1548)
+scale = Vector2(4.353388, 2.540328)
+texture = ExtResource("3_tomtr")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Trunk" unique_id=2010346001]
+position = Vector2(-21.139677, 190.875)
+scale = Vector2(3.1048908, 1)
+texture = ExtResource("2_xcdkv")

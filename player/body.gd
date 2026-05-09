@@ -2,11 +2,14 @@ class_name PlayerBody extends RigidBody2D
 
 @export var left_arm : Arm
 @export var right_arm : Arm
+@onready var sprite : AnimatedSprite2D = $AnimatedSprite2D
 
 # The angle you want the body to maintain (in radians)
 var target_angle = 0.0
 # How strongly the gyroscope corrects the rotation
-var gyroscope_strength = 100.0
+var gyroscope_strength = 0.3
+
+var last_global_pos : Vector2
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -25,6 +28,16 @@ func _integrate_forces(state):
 	# Calculate difference, normalized to -PI to PI
 	var angle_diff = wrapf(target_angle - state.transform.get_rotation(), -PI, PI)
 	
-	# Apply torque to counteract rotation
-	# Proportional to angular velocity for damping
 	angular_velocity = angle_diff * gyroscope_strength
+
+func _physics_process(delta: float) -> void:
+	if last_global_pos == null:
+		last_global_pos = global_position
+		return
+	
+	if last_global_pos.x < global_position.x - 2:
+		sprite.flip_h = false
+	elif last_global_pos.x > global_position.x + 2:
+		sprite.flip_h = true
+	
+	last_global_pos = global_position

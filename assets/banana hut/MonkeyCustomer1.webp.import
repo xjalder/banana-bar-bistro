@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://8ybhbxhdmfll"
-path="res://.godot/imported/BananaSmoothieSlim.png-5f3b32ed22cb513a1bf5372a524ef47d.ctex"
+uid="uid://cich0asbimd7k"
+path="res://.godot/imported/MonkeyCustomer1.webp-d8a055e07f4a75455cc4423fa0ea0453.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/food/BananaSmoothieSlim.png"
-dest_files=["res://.godot/imported/BananaSmoothieSlim.png-5f3b32ed22cb513a1bf5372a524ef47d.ctex"]
+source_file="res://assets/banana hut/MonkeyCustomer1.webp"
+dest_files=["res://.godot/imported/MonkeyCustomer1.webp-d8a055e07f4a75455cc4423fa0ea0453.ctex"]
 
 [params]
 
