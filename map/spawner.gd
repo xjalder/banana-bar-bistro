@@ -17,7 +17,7 @@ var holdable_textures : Dictionary[Enums.Holdables, Texture] = {
 	Enums.Holdables.BANANA: preload("res://assets/banana hut/banana.png"),
 	Enums.Holdables.BREAD: preload("res://assets/banana hut/Bread.png"),
 	Enums.Holdables.MILK: preload("res://assets/banana hut/BananaSmoothieSlim.png"),
-	Enums.Holdables.ICE: preload("res://assets/banana hut/banana.png")
+	Enums.Holdables.ICE: preload("res://assets/Ice.webp")
 }
 
 func _ready() -> void:
@@ -63,7 +63,6 @@ func _regrow() -> void:
 	
 	var fruit := Sprite2D.new()
 	fruit.texture = texture
-	fruit.scale *= 1
 	fruit.position = Vector2(
 		randf_range(box.position.x, box.position.x + box.size.x),
 		randf_range(box.position.y, box.position.y + box.size.y)

@@ -20,8 +20,8 @@ config/icon="res://icon.svg"
 Enums="*uid://b5g650wikhmma"
 SignalBus="*uid://bhq51dwmcoap8"
 GameManager="*res://logic/game_manager.gd"
-PlayerManager="*uid://ts11odaxw0ov"
 InputHandler="*res://logic/input_handler.gd"
+PlayerManager="*res://logic/player_manager.gd"
 
 [dotnet]
 
