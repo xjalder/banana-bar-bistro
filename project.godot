@@ -21,6 +21,7 @@ Enums="*uid://b5g650wikhmma"
 SignalBus="*uid://bhq51dwmcoap8"
 GameManager="*res://logic/game_manager.gd"
 PlayerManager="*uid://v0a7pysx8ijb"
+InputHandler="*uid://clqlxs4v28vvr"
 
 [dotnet]
 

@@ -79,8 +79,10 @@ func _delete_monkey_at_index(index :int) -> void:
 func _process(delta: float) -> void:
 	pass
 		
-func _remove_monkey_with_order(order : Enums.Holdables) -> void:
+func _remove_monkey_with_order(order : Enums.Holdables) -> bool:
 	for i in range(len(monkeys)):
 		if monkeys[i] != null and monkeys[i].order == order:
 			_delete_monkey_at_index(i)
 			SignalBus.add_money.emit(Enums.OrderCost[order] * upgrades["money_multiplier"])
+			return true
+	return false

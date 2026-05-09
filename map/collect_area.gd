@@ -36,6 +36,7 @@ func _input(event: InputEvent) -> void:
 		fruit_sprite.scale *= 0.05
 		var hand = _get_valid_hand()
 		hand.add_child(fruit_sprite)
+		hand.held_item = fruit_sprite
 		if hand.arm_action == "left_arm":
 			PlayerManager.left_hand_holding = _get_holdable_from_growable()
 		elif hand.arm_action == "right_arm":

@@ -2,6 +2,7 @@ class_name Hand extends RigidBody2D
 
 var grabbing : bool
 var arm_action : String
+var held_item : Sprite2D
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
