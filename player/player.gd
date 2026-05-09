@@ -5,7 +5,8 @@ extends Node2D
 @onready var body : PlayerBody = $Body
 
 var grappled : bool = false
-var num_arms_grappled : int = 0
+var left_arm_grappled : bool
+var right_arm_grappled : bool
 
 var walk_left_held : bool
 var walk_right_held : bool
@@ -24,15 +25,20 @@ func _physics_process(delta: float) -> void:
 	elif walk_right_held:
 		body.global_position = lerp(body.global_position, body.global_position + Vector2(walkspeed, 0), 0.3)
 
-func on_grapple() -> void:
-	num_arms_grappled = min(2, num_arms_grappled + 1)
-	if num_arms_grappled >= 1:
-		grappled = true
-		body.mass = 5
+func on_grapple(is_left : bool) -> void:
+	if is_left:
+		left_arm_grappled = true
+	else:
+		right_arm_grappled = true
+	grappled = true
+	body.mass = 5
 	
-func on_ungrapple() -> void:
-	num_arms_grappled = max(0, num_arms_grappled - 1)
-	if num_arms_grappled == 0:
+func on_ungrapple(is_left : bool) -> void:
+	if is_left:
+		left_arm_grappled = false
+	else:
+		right_arm_grappled = false
+	if not left_arm_grappled and not right_arm_grappled:
 		grappled = false
 		body.mass = 500
 #
