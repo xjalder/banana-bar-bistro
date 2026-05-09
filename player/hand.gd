@@ -31,6 +31,6 @@ func _input(event: InputEvent) -> void:
 	elif event.is_action_released(arm_action):
 		grabbing = false
 		if freeze:
-			SignalBus.ungrapple.emit()
+			SignalBus.ungrapple.emit(arm_action == "left_arm")
 			freeze = false
 		

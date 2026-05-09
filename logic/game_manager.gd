@@ -5,42 +5,41 @@ var money: int
 
 var is_paused : bool = false
 
-var items = {"SEATS":100, "MAGIC":50, "DECO":120}
+var items = {'capacity': 100, 'time_to_new_customer':50, 'money_multiplier':120, "time_to_unhappy":150}
+var increases = {'capacity': 2, 'time_to_new_customer': 5, 'money_multiplier': 3, "time_to_unhappy": 90}
 
 var upgrades = {
-	"capacity": 3,
-	"time_to_unhappy": 3,
-	"time_to_new_customer" : 4,
-	"money_multiplier" : 1.0}
-
-var owned_items = []
+	'capacity': 3,
+	'time_to_new_customer': 3,
+	'money_multiplier': 4,
+	'time_to_unhappy': 10}
 
 signal show_cash(money : int)
 
-
+signal buy_order(_buy_item)
 
 func _add_money(income : int)->void:
 	money += income
 	show_cash.emit(money)
 
-func _buy_item(money : int, item: String)->void:
+func buy_item(item: String)->bool:
 	if items.get(item) <= money:
+		print("BOUGHT! ", money)
 		money -= items.get(item)
-		owned_items.append(item)
-		
+		for i in upgrades.keys(): #change item bought
+			if i == item:
+				upgrades[i] += increases.get(item)
+		return true
+	print("FAILED!", money)
+	return false
 
-# Called when the node enters the scene tree for the first time.
+
+#Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	money = 0
-	#BananaHut.connect(_add_money)
-	
-	
-	
+	money = 500
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+#Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("pause"):
 		is_paused = true
-		
-	
