@@ -32,7 +32,7 @@ func buy_item(item: String)->bool:
 		return true
 	print("FAILED!", money)
 	return false
-		
+	 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
