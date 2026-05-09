@@ -6,3 +6,5 @@ signal falling_held
 signal falling_released
 signal unhappy_customer(monkey : MonkeyCustomer)
 signal add_money(amount : int)
+signal end_day
+signal end_lv(curr_lv: Enums.Level)
