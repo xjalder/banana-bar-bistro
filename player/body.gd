@@ -7,7 +7,7 @@ class_name PlayerBody extends RigidBody2D
 # The angle you want the body to maintain (in radians)
 var target_angle = 0.0
 # How strongly the gyroscope corrects the rotation
-var gyroscope_strength = 100.0
+var gyroscope_strength = 0.3
 
 var last_global_pos : Vector2
 
@@ -28,8 +28,6 @@ func _integrate_forces(state):
 	# Calculate difference, normalized to -PI to PI
 	var angle_diff = wrapf(target_angle - state.transform.get_rotation(), -PI, PI)
 	
-	# Apply torque to counteract rotation
-	# Proportional to angular velocity for damping
 	angular_velocity = angle_diff * gyroscope_strength
 
 func _physics_process(delta: float) -> void:
