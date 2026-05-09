@@ -24,7 +24,7 @@ func handle_left_input() -> void:
 	if get_parent() is Spawner and get_parent().num_fruits <= 0:
 		return
 	
-	if hands.is_empty() or !_has_empty_hand(true):
+	if hands.is_empty() or !_has_empty_hand(true) or PlayerManager.left_hand_holding != Enums.Holdables.NONE:
 		return
 		
 	var fruit_sprite := Sprite2D.new()
@@ -40,7 +40,7 @@ func handle_right_input() -> void:
 	if get_parent() is Spawner and get_parent().num_fruits <= 0:
 		return
 		
-	if hands.is_empty() or !_has_empty_hand(false):
+	if hands.is_empty() or !_has_empty_hand(false) or PlayerManager.right_hand_holding != Enums.Holdables.NONE:
 		return
 		
 	var fruit_sprite := Sprite2D.new()

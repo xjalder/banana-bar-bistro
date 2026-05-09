@@ -6,6 +6,12 @@ var droppable_scene : PackedScene = preload("res://logic/Droppable.tscn")
 
 var types: Array[Enums.Holdables] = [0, 0]
 
+var holdable_textures : Dictionary[Enums.Holdables, Texture] = {
+	Enums.Holdables.BANANA: preload("res://assets/banana hut/banana.png"),
+	Enums.Holdables.BREAD: preload("res://assets/banana hut/Bread.png"),
+	Enums.Holdables.MILK: preload("res://assets/banana hut/BananaSmoothieSlim.png"),
+	Enums.Holdables.ICE: preload("res://assets/banana hut/banana.png")
+}
 
 
 # Called when the node enters the scene tree for the first time.

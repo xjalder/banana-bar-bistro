@@ -12,6 +12,7 @@ size = Vector2(20.946732, 29.903465)
 [node name="Map" type="Node2D" unique_id=1327460236]
 
 [node name="DroppedItems" type="Node2D" parent="." unique_id=286471115]
+scale = Vector2(1.002081, 1)
 script = ExtResource("5_kffv2")
 
 [node name="Floor" type="StaticBody2D" parent="." unique_id=1716734742]
