@@ -7,6 +7,11 @@ var is_paused : bool = false
 
 var items = {"SEATS":100, "MAGIC":50, "DECO":120}
 
+var upgrades = {
+	"capacity": 3,
+	"time_to_unhappy": 3,
+	"time_to_new_customer" : 4}
+
 var owned_items = []
 
 signal show_cash(money : int)
