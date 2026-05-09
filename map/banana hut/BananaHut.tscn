@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cteheyqwjxrx8"]
 
 [ext_resource type="Script" uid="uid://cp11kr0mawftl" path="res://map/banana hut/banana_hut.gd" id="1_p72rn"]
-[ext_resource type="Script" uid="uid://cjcyri6wtxbo3" path="res://map/banana hut/hut_area.gd" id="3_p72rn"]
+[ext_resource type="Script" path="res://map/banana hut/hut_area.gd" id="3_p72rn"]
 [ext_resource type="Texture2D" uid="uid://b5xyaedviirpg" path="res://assets/banana hut/hut-clipart-md.png" id="3_umfmm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gjegu"]

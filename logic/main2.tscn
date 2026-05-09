@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://dccwjy27hoe3j"]
+[gd_scene format=3 uid="uid://2hq4oa2dnoad"]
 
 [ext_resource type="Script" uid="uid://cokvl7womi7xx" path="res://logic/day_manager.gd" id="2_eakso"]
 [ext_resource type="PackedScene" uid="uid://nveywkkxaysn" path="res://map/map2.tscn" id="3_6ayjo"]
