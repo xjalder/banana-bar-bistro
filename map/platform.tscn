@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://qcg3f5otv3dp"]
 
 [ext_resource type="Script" uid="uid://du5rulgaa3yxn" path="res://map/platform.gd" id="1_wflxl"]
-[ext_resource type="Texture2D" uid="uid://bw52m2ogcluy7" path="res://icon.svg" id="2_e0dfi"]
+[ext_resource type="Texture2D" uid="uid://ckv1pi02dc8o8" path="res://assets/pngegg.png" id="2_wflxl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1cmj6"]
 size = Vector2(20.946732, 29.903465)
@@ -16,7 +16,8 @@ collision_mask = 2
 script = ExtResource("1_wflxl")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=578163037]
-texture = ExtResource("2_e0dfi")
+scale = Vector2(0.12399036, 1)
+texture = ExtResource("2_wflxl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1807842308]
 position = Vector2(0.060830712, 3.588379)

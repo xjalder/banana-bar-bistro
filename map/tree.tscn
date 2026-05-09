@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://c5d5sejcrnet8"]
+
+[ext_resource type="Texture2D" uid="uid://ckv1pi02dc8o8" path="res://assets/pngegg.png" id="1_xyaq1"]
+[ext_resource type="PackedScene" uid="uid://cx2ds36vn501" path="res://map/branch.tscn" id="2_g2vli"]
+[ext_resource type="PackedScene" uid="uid://qcg3f5otv3dp" path="res://map/platform.tscn" id="3_3puuq"]
+
+[node name="Tree" type="Node2D" unique_id=1494285108]
+scale = Vector2(2.7200031, 8)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=174873766]
+rotation = 1.5707964
+scale = Vector2(1.5, 4)
+texture = ExtResource("1_xyaq1")
+
+[node name="Branch" parent="." unique_id=1836666708 instance=ExtResource("2_g2vli")]
+position = Vector2(1378.3071, 0)
+scale = Vector2(5, 0.5)
+
+[node name="Branch6" parent="." unique_id=2126246900 instance=ExtResource("2_g2vli")]
+position = Vector2(1378.3071, -333.5)
+scale = Vector2(5, 0.5)
+growable = 2
+
+[node name="Branch7" parent="." unique_id=1440954605 instance=ExtResource("2_g2vli")]
+position = Vector2(1378.3071, 477.5)
+scale = Vector2(5, 0.5)
+growable = 2
+
+[node name="Branch2" parent="." unique_id=637252882 instance=ExtResource("2_g2vli")]
+position = Vector2(-1330.1455, -267.125)
+scale = Vector2(-5, 0.5)
+growable = 3
+
+[node name="Branch3" parent="." unique_id=1712799913 instance=ExtResource("2_g2vli")]
+position = Vector2(-1326.1013, 32.25)
+scale = Vector2(-5, 0.5)
+growable = 4
+
+[node name="Branch4" parent="." unique_id=395617969 instance=ExtResource("2_g2vli")]
+position = Vector2(-1326.1013, 334.5)
+scale = Vector2(-5, 0.5)
+
+[node name="Branch5" parent="." unique_id=791125992 instance=ExtResource("2_g2vli")]
+position = Vector2(-1326.1013, -550.875)
+scale = Vector2(-5, 0.5)
+
+[node name="Platform" parent="." unique_id=626660404 instance=ExtResource("3_3puuq")]
+position = Vector2(1378.3071, 111.25)
+rotation = 3.1415927
+scale = Vector2(22.5, -0.5)
+
+[node name="Platform2" parent="." unique_id=1430930194 instance=ExtResource("3_3puuq")]
+position = Vector2(-1309.5576, 194.125)
+rotation = 3.1415927
+scale = Vector2(22.5, -0.5)
+
+[node name="Platform3" parent="." unique_id=1497843977 instance=ExtResource("3_3puuq")]
+position = Vector2(-1431.6161, -150.5)
+rotation = 3.1415927
+scale = Vector2(22.5, -0.5)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=528101459]
+zoom = Vector2(0.05, 0.05)

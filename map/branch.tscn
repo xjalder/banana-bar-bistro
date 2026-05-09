@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://cx2ds36vn501"]
+
+[ext_resource type="Script" uid="uid://ddy2f7g3os7wd" path="res://player/swingable.gd" id="1_s26d4"]
+[ext_resource type="Texture2D" uid="uid://bk0lceil3gipo" path="res://assets/tree-branch-isolated-on-transparent-background_png.png.png" id="2_oyam4"]
+[ext_resource type="Script" uid="uid://1ga77stsguuq" path="res://map/spawner.gd" id="3_oyam4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1yi38"]
+
+[node name="Branch" type="Node2D" unique_id=908753985 node_paths=PackedStringArray("branch_sprite")]
+script = ExtResource("3_oyam4")
+growable = 1
+branch_sprite = NodePath("Swingable/Sprite2D")
+capacity = 10
+regrow_speed = 1
+
+[node name="Swingable" type="Area2D" parent="." unique_id=1836666708]
+collision_layer = 8
+collision_mask = 4
+script = ExtResource("1_s26d4")
+
+[node name="Sprite2D" type="Sprite2D" parent="Swingable" unique_id=2066024036]
+texture = ExtResource("2_oyam4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Swingable" unique_id=291628030]
+scale = Vector2(20.160002, 9.080001)
+shape = SubResource("RectangleShape2D_1yi38")
