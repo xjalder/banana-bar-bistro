@@ -1,7 +1,9 @@
 extends Button
 
+var item : String = 'capacity'
+
 #handles individial items
-func _send_buy(item : Enums.Items) -> void:
+func _send_buy(item : String) -> void:
 	if $OnOff.frame == 2:
 		return
 	
@@ -25,7 +27,7 @@ func _exit() -> void:
 func _ready() -> void:
 	$OnOff.frame = 0
 	$Sold.hide()
-	self.pressed.connect(_send_buy.bind(Enums.Items.DECOS))
+	self.pressed.connect(_send_buy.bind(item))
 	self.mouse_entered.connect(_hover_over)
 	self.mouse_exited.connect(_exit)
 	
