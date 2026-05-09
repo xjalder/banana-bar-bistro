@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://lyvhxu1dycvu"]
+
+[ext_resource type="Texture2D" uid="uid://b1q65gb3ecq1q" path="res://assets/food mixer/mixer face.png" id="1_0d2bf"]
+
+[node name="FoodMixer" type="Node2D" unique_id=1728145295]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=489338280]
+texture = ExtResource("1_0d2bf")
+
+[node name="LeftEye" type="Sprite2D" parent="Sprite2D" unique_id=1365279197]
+
+[node name="RightEye" type="Sprite2D" parent="Sprite2D" unique_id=602810433]

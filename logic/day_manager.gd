@@ -52,7 +52,5 @@ func _process(delta: float) -> void:
 	#send signal to change to next level
 	if monkeys_fed >= get_lv_lim():
 		_start_next_day()
-			
-	
 	
 	
