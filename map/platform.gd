@@ -4,7 +4,8 @@ class_name Platform extends Area2D
 
 var grappling : bool
 var crouching : bool
-var num_arms_grappled : int = 0
+var left_arm_grappled : bool
+var right_arm_grappled : bool
 var player_inside: bool
 
 func _ready() -> void:
@@ -34,6 +35,9 @@ func _try_enable() -> void:
 		_enable_collision()
 
 func _enable_collision() -> void:
+	if left_arm_grappled or right_arm_grappled:
+		return
+		
 	var platform_mask = 1 << 4
 	platform_body.collision_layer |= platform_mask
 
@@ -41,14 +45,20 @@ func _disable_collision() -> void:
 	var platform_mask = 1 << 4
 	platform_body.collision_layer &= ~platform_mask
 		
-func on_grapple() -> void:
-	num_arms_grappled = min(2, num_arms_grappled + 1)
+func on_grapple(is_left : bool) -> void:
+	if is_left:
+		left_arm_grappled = true
+	else:
+		right_arm_grappled = true
 	grappling = true
 	_disable_collision()
 	
-func on_ungrapple() -> void:
-	num_arms_grappled = max(0, num_arms_grappled - 1)
-	if num_arms_grappled == 0:
+func on_ungrapple(is_left : bool) -> void:
+	if is_left:
+		left_arm_grappled = false
+	else:
+		right_arm_grappled = false
+	if not left_arm_grappled and not right_arm_grappled:
 		grappling = false
 		_enable_collision()
 		

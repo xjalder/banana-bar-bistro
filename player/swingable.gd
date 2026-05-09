@@ -12,7 +12,7 @@ func _process(_delta: float) -> void:
 	for hand in hands_colliding:
 		if hand.grabbing and not hand.freeze:
 			hand.set_deferred("freeze", true)
-			SignalBus.grapple.emit()
+			SignalBus.grapple.emit(hand.arm_action == "left_arm")
 
 func handle_body_enter(body : Node) -> void:
 	if body is Hand:
