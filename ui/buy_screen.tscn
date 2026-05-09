@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://b77piyew4gukw"]
+
+[ext_resource type="Script" uid="uid://e6fw7mmqkpep" path="res://logic/buy_screen.gd" id="1_6s6f3"]
+[ext_resource type="Texture2D" uid="uid://ntkdcck5cq4g" path="res://assets/Upgrades/brown.png" id="2_sx2df"]
+[ext_resource type="Texture2D" uid="uid://8ybhbxhdmfll" path="res://assets/Food/BananaSmoothieSlim.png" id="2_wxqgv"]
+[ext_resource type="Script" uid="uid://bghaag3paxmbh" path="res://ui/item_one.gd" id="3_uffs1"]
+[ext_resource type="Texture2D" uid="uid://cfb2gmkfjbjra" path="res://assets/Upgrades/green.png" id="4_wixkr"]
+[ext_resource type="Texture2D" uid="uid://c5uwrv8kcvdud" path="res://assets/Upgrades/red.png" id="5_brqxh"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6s6f3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_wixkr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_brqxh")
+}],
+"loop": true,
+"name": &"OnOff",
+"speed": 5.0
+}]
+
+[node name="BuyScreen" type="Node2D" unique_id=416333969]
+script = ExtResource("1_6s6f3")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=654020622]
+position = Vector2(-124, 11)
+texture = ExtResource("2_sx2df")
+
+[node name="ItemOne" type="Button" parent="." unique_id=1845758924]
+offset_right = 8.0
+offset_bottom = 8.0
+script = ExtResource("3_uffs1")
+
+[node name="OnOff" type="AnimatedSprite2D" parent="ItemOne" unique_id=1124011220]
+position = Vector2(-275.5, 8)
+scale = Vector2(0.25465116, 1.0211481)
+sprite_frames = SubResource("SpriteFrames_6s6f3")
+animation = &"OnOff"
+
+[node name="Item" type="Sprite2D" parent="ItemOne" unique_id=554165661]
+position = Vector2(-282, -84)
+texture = ExtResource("2_wxqgv")
+
+[node name="Sold" type="Sprite2D" parent="ItemOne" unique_id=308095621]

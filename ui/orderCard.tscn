@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://cpytfc87fdm8u"]
+
+[ext_resource type="Texture2D" uid="uid://chqbbw53ot2bw" path="res://assets/Bark1.png" id="1_2rm2a"]
+[ext_resource type="Script" uid="uid://dh168i65vch2t" path="res://ui/order_card.gd" id="1_d1cjd"]
+[ext_resource type="Texture2D" uid="uid://dwpuu47iharbl" path="res://assets/Blue Banana.png" id="3_iy7uw"]
+[ext_resource type="Texture2D" uid="uid://c0vibvthn4dwd" path="res://assets/Red Bannana.png" id="4_vu6y3"]
+[ext_resource type="Texture2D" uid="uid://bkak3wutwwehh" path="res://assets/banana.png" id="5_1jsv6"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7icj6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_iy7uw")
+}],
+"loop": true,
+"name": &"Blue Banana",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_vu6y3")
+}],
+"loop": true,
+"name": &"Red Banana",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_1jsv6")
+}],
+"loop": true,
+"name": &"Yellow Banana",
+"speed": 5.0
+}]
+
+[node name="Orders" type="Node2D" unique_id=1990255410]
+script = ExtResource("1_d1cjd")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1317125671]
+position = Vector2(0, -1)
+texture = ExtResource("1_2rm2a")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1806809552]
+position = Vector2(-11.625, -0.37500036)
+scale = Vector2(0.016845701, 0.014404297)
+sprite_frames = SubResource("SpriteFrames_7icj6")
+animation = &"Red Banana"
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="." unique_id=1579679339]
+position = Vector2(12.999999, 0)
+scale = Vector2(0.016845701, 0.014404297)
+sprite_frames = SubResource("SpriteFrames_7icj6")
+animation = &"Red Banana"

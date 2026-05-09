@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://caini1s7nis7r"]
+
+[ext_resource type="Script" uid="uid://bb2so563yungx" path="res://ui/money_card.gd" id="1_y03t3"]
+[ext_resource type="Texture2D" uid="uid://ly8fwpkh3yq8" path="res://assets/MoneyTab.png" id="2_4t7a2"]
+[ext_resource type="FontFile" uid="uid://bhjumwa63yq50" path="res://assets/Fonts/daydream_3/Daydream DEMO.otf" id="3_76ihj"]
+
+[node name="Money" type="Node2D" unique_id=478792395]
+script = ExtResource("1_y03t3")
+
+[node name="BackCard" type="Sprite2D" parent="." unique_id=1109004346]
+texture = ExtResource("2_4t7a2")
+
+[node name="MoneyCount" type="Label" parent="." unique_id=245698831]
+offset_left = -54.0
+offset_top = -12.0
+offset_right = 116.0
+offset_bottom = 14.0
+theme_override_fonts/font = ExtResource("3_76ihj")
+theme_override_font_sizes/font_size = 16
+text = "Banna"
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2075643131]

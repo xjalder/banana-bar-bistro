@@ -1,9 +1,11 @@
 class_name BananaHut extends Node2D
 
-var monkey_scene : PackedScene = preload("/Users/ben/Desktop/banana-bar-bistro/map/banana hut/MonkeyCustomer.tscn")
+var monkey_scene : PackedScene = preload("res://map/banana hut/MonkeyCustomer.tscn")
 @onready var sprite_2d: Sprite2D = $Sprite2D
-var MAX_MONKEYS : int = 5
 var current_monkey_count : int = 0
+var upgrades : Dictionary= GameManager.upgrades 
+var MAX_MONKEYS : int = upgrades['capacity']
+@onready var timer_to_new_customer: Timer = $Timer
 
 
 var monkeys: Array[MonkeyCustomer] = []
@@ -15,8 +17,16 @@ signal deleted_monkey
 func _ready() -> void:
 	monkeys.resize(MAX_MONKEYS)
 	SignalBus.unhappy_customer.connect(_unhappy_monkey_leave)
-		
+	timer_to_new_customer.wait_time = upgrades["time_to_new_customer"]
+	timer_to_new_customer.one_shot = false
+	timer_to_new_customer.start()
 	
+	
+
+
+func _on_timer_timeout():
+	_spawn_new_monkey()
+		
 func _unhappy_monkey_leave(unhappy_monkey : MonkeyCustomer) -> void:
 	for i in range(len(monkeys)):
 		
@@ -25,9 +35,6 @@ func _unhappy_monkey_leave(unhappy_monkey : MonkeyCustomer) -> void:
 	
 func _spawn_new_monkey() -> void:
 	if (current_monkey_count >= MAX_MONKEYS):
-		var i : int = randi_range(0, MAX_MONKEYS - 1)
-		_delete_monkey_at_index(i)
-		current_monkey_count -= 1
 		return
 		
 	var null_count : int = 0;
@@ -61,6 +68,7 @@ func _deleted_monkey() -> void:
 	
 func _delete_monkey_at_index(index :int) -> void:
 	monkeys.get(index).queue_free()
+	current_monkey_count -= 1
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

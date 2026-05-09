@@ -1,7 +1,11 @@
 [gd_scene format=3 uid="uid://cteheyqwjxrx8"]
 
 [ext_resource type="Script" uid="uid://cp11kr0mawftl" path="res://map/banana hut/banana_hut.gd" id="1_p72rn"]
+[ext_resource type="Script" path="res://map/banana hut/hut_area.gd" id="3_p72rn"]
 [ext_resource type="Texture2D" uid="uid://b5xyaedviirpg" path="res://assets/banana hut/hut-clipart-md.png" id="3_umfmm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gjegu"]
+size = Vector2(11.743933, 26.905067)
 
 [node name="BananaHut" type="Node2D" unique_id=2064569661]
 script = ExtResource("1_p72rn")
@@ -13,3 +17,17 @@ texture = ExtResource("3_umfmm")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=661600757]
 position = Vector2(0, -2)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=587879791]
+collision_layer = 0
+collision_mask = 4
+script = ExtResource("3_p72rn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=727342064]
+position = Vector2(1, 4.4999924)
+scale = Vector2(71.355995, 23.378496)
+shape = SubResource("RectangleShape2D_gjegu")
+
+[node name="Timer" type="Timer" parent="." unique_id=277673880]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
