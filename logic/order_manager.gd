@@ -3,11 +3,11 @@ class_name OrderManager extends Control
 var customers : Array[MonkeyCustomer]
 var order_dict : Dictionary[MonkeyCustomer, OrderCard]
 
-const recipes : Dictionary[Enums.Order, Array] = {
+var recipes : Dictionary[Enums.Order, Array] = {
 	Enums.Order.BANANA : [preload("res://assets/banana hut/banana.png"), null],
 	Enums.Order.BANANA_BREAD : [preload("res://assets/banana hut/banana.png"), preload("res://assets/banana hut/Bread.png")],
-	Enums.Order.BANANA_SMOOTHIE : [preload("res://assets/banana hut/banana.png"), preload("res://assets/banana hut/BananaSmoothieSlim.png")],
-	Enums.Order.BANANA_ICECREAM : [preload("res://assets/banana hut/BananaSmoothieSlim.png"), preload("res://assets/Ice.webp")],
+	Enums.Order.BANANA_SMOOTHIE : [preload("res://assets/banana hut/banana.png"), preload("res://assets/banana hut/MilkBottle.webp")],
+	Enums.Order.BANANA_ICECREAM : [preload("res://assets/banana hut/banana.png"), preload("res://assets/Ice.webp")],
 }
 
 const order_scene : PackedScene = preload("res://ui/order_card.tscn")
@@ -68,7 +68,7 @@ func _reposition_cards() -> void:
 	var card_width: float = card.size.x * card.scale.x
 	var i := 0
 	for customer in customers:
-		if order_dict.has(customer):
+		if is_instance_valid(customer) and order_dict.has(customer):
 			var c: OrderCard = order_dict[customer]
 			c.anchor_left = 1.0
 			c.anchor_right = 1.0
