@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://b36ktsjgujed6"]
+
+[ext_resource type="Texture2D" uid="uid://ome814rh5uxb" path="res://assets/banana hut/banana.png" id="1_o5hks"]
+[ext_resource type="Script" uid="uid://pmi7jaf50m6a" path="res://map/banana hut/food orders/order_sprite.gd" id="1_ssbd1"]
+
+[node name="BananaOrder" type="Node2D" unique_id=1822082875]
+script = ExtResource("1_ssbd1")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=847488671]
+position = Vector2(10, -316)
+texture = ExtResource("1_o5hks")
