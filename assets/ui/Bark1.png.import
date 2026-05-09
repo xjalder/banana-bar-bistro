@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://chqbbw53ot2bw"
-path="res://.godot/imported/Bark1.png-e2b280f01a415af5a407e082953d32e3.ctex"
+path="res://.godot/imported/Bark1.png-323707a6e470150aeb134d5857f57277.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Bark1.png"
-dest_files=["res://.godot/imported/Bark1.png-e2b280f01a415af5a407e082953d32e3.ctex"]
+source_file="res://assets/ui/Bark1.png"
+dest_files=["res://.godot/imported/Bark1.png-323707a6e470150aeb134d5857f57277.ctex"]
 
 [params]
 
