@@ -33,11 +33,11 @@ func _ready() -> void:
 func _spawn_sprite(scene : PackedScene, path :String) -> void:
 	var order := scene.instantiate()
 	var parent_size : Vector2 = sprite_2d.get_rect().size
-	order.position = Vector2(0,0)
+	order.position = Vector2(-parent_size.x,0)
 	order.get_node("Sprite2D").texture = load(path)
 	var order_size : Vector2 = order.get_node("Sprite2D").get_rect().size
 	#print(order_size,parent_size)
-	order.get_node("Sprite2D").scale= Vector2(parent_size.x / (2 *order_size.x), parent_size.y/ (2 * order_size.y))
+	order.get_node("Sprite2D").scale= Vector2(parent_size.x / (order_size.x), parent_size.y/ ( order_size.y))
 	add_child(order)
 	
 	

@@ -9,10 +9,10 @@ var items = {'capacity': 100, 'time_to_new_customer':50, 'money_multiplier':120,
 var increases = {'capacity': 2, 'time_to_new_customer': 5, 'money_multiplier': 3, "time_to_unhappy": 90}
 
 var upgrades = {
-	'capacity': 5,
-	'time_to_new_customer':2,
-	'money_multiplier': 4,
-	'time_to_unhappy': 15}
+	'capacity': 2,
+	'time_to_new_customer':5,
+	'money_multiplier': 1,
+	'time_to_unhappy': 45}
 
 signal show_cash(money : int)
 
