@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://cbhudo0l0qiar"]
+
+[ext_resource type="Script" uid="uid://om8oiri33w0p" path="res://ui/end_day_screen.gd" id="1_6bdhl"]
+[ext_resource type="Texture2D" uid="uid://b6kvoiw4gwrwp" path="res://assets/ui/EndDayScreen.png" id="2_d31m8"]
+[ext_resource type="FontFile" uid="uid://bhjumwa63yq50" path="res://assets/fonts/daydream_3/Daydream DEMO.otf" id="3_grx2n"]
+[ext_resource type="Texture2D" uid="uid://xd35bcevvqwm" path="res://assets/ui/BananaCoin.png" id="6_icr8a"]
+
+[node name="EndDay" type="Control" unique_id=1600946165]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6bdhl")
+metadata/_edit_group_ = true
+
+[node name="EndScreen" type="Sprite2D" parent="." unique_id=666469901]
+position = Vector2(12, 3)
+scale = Vector2(1.1875, 1.046875)
+texture = ExtResource("2_d31m8")
+
+[node name="Level Card" type="Label" parent="." unique_id=2077456766]
+layout_mode = 0
+offset_left = 46.0
+offset_top = -46.0
+offset_right = 61.0
+offset_bottom = -20.0
+theme_override_fonts/font = ExtResource("3_grx2n")
+text = "5"
+
+[node name="Money" type="Label" parent="." unique_id=1456642492]
+layout_mode = 0
+offset_left = -24.0
+offset_top = 18.0
+offset_right = 77.0
+offset_bottom = 44.0
+theme_override_fonts/font = ExtResource("3_grx2n")
+text = "100"
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1611117435]
+
+[node name="Coin" type="Sprite2D" parent="." unique_id=1501513531]
+position = Vector2(-44, 30)
+scale = Vector2(0.21874993, 0.20703126)
+texture = ExtResource("6_icr8a")
+
+[node name="Card" type="Label" parent="." unique_id=1956077530]
+layout_mode = 0
+offset_left = -45.0
+offset_top = -46.0
+offset_right = 30.0
+offset_bottom = -20.0
+theme_override_fonts/font = ExtResource("3_grx2n")
+text = "Level"

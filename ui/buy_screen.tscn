@@ -1,44 +1,65 @@
 [gd_scene format=3 uid="uid://b77piyew4gukw"]
 
+[ext_resource type="Script" uid="uid://ck8rj2o3pfb1x" path="res://ui/buy_screen.gd" id="1_td7va"]
 [ext_resource type="Texture2D" uid="uid://bfhagmhhag470" path="res://assets/ui/ShopMenu.png" id="2_dge2v"]
-[ext_resource type="Script" uid="uid://cllfogj15o0xg" path="res://ui/exit.gd" id="3_td7va"]
 [ext_resource type="PackedScene" uid="uid://cr4rv8frubllr" path="res://ui/item.tscn" id="3_y8qtc"]
+[ext_resource type="Texture2D" uid="uid://8ybhbxhdmfll" path="res://assets/banana hut/BananaSmoothieSlim.png" id="5_3a4mh"]
+[ext_resource type="Texture2D" uid="uid://cmf8k8opcr132" path="res://assets/banana.png" id="6_dge2v"]
+[ext_resource type="Texture2D" uid="uid://fvrl4bocpg8h" path="res://assets/ui/MonkeyMarketSign.png" id="7_dge2v"]
 
 [node name="BuyScreen" type="Control" unique_id=817242226]
 layout_mode = 3
 anchors_preset = 0
 mouse_filter = 1
+script = ExtResource("1_td7va")
 
 [node name="Background" type="Sprite2D" parent="." unique_id=654020622]
-position = Vector2(-200, 4)
-scale = Vector2(1.296875, 1.0273438)
+position = Vector2(-167.50003, 4)
+scale = Vector2(1.4003906, 1.0273438)
 texture = ExtResource("2_dge2v")
 
 [node name="ItemOne" parent="." unique_id=851644414 instance=ExtResource("3_y8qtc")]
 layout_mode = 0
-offset_left = -489.0
-offset_top = -114.0
-offset_right = -281.0
-offset_bottom = 235.0
+offset_left = -482.0
+offset_top = -115.0
+offset_right = -274.0
+offset_bottom = 234.0
+metadata/_edit_group_ = true
 
-[node name="ItemTwo" parent="." unique_id=1280744984 instance=ExtResource("3_y8qtc")]
+[node name="ItemTwo" parent="." unique_id=24033738 instance=ExtResource("3_y8qtc")]
 layout_mode = 0
-offset_left = -489.0
+offset_left = -272.0
 offset_top = -114.0
-offset_right = -281.0
+offset_right = -64.0
 offset_bottom = 235.0
+metadata/_edit_group_ = true
 
-[node name="ItemThree" parent="." unique_id=2074387446 instance=ExtResource("3_y8qtc")]
+[node name="ItemThree" parent="." unique_id=168713694 instance=ExtResource("3_y8qtc")]
 layout_mode = 0
-offset_left = -489.0
+offset_left = -62.0
 offset_top = -114.0
-offset_right = -281.0
+offset_right = 146.0
 offset_bottom = 235.0
+metadata/_edit_group_ = true
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=530582969]
 
-[node name="Exit" type="Button" parent="." unique_id=70274004]
-layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
-script = ExtResource("3_td7va")
+[node name="Chairs" type="Sprite2D" parent="." unique_id=627735370]
+visible = false
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("5_3a4mh")
+
+[node name="Music" type="Sprite2D" parent="." unique_id=59999181]
+visible = false
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("6_dge2v")
+
+[node name="Deco" type="Sprite2D" parent="." unique_id=659239923]
+visible = false
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("6_dge2v")
+
+[node name="Sign" type="Sprite2D" parent="." unique_id=509845440]
+position = Vector2(-173.00002, -175)
+scale = Vector2(1.4687501, 1)
+texture = ExtResource("7_dge2v")
