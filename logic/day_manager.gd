@@ -28,7 +28,6 @@ func _iterate_monkey_fed() ->void:
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	curr_lv = Enums.Level.LV1
-	SignalBus.end_day.connect(_next_level)
 	SignalBus.add_money.connect(_add_money)
 	money = 0
 	_load_map()
@@ -45,6 +44,7 @@ func _add_money(x :float) -> void:
 	happy_customer_count += 1
 	if (happy_customer_count == customers_per_level[curr_lv]):
 		_reload_map()
+		print("test2")
 		
 	
 
@@ -54,25 +54,16 @@ func _reload_map() -> void:
 	_load_map()
 	
 	
-func _end_day() -> void:
-	SignalBus.end_lv.emit()
-	
+
 func _load_map() -> void:
 	var map = map_scene.instantiate()
-	
-	get_tree().current_scene.add_child(map)
+
+	get_tree().current_scene.call_deferred("add_child", map)
+	print("test")
 	
 
-func _start_next_day() -> void:
-	_next_level()
-	change_map.emit(curr_lv)  #emit new level
-	
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	#send signal to change to next level
-	if monkeys_fed >= level_limit.get(curr_lv):
-		_end_day()
 	
 	
