@@ -7,6 +7,10 @@ var upgrades : Dictionary= GameManager.upgrades
 var MAX_MONKEYS : int = upgrades['capacity']
 @onready var timer_to_new_customer: Timer = $Timer
 
+var left_hand : Enums.Order = Enums.Order.BANANA
+var right_hand : Enums.Order = Enums.Order.BANANA_SMOOTHIE
+
+
 
 var monkeys: Array[MonkeyCustomer] = []
 
@@ -68,9 +72,16 @@ func _deleted_monkey() -> void:
 	
 func _delete_monkey_at_index(index :int) -> void:
 	monkeys.get(index).queue_free()
+	_deleted_monkey()
 	current_monkey_count -= 1
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if Input.is_action_just_pressed("spawn_monkey"):
-		_spawn_new_monkey()
+		
+func _remove_monkey_with_order(order : Enums.Order) -> void:
+	for i in range(len(monkeys)):
+		if monkeys[i] != null and monkeys[i].order == order:
+			_delete_monkey_at_index(i)
+			SignalBus.add_money.emit(Enums.OrderCost[order])
+			
+			
