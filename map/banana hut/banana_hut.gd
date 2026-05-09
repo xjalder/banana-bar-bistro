@@ -1,11 +1,11 @@
 class_name BananaHut extends Node2D
 
-var monkey_scene : PackedScene = preload("/Users/ben/Desktop/banana-bar-bistro/map/banana hut/MonkeyCustomer.tscn")
+var monkey_scene : PackedScene = preload("res://map/banana hut/MonkeyCustomer.tscn")
 @onready var sprite_2d: Sprite2D = $Sprite2D
 var current_monkey_count : int = 0
 var upgrades : Dictionary= GameManager.upgrades 
 var MAX_MONKEYS : int = upgrades['capacity']
-@onready var timer_to_new_customer: Timer = $Timer
+@onready var timer_to_new_customer: Timer = $Timerss
 
 
 var monkeys: Array[MonkeyCustomer] = []
