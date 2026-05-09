@@ -2,9 +2,16 @@ extends Node2D
 @onready var left_eye: Sprite2D = $FaceSprite/LeftEye
 @onready var right_eye: Sprite2D = $FaceSprite/RightEye
 @onready var face_sprite: Sprite2D = $FaceSprite
+var droppable_scene : PackedScene = preload("res://logic/Droppable.tscn")
 
 var types: Array[Enums.Holdables] = [0, 0]
 
+var holdable_textures : Dictionary[Enums.Holdables, Texture] = {
+	Enums.Holdables.BANANA: preload("res://assets/banana hut/banana.png"),
+	Enums.Holdables.BREAD: preload("res://assets/banana hut/Bread.png"),
+	Enums.Holdables.MILK: preload("res://assets/banana hut/BananaSmoothieSlim.png"),
+	Enums.Holdables.ICE: preload("res://assets/banana hut/banana.png")
+}
 
 
 # Called when the node enters the scene tree for the first time.
@@ -46,7 +53,11 @@ func _make_product() -> void:
 	
 	
 func _spawn_product(product : Enums.Holdables) -> void:
-	pass
+	var dropped : Droppable= droppable_scene.instantiate()
+	PlayerManager.add_child(dropped)
+	dropped._create_droppable_no_sprite(product, self.position)
+	
+	
 	
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.

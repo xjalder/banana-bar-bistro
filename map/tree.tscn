@@ -14,34 +14,31 @@ texture = ExtResource("1_xyaq1")
 
 [node name="Branch" parent="." unique_id=1836666708 instance=ExtResource("2_g2vli")]
 position = Vector2(1378.3071, 0)
-scale = Vector2(5, 0.5)
+scale = Vector2(5.0158544, 0.5)
 
 [node name="Branch6" parent="." unique_id=2126246900 instance=ExtResource("2_g2vli")]
 position = Vector2(1378.3071, -333.5)
-scale = Vector2(5, 0.5)
-growable = 2
+scale = Vector2(5.0158544, 0.5)
 
 [node name="Branch7" parent="." unique_id=1440954605 instance=ExtResource("2_g2vli")]
 position = Vector2(1378.3071, 477.5)
-scale = Vector2(5, 0.5)
+scale = Vector2(5.0158544, 0.5)
 
 [node name="Branch2" parent="." unique_id=637252882 instance=ExtResource("2_g2vli")]
 position = Vector2(-1330.1455, -267.125)
-scale = Vector2(-5, 0.5)
-growable = 3
+scale = Vector2(-5.0158544, 0.5)
 
 [node name="Branch3" parent="." unique_id=1712799913 instance=ExtResource("2_g2vli")]
 position = Vector2(-1326.1013, 32.25)
-scale = Vector2(-5, 0.5)
-growable = 4
+scale = Vector2(-5.0158544, 0.5)
 
 [node name="Branch4" parent="." unique_id=395617969 instance=ExtResource("2_g2vli")]
 position = Vector2(-1326.1013, 334.5)
-scale = Vector2(-5, 0.5)
+scale = Vector2(-5.0158544, 0.5)
 
 [node name="Branch5" parent="." unique_id=791125992 instance=ExtResource("2_g2vli")]
 position = Vector2(-1326.1013, -550.875)
-scale = Vector2(-5, 0.5)
+scale = Vector2(-5.0158544, 0.5)
 
 [node name="Platform" parent="." unique_id=626660404 instance=ExtResource("3_3puuq")]
 position = Vector2(1378.3071, 111.25)

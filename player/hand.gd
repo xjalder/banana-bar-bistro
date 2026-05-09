@@ -3,7 +3,20 @@ class_name Hand extends RigidBody2D
 var grabbing : bool
 var arm_action : String
 var held_item : Sprite2D
+var droppable_scene : PackedScene = preload("res://logic/Droppable.tscn")
 
+func _ready() -> void:
+	InputHandler.left_arm_interact_pressed.connect(_drop_item_left)
+
+
+func _drop_item_left() -> void:
+	if PlayerManager.left_hand_holding == Enums.Holdables.NONE:
+		return
+	var dropped : Droppable= droppable_scene.instantiate()
+	PlayerManager.add_child(dropped)
+	dropped._create_droppable_no_sprite(PlayerManager.left_hand_holding, self.position)
+	PlayerManager.left_hand_holding = Enums.Holdables.NONE
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
 	if !grabbing:

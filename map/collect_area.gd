@@ -1,6 +1,6 @@
 class_name CollectArea extends Area2D
 
-var growable : Enums.Growables = Enums.Growables.None
+var holdable : Enums.Holdables = Enums.Holdables.NONE
 var texture : Texture
 var hands : Array[Hand]
 
@@ -19,39 +19,37 @@ func body_enter(body : Node) -> void:
 func body_exit(body : Node) -> void:
 	if body is Hand:
 		hands.erase(body)
-		
-func _get_holdable_from_growable() -> Enums.Holdables:
-	match growable:
-		Enums.Growables.Banana: return Enums.Holdables.BANANA
-		Enums.Growables.Milk: return Enums.Holdables.MILK
-		Enums.Growables.Ice: return Enums.Holdables.ICE
-		Enums.Growables.Bread: return Enums.Holdables.BREAD
-	return Enums.Holdables.NONE
 
 func handle_left_input() -> void:
-	if hands.is_empty() or get_parent().num_fruits <= 0 or !_has_empty_hand(true):
+	if get_parent() is Spawner and get_parent().num_fruits <= 0:
+		return
+	
+	if hands.is_empty() or !_has_empty_hand(true) or PlayerManager.left_hand_holding != Enums.Holdables.NONE:
 		return
 		
 	var fruit_sprite := Sprite2D.new()
 	fruit_sprite.texture = texture
-	fruit_sprite.scale *= 0.05
+	fruit_sprite.scale *=  2
 	var hand = _get_valid_hand(true)
 	hand.add_child(fruit_sprite)
 	hand.held_item = fruit_sprite
-	PlayerManager.left_hand_holding = _get_holdable_from_growable()
+	PlayerManager.left_hand_holding = holdable
 	fruit_taken.emit()
 
 func handle_right_input() -> void:
-	if hands.is_empty() or get_parent().num_fruits <= 0 or !_has_empty_hand(false):
+	if get_parent() is Spawner and get_parent().num_fruits <= 0:
+		return
+		
+	if hands.is_empty() or !_has_empty_hand(false) or PlayerManager.right_hand_holding != Enums.Holdables.NONE:
 		return
 		
 	var fruit_sprite := Sprite2D.new()
 	fruit_sprite.texture = texture
-	fruit_sprite.scale *= 0.05
+	fruit_sprite.scale *= 2
 	var hand = _get_valid_hand(false)
 	hand.add_child(fruit_sprite)
 	hand.held_item = fruit_sprite
-	PlayerManager.right_hand_holding = _get_holdable_from_growable()
+	PlayerManager.right_hand_holding = holdable
 	fruit_taken.emit()
 
 func _has_empty_hand(is_left : bool) -> bool:
