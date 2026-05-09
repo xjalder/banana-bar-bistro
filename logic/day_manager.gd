@@ -3,7 +3,7 @@ extends Node
 var money: int
 @export var curr_lv: Enums.Level
 
-const map_scene : PackedScene = preload("res://map/map.tscn")
+const main_scene : String = "res://logic/main.tscn"
 
 var level_limit: Dictionary = {
 	Enums.Level.LV1: 1, # one monkey order completed to finish day 
@@ -16,22 +16,16 @@ var level_limit: Dictionary = {
 var customers_per_level : Array[int] = [1,2,4,5,7,9,10,15,20]
 var happy_customer_count : int = 0
 
-signal change_map(curr_lv: Enums.Level)
-
 var monkeys_fed : int = 0
-
 
 func _iterate_monkey_fed() ->void:
 	monkeys_fed += 1
-	
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	curr_lv = Enums.Level.LV1
 	SignalBus.add_money.connect(_add_money)
 	money = 0
-	_load_map()
-
 func _next_level() -> void:
 	if curr_lv == Enums.Level.LV5:
 		curr_lv = Enums.Level.LV1
@@ -40,30 +34,11 @@ func _next_level() -> void:
 	GameManager.upgrades['capacity'] += 1
 
 func _add_money(x :float) -> void:
-	print("yes")
 	happy_customer_count += 1
 	if (happy_customer_count == customers_per_level[curr_lv]):
 		_reload_map()
-		print("test2")
-		
 	
-
 func _reload_map() -> void:
-	get_tree().current_scene.get_node("Map").queue_free()
 	_next_level()
-	_load_map()
-	
-	
-
-func _load_map() -> void:
-	var map = map_scene.instantiate()
-
-	get_tree().current_scene.call_deferred("add_child", map)
-	print("test")
-	
-
-	
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-	
+	await SceneManagerTscn.change_scene(get_tree().current_scene, main_scene)
 	

@@ -25,6 +25,7 @@ DayManager="*uid://cokvl7womi7xx"
 AudioManager="*uid://bcplgfqsjy3su"
 SfxManager="*uid://85i436bu54sn"
 InputHandler="*uid://bpatea0ka01ri"
+SceneManagerTscn="*uid://b6hfqvhofi5qd"
 
 [display]
 
