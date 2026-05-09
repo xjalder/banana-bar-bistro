@@ -49,6 +49,7 @@ func _input(event: InputEvent) -> void:
 		var local_pos := (get_global_mouse_position() - global_position).normalized()
 		apply_central_impulse(local_pos * 1000)
 		grabbing = true
+		
 		sprite_2d.texture = load("res://assets/player/Hand_Closed.png")
 		
 	elif event.is_action_released(arm_action):

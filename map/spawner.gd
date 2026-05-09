@@ -16,7 +16,7 @@ var current_block: int = randi_range(0,2)
 var holdable_textures : Dictionary[Enums.Holdables, Texture] = {
 	Enums.Holdables.BANANA: preload("res://assets/banana hut/banana.png"),
 	Enums.Holdables.BREAD: preload("res://assets/banana hut/Bread.png"),
-	Enums.Holdables.MILK: preload("res://assets/banana hut/BananaSmoothieSlim.png"),
+	Enums.Holdables.MILK: preload("res://assets/banana hut/MilkBottle.webp"),
 	Enums.Holdables.ICE: preload("res://assets/Ice.webp")
 }
 

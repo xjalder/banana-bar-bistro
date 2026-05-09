@@ -5,29 +5,39 @@
 [ext_resource type="Texture2D" uid="uid://wdam1rf0oymt" path="res://assets/Jungle/TreeMidd.png" id="2_xcdkv"]
 [ext_resource type="PackedScene" uid="uid://qcg3f5otv3dp" path="res://map/platform.tscn" id="3_3puuq"]
 [ext_resource type="Texture2D" uid="uid://20y5aac4j1fu" path="res://assets/map/top.webp" id="3_tomtr"]
+[ext_resource type="Script" uid="uid://ddy2f7g3os7wd" path="res://player/swingable.gd" id="6_xcdkv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xup7d"]
+size = Vector2(394, 1888)
 
 [node name="Tree" type="Node2D" unique_id=1494285108]
 
 [node name="Branch" parent="." unique_id=1836666708 instance=ExtResource("2_g2vli")]
-position = Vector2(454.00006, -67)
-scale = Vector2(3.0505292, 1.0696808)
-
-[node name="Branch6" parent="." unique_id=2126246900 instance=ExtResource("2_g2vli")]
-position = Vector2(409.00003, -612)
-scale = Vector2(2.8231685, 2.0882418)
+position = Vector2(450, -45.000004)
+scale = Vector2(3, 3)
+capacity = 1
+regrow_speed = 5
 
 [node name="Branch7" parent="." unique_id=1440954605 instance=ExtResource("2_g2vli")]
-position = Vector2(371, 619)
-scale = Vector2(2.5961075, 1.4206135)
-holdable = 5
+position = Vector2(356, 609)
+scale = Vector2(2, 2)
+holdable = 6
+capacity = 1
+regrow_speed = 5
 
 [node name="Branch3" parent="." unique_id=1712799913 instance=ExtResource("2_g2vli")]
-position = Vector2(-488, -24)
-scale = Vector2(-2.8498545, 1.2551674)
+position = Vector2(-410, -49)
+scale = Vector2(-2, 2)
+holdable = 1
+capacity = 1
+regrow_speed = 5
 
 [node name="Branch4" parent="." unique_id=395617969 instance=ExtResource("2_g2vli")]
-position = Vector2(-486.00006, 772.00006)
-scale = Vector2(2.073565, 4.490211)
+position = Vector2(-597, 720)
+scale = Vector2(3, 3)
+holdable = 5
+capacity = 1
+regrow_speed = 5
 
 [node name="Platform" parent="." unique_id=626660404 instance=ExtResource("3_3puuq")]
 position = Vector2(490, 225)
@@ -40,8 +50,8 @@ rotation = 3.1415927
 scale = Vector2(2.8536787, -2.2108514)
 
 [node name="Platform3" parent="." unique_id=1497843977 instance=ExtResource("3_3puuq")]
-position = Vector2(292, -298)
-scale = Vector2(2, 2)
+position = Vector2(509.00003, -511)
+scale = Vector2(2.7813153, 2)
 
 [node name="Platform4" parent="." unique_id=2139933727 instance=ExtResource("3_3puuq")]
 position = Vector2(-410, -390)
@@ -92,7 +102,7 @@ scale = Vector2(3.1048908, 1)
 texture = ExtResource("2_xcdkv")
 
 [node name="Sprite2D10" type="Sprite2D" parent="Trunk" unique_id=1369836540]
-position = Vector2(25.000002, -660.1548)
+position = Vector2(25.000002, -659.035)
 scale = Vector2(4.353388, 2.540328)
 texture = ExtResource("3_tomtr")
 
@@ -100,3 +110,13 @@ texture = ExtResource("3_tomtr")
 position = Vector2(-21.139677, 190.875)
 scale = Vector2(3.1048908, 1)
 texture = ExtResource("2_xcdkv")
+
+[node name="Swingable" type="Area2D" parent="." unique_id=294573093]
+position = Vector2(4, 2)
+collision_mask = 4
+script = ExtResource("6_xcdkv")
+metadata/_custom_type_script = "uid://ddy2f7g3os7wd"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Swingable" unique_id=2135945264]
+position = Vector2(-16, 92)
+shape = SubResource("RectangleShape2D_xup7d")

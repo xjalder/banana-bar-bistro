@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://wvnsc4f75mgt"
-path="res://.godot/imported/Bread.png-dd46a70f2ad4f329a36bf787cfc15ef5.ctex"
+uid="uid://g00xvx7l2j2"
+path="res://.godot/imported/BananaBreadV2.webp-95c79f7d62173cbcbb917a6fb9bd13b6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/banana hut/Bread.png"
-dest_files=["res://.godot/imported/Bread.png-dd46a70f2ad4f329a36bf787cfc15ef5.ctex"]
+source_file="res://assets/banana hut/BananaBreadV2.webp"
+dest_files=["res://.godot/imported/BananaBreadV2.webp-95c79f7d62173cbcbb917a6fb9bd13b6.ctex"]
 
 [params]
 

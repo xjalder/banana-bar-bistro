@@ -32,6 +32,7 @@ func on_grapple(is_left : bool) -> void:
 		right_arm_grappled = true
 	grappled = true
 	body.mass = 5
+	SignalBus.play_grapple_sound.emit()
 	
 func on_ungrapple(is_left : bool) -> void:
 	if is_left:

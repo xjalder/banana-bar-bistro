@@ -1,6 +1,6 @@
 class_name FruitVacuum extends Area2D
 
-const PULL_POINT := Vector2(0, -300)
+const PULL_POINT := Vector2(0, -100)
 const PULL_STRENGTH := 300.0
 
 func _ready() -> void:

@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://cvok5ewpyc0k6" path="res://map/map.tscn" id="1_uakhj"]
 [ext_resource type="Script" uid="uid://cokvl7womi7xx" path="res://logic/day_manager.gd" id="2_ki0ac"]
-[ext_resource type="Script" uid="uid://dqijv4j5x432j" path="res://logic/game_manager.gd" id="3_aamnr"]
+[ext_resource type="Script" uid="uid://ctal5tdtd6vln" path="res://logic/game_manager.gd" id="3_aamnr"]
 [ext_resource type="PackedScene" uid="uid://c2bu7gqw8rbso" path="res://player/player.tscn" id="8_b2foh"]
 
 [node name="Main" type="Node" unique_id=738397567]
