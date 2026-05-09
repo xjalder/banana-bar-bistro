@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b1q65gb3ecq1q"
-path="res://.godot/imported/mixer face.png-0c760b6dd6825da125b75b89b7afc593.ctex"
+uid="uid://drxykc1pgbk5h"
+path="res://.godot/imported/mixer_face.png-474746aa8c52a44cf7f752f1aa3a7062.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/food mixer/mixer face.png"
-dest_files=["res://.godot/imported/mixer face.png-0c760b6dd6825da125b75b89b7afc593.ctex"]
+source_file="res://assets/food mixer/mixer_face.png"
+dest_files=["res://.godot/imported/mixer_face.png-474746aa8c52a44cf7f752f1aa3a7062.ctex"]
 
 [params]
 

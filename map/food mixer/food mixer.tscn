@@ -1,12 +1,16 @@
 [gd_scene format=3 uid="uid://lyvhxu1dycvu"]
 
-[ext_resource type="Texture2D" uid="uid://b1q65gb3ecq1q" path="res://assets/food mixer/mixer face.png" id="1_0d2bf"]
+[ext_resource type="Script" uid="uid://duft7hbyfsu4q" path="res://map/food mixer/food_mixer.gd" id="1_1a3wy"]
+[ext_resource type="Texture2D" uid="uid://drxykc1pgbk5h" path="res://assets/food mixer/mixer_face.png" id="2_1a3wy"]
 
 [node name="FoodMixer" type="Node2D" unique_id=1728145295]
+script = ExtResource("1_1a3wy")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=489338280]
-texture = ExtResource("1_0d2bf")
+[node name="FaceSprite" type="Sprite2D" parent="." unique_id=489338280]
+texture = ExtResource("2_1a3wy")
 
-[node name="LeftEye" type="Sprite2D" parent="Sprite2D" unique_id=1365279197]
+[node name="LeftEye" type="Sprite2D" parent="FaceSprite" unique_id=1365279197]
+position = Vector2(-75, -50)
 
-[node name="RightEye" type="Sprite2D" parent="Sprite2D" unique_id=602810433]
+[node name="RightEye" type="Sprite2D" parent="FaceSprite" unique_id=602810433]
+position = Vector2(94, -52)
