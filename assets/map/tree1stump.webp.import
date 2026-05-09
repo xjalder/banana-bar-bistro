@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://sxnsshywfnyv"
-path="res://.godot/imported/banana.png-84b6616c778d3a74eeb050cadcb3fbca.ctex"
+uid="uid://6au2tyd0ybjb"
+path="res://.godot/imported/tree1stump.webp-aedf124a5a9e2338b57fdb2f054bda9f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/banana hut/banana.png"
-dest_files=["res://.godot/imported/banana.png-84b6616c778d3a74eeb050cadcb3fbca.ctex"]
+source_file="res://assets/map/tree1stump.webp"
+dest_files=["res://.godot/imported/tree1stump.webp-aedf124a5a9e2338b57fdb2f054bda9f.ctex"]
 
 [params]
 

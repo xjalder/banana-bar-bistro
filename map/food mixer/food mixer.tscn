@@ -1,15 +1,111 @@
 [gd_scene format=3 uid="uid://lyvhxu1dycvu"]
 
 [ext_resource type="Script" uid="uid://duft7hbyfsu4q" path="res://map/food mixer/food_mixer.gd" id="1_1a3wy"]
-[ext_resource type="Texture2D" uid="uid://drxykc1pgbk5h" path="res://assets/food mixer/mixer_face.png" id="2_1a3wy"]
+[ext_resource type="Texture2D" uid="uid://q3xerdfukgip" path="res://assets/food mixer/mixer_face.webp" id="2_1a3wy"]
+[ext_resource type="Texture2D" uid="uid://b6mf3pltgiwdd" path="res://assets/food mixer/airsheet.png" id="2_w8m5l"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1a3wy"]
 size = Vector2(19.473476, 19.158035)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_6cu7d"]
+atlas = ExtResource("2_w8m5l")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_246an"]
+atlas = ExtResource("2_w8m5l")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r33e3"]
+atlas = ExtResource("2_w8m5l")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vehbt"]
+atlas = ExtResource("2_w8m5l")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pcqrw"]
+atlas = ExtResource("2_w8m5l")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6x7mt"]
+atlas = ExtResource("2_w8m5l")
+region = Rect2(0, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ab53"]
+atlas = ExtResource("2_w8m5l")
+region = Rect2(128, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b1y8k"]
+atlas = ExtResource("2_w8m5l")
+region = Rect2(256, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wkghr"]
+atlas = ExtResource("2_w8m5l")
+region = Rect2(384, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nhw7d"]
+atlas = ExtResource("2_w8m5l")
+region = Rect2(512, 128, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4urds"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6cu7d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_246an")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r33e3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vehbt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pcqrw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6x7mt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1ab53")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b1y8k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wkghr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nhw7d")
+}],
+"loop": true,
+"name": &"default",
+"speed": 7.0
+}]
+
 [node name="FoodMixer" type="Node2D" unique_id=1728145295]
 script = ExtResource("1_1a3wy")
 
+[node name="Area2D" type="Area2D" parent="." unique_id=1467499078]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=107151604]
+visible = false
+position = Vector2(7, -425)
+scale = Vector2(19.337, 19.365242)
+shape = SubResource("RectangleShape2D_1a3wy")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D" unique_id=813685259]
+position = Vector2(-24, -405)
+scale = Vector2(4.787237, 4.787237)
+sprite_frames = SubResource("SpriteFrames_4urds")
+autoplay = "default"
+frame_progress = 0.9044556
+
 [node name="FaceSprite" type="Sprite2D" parent="." unique_id=489338280]
+position = Vector2(0, -30)
+scale = Vector2(4.366633, 4.2683735)
 texture = ExtResource("2_1a3wy")
 
 [node name="LeftEye" type="Sprite2D" parent="FaceSprite" unique_id=1365279197]
@@ -18,10 +114,3 @@ position = Vector2(-75, -50)
 [node name="RightEye" type="Sprite2D" parent="FaceSprite" unique_id=602810433]
 z_as_relative = false
 position = Vector2(94, -52)
-
-[node name="Area2D" type="Area2D" parent="." unique_id=1467499078]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=107151604]
-position = Vector2(7, -425)
-scale = Vector2(19.337, 19.365242)
-shape = SubResource("RectangleShape2D_1a3wy")

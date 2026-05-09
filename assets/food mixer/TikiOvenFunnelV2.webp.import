@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bxwwta80054d2"
-path="res://.godot/imported/Ground_1.1.png-86496e07981b22dc18311434c059ae01.ctex"
+uid="uid://cfdpfgnv0vqii"
+path="res://.godot/imported/TikiOvenFunnelV2.webp-3628b496eca3bfbc96f34c6187e742b5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/map/Ground_1.1.png"
-dest_files=["res://.godot/imported/Ground_1.1.png-86496e07981b22dc18311434c059ae01.ctex"]
+source_file="res://assets/food mixer/TikiOvenFunnelV2.webp"
+dest_files=["res://.godot/imported/TikiOvenFunnelV2.webp-3628b496eca3bfbc96f34c6187e742b5.ctex"]
 
 [params]
 

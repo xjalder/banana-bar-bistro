@@ -1,17 +1,18 @@
 [gd_scene format=3 uid="uid://cx2ds36vn501"]
 
 [ext_resource type="Script" uid="uid://ddy2f7g3os7wd" path="res://player/swingable.gd" id="1_s26d4"]
-[ext_resource type="Texture2D" uid="uid://bk0lceil3gipo" path="res://assets/tree-branch-isolated-on-transparent-background_png.png.png" id="2_oyam4"]
 [ext_resource type="Script" uid="uid://1ga77stsguuq" path="res://map/spawner.gd" id="3_oyam4"]
+[ext_resource type="Texture2D" uid="uid://6r16iwqprv2" path="res://assets/map/Branch1.png" id="3_prnlj"]
 [ext_resource type="Script" uid="uid://dcybawuouq3h8" path="res://map/collect_area.gd" id="4_prnlj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1yi38"]
+size = Vector2(9.35516, 19.2511)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oyam4"]
+size = Vector2(17.313213, 22.1978)
 
 [node name="Branch" type="Node2D" unique_id=908753985 node_paths=PackedStringArray("branch_sprite")]
 script = ExtResource("3_oyam4")
-growable = 1
 branch_sprite = NodePath("Swingable/Sprite2D")
 capacity = 10
 regrow_speed = 1
@@ -22,9 +23,14 @@ collision_mask = 4
 script = ExtResource("1_s26d4")
 
 [node name="Sprite2D" type="Sprite2D" parent="Swingable" unique_id=2066024036]
-texture = ExtResource("2_oyam4")
+position = Vector2(13, 2)
+scale = Vector2(2.192576, 3.088212)
+texture = ExtResource("3_prnlj")
+flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Swingable" unique_id=291628030]
+visible = false
+position = Vector2(-3.0000002, 7)
 scale = Vector2(20.160002, 9.080001)
 shape = SubResource("RectangleShape2D_1yi38")
 
@@ -34,5 +40,7 @@ collision_mask = 4
 script = ExtResource("4_prnlj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CollectArea" unique_id=2063405701]
-scale = Vector2(23.32, 11.92)
+visible = false
+position = Vector2(6, 3.0000002)
+scale = Vector2(15.396091, 7.807813)
 shape = SubResource("RectangleShape2D_oyam4")

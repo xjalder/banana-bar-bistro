@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://lkg55lsyvny5"
-path="res://.godot/imported/Ground_2.2.png-111de034edb2e9debeb1a45364435258.ctex"
+uid="uid://q3xerdfukgip"
+path="res://.godot/imported/mixer_face.webp-1e3df9f7c6aa7c29ac39ee1b5f76936d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/map/Ground_2.2.png"
-dest_files=["res://.godot/imported/Ground_2.2.png-111de034edb2e9debeb1a45364435258.ctex"]
+source_file="res://assets/food mixer/mixer_face.webp"
+dest_files=["res://.godot/imported/mixer_face.webp-1e3df9f7c6aa7c29ac39ee1b5f76936d.ctex"]
 
 [params]
 

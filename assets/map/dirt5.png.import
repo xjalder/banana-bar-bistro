@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cglack55ekqww"
-path="res://.godot/imported/Ground_3.3.png-8443b8c9a02ccf6e28ce70ddf7352284.ctex"
+uid="uid://crol02hfwvbv1"
+path="res://.godot/imported/dirt5.png-a352dfcc898fe3dc2388bc56ea938971.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/map/Ground_3.3.png"
-dest_files=["res://.godot/imported/Ground_3.3.png-8443b8c9a02ccf6e28ce70ddf7352284.ctex"]
+source_file="res://assets/map/dirt5.png"
+dest_files=["res://.godot/imported/dirt5.png-a352dfcc898fe3dc2388bc56ea938971.ctex"]
 
 [params]
 
