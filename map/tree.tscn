@@ -26,6 +26,7 @@ position = Vector2(-488, -24)
 scale = Vector2(-2.8498545, 1.2551674)
 
 [node name="Branch4" parent="." unique_id=395617969 instance=ExtResource("2_g2vli")]
+texture_filter = 1
 position = Vector2(-486.00006, 772.00006)
 scale = Vector2(2.073565, 4.490211)
 

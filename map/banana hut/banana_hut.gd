@@ -10,8 +10,6 @@ var MAX_MONKEYS : int = GameManager.upgrades['capacity']
 var left_hand : Enums.Holdables = Enums.Holdables.BANANA
 var right_hand : Enums.Holdables = Enums.Holdables.BANANA_SMOOTHIE
 
-
-
 var monkeys: Array[MonkeyCustomer] = []
 
 signal deleted_monkey
@@ -85,6 +83,7 @@ func _remove_monkey_with_order(order : Enums.Holdables) -> bool:
 	for i in range(len(monkeys)):
 		if monkeys[i] != null and monkeys[i].order == order:
 			_delete_monkey_at_index(i)
+			SignalBus.happy_customer.emit(self)
 			SignalBus.add_money.emit(Enums.OrderCost[order] * upgrades["money_multiplier"])
 			return true
 	return false

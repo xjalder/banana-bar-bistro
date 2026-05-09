@@ -39,7 +39,7 @@ func _next_level() -> void:
 func _end_day() -> void:
 	SignalBus.end_lv.emit()
 	
-	
+
 
 func _start_next_day() -> void:
 	_next_level()

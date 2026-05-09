@@ -45,11 +45,6 @@ scale = Vector2(-4.4332275, 2.8182962)
 position = Vector2(501, -1752)
 scale = Vector2(2.8853328, 2.42739)
 
-[node name="Platform2" parent="." unique_id=1430930194 instance=ExtResource("6_igw4o")]
-position = Vector2(-821.32245, 280.75)
-rotation = 3.1415927
-scale = Vector2(24.91604, -0.63948405)
-
 [node name="Platform3" parent="." unique_id=1497843977 instance=ExtResource("6_igw4o")]
 position = Vector2(507, -2692)
 scale = Vector2(2.9809918, 1.6232952)

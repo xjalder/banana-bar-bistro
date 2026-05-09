@@ -72,7 +72,7 @@ sources/5 = SubResource("TileSetAtlasSource_xar17")
 [node name="Map" type="Node2D" unique_id=1327460236]
 
 [node name="Treemid" parent="." unique_id=1521149575 instance=ExtResource("8_kxmgb")]
-position = Vector2(54, -73)
+position = Vector2(54, -36)
 scale = Vector2(1, 0.8)
 
 [node name="Tree2" parent="." unique_id=1494285108 instance=ExtResource("3_7lyie")]
