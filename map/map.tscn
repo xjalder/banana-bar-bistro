@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://c5d5sejcrnet8" path="res://map/tree.tscn" id="3_7lyie"]
 [ext_resource type="Texture2D" uid="uid://deniuwn4q43vj" path="res://assets/map/backdrop.png" id="4_58xwf"]
 [ext_resource type="PackedScene" uid="uid://lyvhxu1dycvu" path="res://map/food mixer/food mixer.tscn" id="4_lgq1i"]
+[ext_resource type="Script" path="res://map/dropped_items.gd" id="5_kffv2"]
 [ext_resource type="Texture2D" uid="uid://dahg03e0j23eo" path="res://assets/map/Background2.webp" id="5_w1ifk"]
 [ext_resource type="Texture2D" uid="uid://cch6fvki0xk23" path="res://assets/map/dirt1.webp" id="6_i5grx"]
 [ext_resource type="Texture2D" uid="uid://c8yb7ycgdacc8" path="res://assets/map/dirt2.webp" id="7_lct0g"]
@@ -81,7 +82,8 @@ position = Vector2(2361, -837)
 position = Vector2(-2124, -842)
 
 [node name="FoodMixer" parent="." unique_id=1728145295 instance=ExtResource("4_lgq1i")]
-position = Vector2(49, -569)
+position = Vector2(27, -568)
+scale = Vector2(3.9854012, 3.9854012)
 
 [node name="Parallax2D2" type="Parallax2D" parent="." unique_id=267267703]
 scroll_scale = Vector2(0.2, 0.4)
@@ -159,3 +161,6 @@ texture = ExtResource("15_sjjp3")
 position = Vector2(-2579, 107)
 scale = Vector2(1.5599122, 1.5599122)
 texture = ExtResource("14_w1ifk")
+
+[node name="DroppedItems" type="Node2D" parent="." unique_id=1385494066]
+script = ExtResource("5_kffv2")
