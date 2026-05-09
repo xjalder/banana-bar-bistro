@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://wvnsc4f75mgt"
-path="res://.godot/imported/Bread.png-dd46a70f2ad4f329a36bf787cfc15ef5.ctex"
+uid="uid://qharpvpfxhca"
+path="res://.godot/imported/MilkBottle.webp-66f90976030bf49fda777535c45c46dd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/banana hut/Bread.png"
-dest_files=["res://.godot/imported/Bread.png-dd46a70f2ad4f329a36bf787cfc15ef5.ctex"]
+source_file="res://assets/banana hut/MilkBottle.webp"
+dest_files=["res://.godot/imported/MilkBottle.webp-66f90976030bf49fda777535c45c46dd.ctex"]
 
 [params]
 

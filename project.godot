@@ -22,6 +22,7 @@ SignalBus="*uid://bhq51dwmcoap8"
 GameManager="*res://logic/game_manager.gd"
 InputHandler="*res://logic/input_handler.gd"
 PlayerManager="*res://logic/player_manager.gd"
+AudioManager="*uid://bcplgfqsjy3su"
 
 [dotnet]
 
@@ -95,4 +96,5 @@ interact={
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"

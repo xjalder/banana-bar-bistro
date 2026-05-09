@@ -7,8 +7,6 @@ var upgrades : Dictionary= GameManager.upgrades
 var MAX_MONKEYS : int = GameManager.upgrades['capacity']
 @onready var timer_to_new_customer: Timer = $Timer
 
-var left_hand : Enums.Holdables = Enums.Holdables.BANANA
-var right_hand : Enums.Holdables = Enums.Holdables.BANANA_SMOOTHIE
 
 
 
@@ -24,9 +22,23 @@ func _ready() -> void:
 	timer_to_new_customer.wait_time = upgrades["time_to_new_customer"]
 	timer_to_new_customer.one_shot = false
 	timer_to_new_customer.start()
+	_create_stool()
 	
 	
 
+func _create_stool() -> void:
+	var parent_size : Vector2 = sprite_2d.texture.get_size()
+	for i in range(MAX_MONKEYS):
+		var x_pos: float = -parent_size.x / 2.0 + (parent_size.x * i) / (MAX_MONKEYS - 1)
+		var y_pos : int = parent_size.y/2 - parent_size.y/9
+		var new_sprite = Sprite2D.new()
+		new_sprite.texture = load("res://assets/banana hut/WoodenStoolV2.webp")
+		new_sprite.position = Vector2(x_pos, y_pos)
+		add_child(new_sprite)
+		
+		
+	
+	
 
 func _on_timer_timeout():
 	_spawn_new_monkey()

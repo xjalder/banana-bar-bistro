@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://c5d5sejcrnet8" path="res://map/tree.tscn" id="3_7lyie"]
 [ext_resource type="Texture2D" uid="uid://deniuwn4q43vj" path="res://assets/map/backdrop.png" id="4_58xwf"]
 [ext_resource type="PackedScene" uid="uid://lyvhxu1dycvu" path="res://map/food mixer/food mixer.tscn" id="4_lgq1i"]
-[ext_resource type="Script" path="res://map/dropped_items.gd" id="5_kffv2"]
+[ext_resource type="Script" uid="uid://dcn8ilqkme8d3" path="res://map/dropped_items.gd" id="5_kffv2"]
 [ext_resource type="Texture2D" uid="uid://dahg03e0j23eo" path="res://assets/map/Background2.webp" id="5_w1ifk"]
 [ext_resource type="Texture2D" uid="uid://cch6fvki0xk23" path="res://assets/map/dirt1.webp" id="6_i5grx"]
 [ext_resource type="Texture2D" uid="uid://c8yb7ycgdacc8" path="res://assets/map/dirt2.webp" id="7_lct0g"]
@@ -17,6 +17,9 @@
 [ext_resource type="Texture2D" uid="uid://de1gjq27tx834" path="res://assets/map/Bush_2.png" id="13_58xwf"]
 [ext_resource type="Texture2D" uid="uid://b1iqq726ultwh" path="res://assets/map/Fern.png" id="14_w1ifk"]
 [ext_resource type="Texture2D" uid="uid://bsl068aqbtwfn" path="res://assets/map/Bush_1.1.png" id="15_sjjp3"]
+[ext_resource type="Texture2D" uid="uid://b5xyaedviirpg" path="res://assets/banana hut/hut-clipart-md.png" id="18_g0u07"]
+[ext_resource type="Texture2D" uid="uid://4bxssffpjnfs" path="res://assets/Jungle/cobble.webp" id="18_sjjp3"]
+[ext_resource type="Texture2D" uid="uid://cpqt4i6mv6hq8" path="res://assets/banana hut/monkey-cute-sticker-transparent-free-png.webp" id="19_8lto5"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_5jdw0"]
 
@@ -72,7 +75,7 @@ sources/5 = SubResource("TileSetAtlasSource_xar17")
 [node name="Map" type="Node2D" unique_id=1327460236]
 
 [node name="Treemid" parent="." unique_id=1521149575 instance=ExtResource("8_kxmgb")]
-position = Vector2(54, -73)
+position = Vector2(54, -22)
 scale = Vector2(1, 0.8)
 
 [node name="Tree2" parent="." unique_id=1494285108 instance=ExtResource("3_7lyie")]
@@ -82,7 +85,7 @@ position = Vector2(2361, -837)
 position = Vector2(-2124, -842)
 
 [node name="FoodMixer" parent="." unique_id=1728145295 instance=ExtResource("4_lgq1i")]
-position = Vector2(27, -568)
+position = Vector2(27, -570)
 scale = Vector2(3.9854012, 3.9854012)
 
 [node name="Parallax2D2" type="Parallax2D" parent="." unique_id=267267703]
@@ -164,3 +167,17 @@ texture = ExtResource("14_w1ifk")
 
 [node name="DroppedItems" type="Node2D" parent="." unique_id=1385494066]
 script = ExtResource("5_kffv2")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1817694307]
+position = Vector2(-5409, 107)
+scale = Vector2(0.26360357, 0.26360357)
+texture = ExtResource("18_g0u07")
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=1291877769]
+position = Vector2(-5447, 155.00002)
+scale = Vector2(0.26360357, 0.26360357)
+texture = ExtResource("19_8lto5")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1690815246]
+position = Vector2(-5360, 159)
+texture = ExtResource("18_sjjp3")

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://wvnsc4f75mgt"
-path="res://.godot/imported/Bread.png-dd46a70f2ad4f329a36bf787cfc15ef5.ctex"
+uid="uid://4bxssffpjnfs"
+path="res://.godot/imported/cobble.webp-69ff4a74a36cee3ecde141941bb7b6ea.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/banana hut/Bread.png"
-dest_files=["res://.godot/imported/Bread.png-dd46a70f2ad4f329a36bf787cfc15ef5.ctex"]
+source_file="res://assets/Jungle/cobble.webp"
+dest_files=["res://.godot/imported/cobble.webp-69ff4a74a36cee3ecde141941bb7b6ea.ctex"]
 
 [params]
 

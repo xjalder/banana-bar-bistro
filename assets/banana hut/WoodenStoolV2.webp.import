@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://wvnsc4f75mgt"
-path="res://.godot/imported/Bread.png-dd46a70f2ad4f329a36bf787cfc15ef5.ctex"
+uid="uid://dc8jy5exclp1r"
+path="res://.godot/imported/WoodenStoolV2.webp-9a64a0f3e816b4588e0f655c7a1d64ff.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/banana hut/Bread.png"
-dest_files=["res://.godot/imported/Bread.png-dd46a70f2ad4f329a36bf787cfc15ef5.ctex"]
+source_file="res://assets/banana hut/WoodenStoolV2.webp"
+dest_files=["res://.godot/imported/WoodenStoolV2.webp-9a64a0f3e816b4588e0f655c7a1d64ff.ctex"]
 
 [params]
 

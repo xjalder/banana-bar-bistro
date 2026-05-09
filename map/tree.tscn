@@ -9,25 +9,31 @@
 [node name="Tree" type="Node2D" unique_id=1494285108]
 
 [node name="Branch" parent="." unique_id=1836666708 instance=ExtResource("2_g2vli")]
-position = Vector2(454.00006, -67)
-scale = Vector2(3.0505292, 1.0696808)
-
-[node name="Branch6" parent="." unique_id=2126246900 instance=ExtResource("2_g2vli")]
-position = Vector2(409.00003, -612)
-scale = Vector2(2.8231685, 2.0882418)
+position = Vector2(450, -45.000004)
+scale = Vector2(3, 3)
+capacity = 1
+regrow_speed = 5
 
 [node name="Branch7" parent="." unique_id=1440954605 instance=ExtResource("2_g2vli")]
-position = Vector2(371, 619)
-scale = Vector2(2.5961075, 1.4206135)
-holdable = 5
+position = Vector2(356, 609)
+scale = Vector2(2, 2)
+holdable = 6
+capacity = 1
+regrow_speed = 5
 
 [node name="Branch3" parent="." unique_id=1712799913 instance=ExtResource("2_g2vli")]
-position = Vector2(-488, -24)
-scale = Vector2(-2.8498545, 1.2551674)
+position = Vector2(-410, -49)
+scale = Vector2(-2, 2)
+holdable = 1
+capacity = 1
+regrow_speed = 5
 
 [node name="Branch4" parent="." unique_id=395617969 instance=ExtResource("2_g2vli")]
-position = Vector2(-486.00006, 772.00006)
-scale = Vector2(2.073565, 4.490211)
+position = Vector2(-597, 720)
+scale = Vector2(3, 3)
+holdable = 5
+capacity = 1
+regrow_speed = 5
 
 [node name="Platform" parent="." unique_id=626660404 instance=ExtResource("3_3puuq")]
 position = Vector2(490, 225)
@@ -40,8 +46,8 @@ rotation = 3.1415927
 scale = Vector2(2.8536787, -2.2108514)
 
 [node name="Platform3" parent="." unique_id=1497843977 instance=ExtResource("3_3puuq")]
-position = Vector2(292, -298)
-scale = Vector2(2, 2)
+position = Vector2(509.00003, -511)
+scale = Vector2(2.7813153, 2)
 
 [node name="Platform4" parent="." unique_id=2139933727 instance=ExtResource("3_3puuq")]
 position = Vector2(-410, -390)
