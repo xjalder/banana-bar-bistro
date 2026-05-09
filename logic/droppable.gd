@@ -54,7 +54,7 @@ func _create_droppable(sprite : Sprite2D, type : Enums.Holdables) -> void:
 func _create_droppable_no_sprite(type : Enums.Holdables, position :Vector2) -> void:
 	if type == Enums.Holdables.BANANA:
 		sprite_2d.texture = load("res://assets/banana.png")
-	
+
 	elif type == Enums.Holdables.BANANA_BREAD:
 		sprite_2d.texture = load("res://assets/banana hut/BananaBreadV2.webp")
 	elif type == Enums.Holdables.BREAD:
@@ -62,7 +62,8 @@ func _create_droppable_no_sprite(type : Enums.Holdables, position :Vector2) -> v
 	elif type == Enums.Holdables.BANANA_SMOOTHIE:
 		sprite_2d.texture = load("res://assets/banana hut/BananaSmoothieSlim.png")
 	elif type == Enums.Holdables.BANANA_ICECREAM:
-		sprite_2d.texture = load("res://assets/BananaSplit.webp")
+		print("HEASLD")
+		sprite_2d.texture = load("res://assets/banana hut/BananaSplit.png")
 	elif type == Enums.Holdables.ICE:
 		sprite_2d.texture = load("res://assets/Ice.webp")
 	elif type == Enums.Holdables.MILK:
