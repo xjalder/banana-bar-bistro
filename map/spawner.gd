@@ -5,6 +5,8 @@ class_name Spawner extends Node2D
 @export var capacity : int
 @export var regrow_speed : int
 
+@onready var collect : CollectArea = $CollectArea
+
 var regrow_timer : Timer
 var texture : Texture
 var num_fruits : int
@@ -23,6 +25,8 @@ func _ready() -> void:
 		return
 	
 	texture = growable_textures.get(growable)
+	collect.growable = growable
+	collect.texture = texture
 	
 	var full := branch_sprite.get_rect()
 	var margin := 30.0
@@ -51,6 +55,7 @@ func _ready() -> void:
 	add_child(regrow_timer)
 	
 	regrow_timer.start()
+	collect.fruit_taken.connect(remove_fruit)
 
 func _regrow() -> void:
 	var box: Rect2 = bound_blocks[current_block]
@@ -68,4 +73,13 @@ func _regrow() -> void:
 	num_fruits += 1
 	if num_fruits >= capacity:
 		regrow_timer.stop()
-	
+
+func remove_fruit() -> void:
+	if num_fruits == 0:
+		return
+		
+	for child in get_children():
+		if child is Sprite2D:
+			child.queue_free()
+			num_fruits -= 1
+			return
