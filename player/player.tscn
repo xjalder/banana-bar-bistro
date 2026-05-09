@@ -4,6 +4,10 @@
 [ext_resource type="Script" uid="uid://2sop8jeytx05" path="res://player/player.gd" id="1_yw30f"]
 [ext_resource type="Script" uid="uid://cf64h7p18bjq" path="res://player/camera.gd" id="2_g1dw6"]
 [ext_resource type="PackedScene" uid="uid://nvmw36h1tqir" path="res://player/arm.tscn" id="2_yw30f"]
+[ext_resource type="PackedScene" uid="uid://b77piyew4gukw" path="res://ui/buy_screen.tscn" id="4_rgyib"]
+[ext_resource type="PackedScene" uid="uid://e73ewxlcxswc" path="res://ui/pause_screen.tscn" id="5_hg6s5"]
+[ext_resource type="PackedScene" uid="uid://cpytfc87fdm8u" path="res://ui/order_card.tscn" id="6_8t03j"]
+[ext_resource type="PackedScene" uid="uid://caini1s7nis7r" path="res://ui/money.tscn" id="7_2ieo8"]
 
 [sub_resource type="Gradient" id="Gradient_ig7tw"]
 offsets = PackedFloat32Array(0, 0.012345679)
@@ -36,10 +40,24 @@ texture = SubResource("GradientTexture1D_0xm2m")
 position = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_0xm2m")
 
-[node name="Camera2D" type="Camera2D" parent="Body" unique_id=1559137683]
+[node name="Camera2D" type="Camera2D" parent="Body" unique_id=1238034262]
 zoom = Vector2(0.5, 0.5)
-position_smoothing_enabled = true
 script = ExtResource("2_g1dw6")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Body/Camera2D" unique_id=976656624]
+
+[node name="BuyScreen" parent="Body/Camera2D/CanvasLayer" unique_id=416333969 instance=ExtResource("4_rgyib")]
+visible = false
+position = Vector2(687, 324)
+
+[node name="PauseScreen" parent="Body/Camera2D/CanvasLayer" unique_id=1101154008 instance=ExtResource("5_hg6s5")]
+visible = false
+
+[node name="Orders" parent="Body/Camera2D/CanvasLayer" unique_id=1990255410 instance=ExtResource("6_8t03j")]
+visible = false
+
+[node name="Money" parent="Body/Camera2D/CanvasLayer" unique_id=478792395 instance=ExtResource("7_2ieo8")]
+position = Vector2(127, 47)
 
 [node name="LeftArm" parent="." unique_id=2147052751 instance=ExtResource("2_yw30f")]
 position = Vector2(-5, -60)
