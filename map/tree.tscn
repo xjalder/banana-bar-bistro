@@ -35,6 +35,7 @@ scale = Vector2(-5.0158544, 0.5)
 [node name="Branch4" parent="." unique_id=395617969 instance=ExtResource("2_g2vli")]
 position = Vector2(-1326.1013, 334.5)
 scale = Vector2(-5.0158544, 0.5)
+holdable = 4
 
 [node name="Branch5" parent="." unique_id=791125992 instance=ExtResource("2_g2vli")]
 position = Vector2(-1326.1013, -550.875)

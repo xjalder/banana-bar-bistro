@@ -8,7 +8,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c0jnu"]
 
 [node name="Droppable" type="RigidBody2D" unique_id=1294692770]
-collision_layer = 0
+collision_layer = 32
 script = ExtResource("1_utneh")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=478254860]

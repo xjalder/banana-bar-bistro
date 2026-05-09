@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bxwwta80054d2" path="res://assets/map/Ground_1.1.png" id="6_kxmgb"]
 [ext_resource type="Texture2D" uid="uid://lkg55lsyvny5" path="res://assets/map/Ground_2.2.png" id="7_e8e5r"]
 [ext_resource type="Texture2D" uid="uid://cglack55ekqww" path="res://assets/map/Ground_3.3.png" id="8_112ik"]
+[ext_resource type="Script" path="res://map/dropped_items.gd" id="8_kxmgb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i5grx"]
 texture = ExtResource("6_kxmgb")
@@ -83,7 +84,7 @@ position = Vector2(-3152, -1153)
 scale = Vector2(0.68, 2)
 
 [node name="FoodMixer" parent="." unique_id=1728145295 instance=ExtResource("4_lgq1i")]
-position = Vector2(-767, -203)
+position = Vector2(-767, -94)
 
 [node name="Parallax2D" type="Parallax2D" parent="." unique_id=730195881]
 scroll_scale = Vector2(0.5, 1)
@@ -121,3 +122,6 @@ collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RightBoundary" unique_id=1720354399]
 shape = SubResource("WorldBoundaryShape2D_kxmgb")
+
+[node name="DroppedItems" type="Node2D" parent="." unique_id=1050428012]
+script = ExtResource("8_kxmgb")
