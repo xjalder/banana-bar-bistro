@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cd7ccg6awoyml"
-path="res://.godot/imported/banana.png-84b6616c778d3a74eeb050cadcb3fbca.ctex"
+uid="uid://8ybhbxhdmfll"
+path="res://.godot/imported/BananaSmoothieSlim.png-b77ba06a249e4c65abadd9e1e3b8acbf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/banana hut/banana.png"
-dest_files=["res://.godot/imported/banana.png-84b6616c778d3a74eeb050cadcb3fbca.ctex"]
+source_file="res://assets/banana hut/BananaSmoothieSlim.png"
+dest_files=["res://.godot/imported/BananaSmoothieSlim.png-b77ba06a249e4c65abadd9e1e3b8acbf.ctex"]
 
 [params]
 
