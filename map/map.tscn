@@ -2,8 +2,9 @@
 
 [ext_resource type="PackedScene" uid="uid://cteheyqwjxrx8" path="res://map/banana hut/BananaHut.tscn" id="2_4hjbm"]
 [ext_resource type="PackedScene" uid="uid://c5d5sejcrnet8" path="res://map/tree.tscn" id="3_7lyie"]
+[ext_resource type="Texture2D" uid="uid://deniuwn4q43vj" path="res://assets/map/backdrop.png" id="4_58xwf"]
 [ext_resource type="PackedScene" uid="uid://lyvhxu1dycvu" path="res://map/food mixer/food mixer.tscn" id="4_lgq1i"]
-[ext_resource type="Texture2D" uid="uid://opy0ocex4xxl" path="res://assets/map/3756A818-C59D-473B-BD83-1BFD8B4AC7DC.jpeg" id="5_kffv2"]
+[ext_resource type="Texture2D" uid="uid://dahg03e0j23eo" path="res://assets/map/Background2.webp" id="5_w1ifk"]
 [ext_resource type="Texture2D" uid="uid://cch6fvki0xk23" path="res://assets/map/dirt1.webp" id="6_i5grx"]
 [ext_resource type="Texture2D" uid="uid://c8yb7ycgdacc8" path="res://assets/map/dirt2.webp" id="7_lct0g"]
 [ext_resource type="Texture2D" uid="uid://bppnqidxfr0ps" path="res://assets/map/dirt3.webp" id="8_k8tny"]
@@ -70,8 +71,8 @@ sources/5 = SubResource("TileSetAtlasSource_xar17")
 [node name="Map" type="Node2D" unique_id=1327460236]
 
 [node name="Treemid" parent="." unique_id=1521149575 instance=ExtResource("8_kxmgb")]
-position = Vector2(70, -1197)
-scale = Vector2(0.82387257, 2.4231517)
+position = Vector2(54, -73)
+scale = Vector2(1, 0.8)
 
 [node name="Tree2" parent="." unique_id=1494285108 instance=ExtResource("3_7lyie")]
 position = Vector2(2361, -837)
@@ -82,23 +83,29 @@ position = Vector2(-2124, -842)
 [node name="FoodMixer" parent="." unique_id=1728145295 instance=ExtResource("4_lgq1i")]
 position = Vector2(49, -569)
 
-[node name="Parallax2D" type="Parallax2D" parent="." unique_id=730195881]
-scroll_scale = Vector2(0.5, 1)
+[node name="Parallax2D2" type="Parallax2D" parent="." unique_id=267267703]
+scroll_scale = Vector2(0.2, 0.4)
 scroll_offset = Vector2(0, -300)
-repeat_size = Vector2(1500, 0)
+repeat_size = Vector2(2500, 0)
+repeat_times = 10
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D2" unique_id=1196197540]
+z_index = -1
+position = Vector2(-961.00006, -1615)
+scale = Vector2(2.1659722, 3.5861106)
+texture = ExtResource("4_58xwf")
+
+[node name="Parallax2D" type="Parallax2D" parent="." unique_id=730195881]
+scroll_scale = Vector2(0.5, 0.5)
+scroll_offset = Vector2(0, -300)
+repeat_size = Vector2(2500, 0)
 repeat_times = 10
 
 [node name="Sprite2D" type="Sprite2D" parent="Parallax2D" unique_id=1284954560]
 z_index = -1
-position = Vector2(-199, -676)
-scale = Vector2(3, 6.0849633)
-texture = ExtResource("5_kffv2")
-
-[node name="Parallax2D2" type="Parallax2D" parent="." unique_id=1066532567]
-visible = false
-
-[node name="Sprite2D" type="Sprite2D" parent="Parallax2D2" unique_id=334165738]
-texture = ExtResource("5_kffv2")
+position = Vector2(-1248, -1028.5)
+scale = Vector2(2, 4.3416667)
+texture = ExtResource("5_w1ifk")
 
 [node name="LeftBoundary" type="StaticBody2D" parent="." unique_id=1674770999]
 position = Vector2(-5000, 200)
@@ -118,8 +125,7 @@ collision_mask = 0
 shape = SubResource("WorldBoundaryShape2D_kxmgb")
 
 [node name="BananaHut" parent="." unique_id=2064569661 instance=ExtResource("2_4hjbm")]
-visible = false
-position = Vector2(35, -3360)
+position = Vector2(-14, -3189)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=813696785]
 position = Vector2(10, 178)

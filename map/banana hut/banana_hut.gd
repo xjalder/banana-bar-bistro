@@ -64,6 +64,8 @@ func _spawn_new_monkey() -> void:
 
 func _spawn_monkey_customer_at_position(position : Vector2) -> MonkeyCustomer:
 	var monkey : MonkeyCustomer = monkey_scene.instantiate()
+	var skin : int = randi_range(1, 4)
+	monkey.get_node("Sprite2D").texture = load("res://assets/banana hut/MonkeyCustomer%s.webp" % skin)
 	monkey.position = Vector2(position)
 	return monkey
 	
