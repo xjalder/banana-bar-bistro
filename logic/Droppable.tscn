@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dntiqvymjvh75"]
+
+[ext_resource type="Script" uid="uid://wbq0s8k80roa" path="res://logic/droppable.gd" id="1_utneh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c0jnu"]
+
+[node name="Droppable" type="Node2D" unique_id=2097309084]
+script = ExtResource("1_utneh")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=1925136345]
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D" unique_id=1758117453]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=240905812]
+position = Vector2(-6, -8)
+shape = SubResource("RectangleShape2D_c0jnu")

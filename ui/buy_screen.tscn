@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://e6fw7mmqkpep" path="res://logic/buy_screen.gd" id="1_6s6f3"]
 [ext_resource type="Texture2D" uid="uid://ntkdcck5cq4g" path="res://assets/upgrades/brown.png" id="2_sx2df"]
-[ext_resource type="Texture2D" uid="uid://8ybhbxhdmfll" path="res://assets/food/BananaSmoothieSlim.png" id="2_wxqgv"]
+[ext_resource type="Texture2D" uid="uid://8ybhbxhdmfll" path="res://assets/banana hut/BananaSmoothieSlim.png" id="2_wxqgv"]
 [ext_resource type="Script" uid="uid://bghaag3paxmbh" path="res://ui/item_one.gd" id="3_uffs1"]
 [ext_resource type="Texture2D" uid="uid://cfb2gmkfjbjra" path="res://assets/upgrades/green.png" id="4_wixkr"]
 [ext_resource type="Texture2D" uid="uid://c5uwrv8kcvdud" path="res://assets/upgrades/red.png" id="5_brqxh"]

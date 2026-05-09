@@ -23,8 +23,11 @@ func _ready() -> void:
 		_spawn_sprite(order_sprite, "res://assets/banana hut/banana_bread.png")
 		order = Enums.Order.BANANA_BREAD
 	elif (values[x] == Enums.Order.BANANA_SMOOTHIE):
-		_spawn_sprite(order_sprite, "res://assets/banana hut/smoothie.png")
+		_spawn_sprite(order_sprite, "res://assets/banana hut/BananaSmoothieSlim.png")
 		order = Enums.Order.BANANA_SMOOTHIE
+	elif (values[x] == Enums.Order.BANANA_ICECREAM):
+		_spawn_sprite(order_sprite, "res://assets/banana hut/BananaSplit.webp")
+		order = Enums.Order.BANANA_ICECREAM
 		
 
 func _spawn_sprite(scene : PackedScene, path :String) -> void:

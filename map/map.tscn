@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bw52m2ogcluy7" path="res://icon.svg" id="2_7lyie"]
 [ext_resource type="PackedScene" uid="uid://c5d5sejcrnet8" path="res://map/tree.tscn" id="3_7lyie"]
 [ext_resource type="PackedScene" uid="uid://lyvhxu1dycvu" path="res://map/food mixer/food mixer.tscn" id="4_lgq1i"]
+[ext_resource type="Script" uid="uid://dcn8ilqkme8d3" path="res://map/dropped_items.gd" id="5_kffv2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1cmj6"]
 size = Vector2(20.946732, 29.903465)
@@ -31,3 +32,6 @@ scale = Vector2(0.68, 2)
 
 [node name="FoodMixer" parent="." unique_id=1728145295 instance=ExtResource("4_lgq1i")]
 position = Vector2(-767, -203)
+
+[node name="DroppedItems" type="Node2D" parent="." unique_id=286471115]
+script = ExtResource("5_kffv2")
