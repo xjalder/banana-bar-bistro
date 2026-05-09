@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://dlfbgyi6xh5t"]
+
+[ext_resource type="Script" uid="uid://odcgxyf31vjm" path="res://map/banana hut/monkey_customer.gd" id="1_ioj3v"]
+[ext_resource type="Texture2D" uid="uid://cpqt4i6mv6hq8" path="res://assets/banana hut/monkey-cute-sticker-transparent-free-png.webp" id="1_p7abg"]
+[ext_resource type="Texture2D" uid="uid://bb56ayvfm058j" path="res://assets/banana hut/p_under.webp" id="3_wew6a"]
+[ext_resource type="Texture2D" uid="uid://0pr3rq6hlqfb" path="res://assets/banana hut/progess_over.webp" id="4_h5tgs"]
+
+[node name="MonkeyCustomer" type="Node2D" unique_id=873786103]
+script = ExtResource("1_ioj3v")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=381512618]
+position = Vector2(0, 1)
+texture = ExtResource("1_p7abg")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="." unique_id=897921258]
+offset_left = -256.0
+offset_top = -471.0
+offset_right = 998.0
+offset_bottom = 783.0
+scale = Vector2(0.35882837, 0.36210367)
+fill_mode = 3
+texture_under = ExtResource("3_wew6a")
+texture_progress = ExtResource("4_h5tgs")
+texture_progress_offset = Vector2(0, 50)
+metadata/_edit_use_anchors_ = true
