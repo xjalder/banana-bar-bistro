@@ -13,15 +13,15 @@ size = Vector2(20.946732, 29.903465)
 z_index = 1
 walkspeed = 40.0
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1716734742]
+[node name="Floor" type="StaticBody2D" parent="." unique_id=1716734742]
 position = Vector2(0, 366)
 scale = Vector2(17.720003, 2.8)
 collision_mask = 0
 
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=1011172669]
+[node name="Sprite2D" type="Sprite2D" parent="Floor" unique_id=1011172669]
 texture = ExtResource("2_7lyie")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1144853885]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor" unique_id=1144853885]
 scale = Vector2(5.640002, 5.880001)
 shape = SubResource("RectangleShape2D_1cmj6")
 
