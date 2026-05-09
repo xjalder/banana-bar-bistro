@@ -1,9 +1,12 @@
-extends Button
+class_name ItemCard extends Button
 
-var item : String = 'capacity'
+@export var item : String
+@onready var item_sprite: Sprite2D = $ItemSprite
+@onready var item_texts: Label = $Description
+@onready var item_cost : Label = $Cost
 
 #handles individial items
-func _send_buy(item : String) -> void:
+func _send_buy() -> void:
 	if $OnOff.frame == 2:
 		return
 	
@@ -27,12 +30,6 @@ func _exit() -> void:
 func _ready() -> void:
 	$OnOff.frame = 0
 	$Sold.hide()
-	self.pressed.connect(_send_buy.bind(item))
+	self.pressed.connect(_send_buy)
 	self.mouse_entered.connect(_hover_over)
 	self.mouse_exited.connect(_exit)
-	
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass

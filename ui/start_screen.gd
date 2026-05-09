@@ -1,14 +1,12 @@
 extends Control
 
-#manages the spawn of buttons
-# or items that are decided from level and
-# handles signal messages
-signal send_order(_send_buy)
+func _show_all() -> void:
+	
+	
+func _hide_all() -> void:
 
-#each individual enum
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass
 	
 
 
