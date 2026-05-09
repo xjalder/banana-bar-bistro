@@ -21,5 +21,4 @@ scale = Vector2(0.35882837, 0.36210367)
 fill_mode = 3
 texture_under = ExtResource("3_wew6a")
 texture_progress = ExtResource("4_h5tgs")
-texture_progress_offset = Vector2(0, 50)
 metadata/_edit_use_anchors_ = true
