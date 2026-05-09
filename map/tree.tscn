@@ -19,7 +19,6 @@ scale = Vector2(5.0158544, 0.5)
 [node name="Branch6" parent="." unique_id=2126246900 instance=ExtResource("2_g2vli")]
 position = Vector2(1378.3071, -333.5)
 scale = Vector2(5.0158544, 0.5)
-growable = 2
 
 [node name="Branch7" parent="." unique_id=1440954605 instance=ExtResource("2_g2vli")]
 position = Vector2(1378.3071, 477.5)
@@ -28,12 +27,10 @@ scale = Vector2(5.0158544, 0.5)
 [node name="Branch2" parent="." unique_id=637252882 instance=ExtResource("2_g2vli")]
 position = Vector2(-1330.1455, -267.125)
 scale = Vector2(-5.0158544, 0.5)
-growable = 3
 
 [node name="Branch3" parent="." unique_id=1712799913 instance=ExtResource("2_g2vli")]
 position = Vector2(-1326.1013, 32.25)
 scale = Vector2(-5.0158544, 0.5)
-growable = 4
 
 [node name="Branch4" parent="." unique_id=395617969 instance=ExtResource("2_g2vli")]
 position = Vector2(-1326.1013, 334.5)

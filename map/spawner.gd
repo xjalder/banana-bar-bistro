@@ -1,6 +1,6 @@
 class_name Spawner extends Node2D
 
-@export var growable : Enums.Growables
+@export var holdable : Enums.Holdables
 @export var branch_sprite : Sprite2D
 @export var capacity : int
 @export var regrow_speed : int
@@ -13,19 +13,19 @@ var num_fruits : int
 var bound_blocks : Array[Rect2]
 var current_block: int = randi_range(0,2)
 
-var growable_textures : Dictionary[Enums.Growables, Texture] = {
-	Enums.Growables.Banana: preload("res://assets/banana hut/banana.png"),
-	Enums.Growables.Bread: preload("res://assets/banana hut/Bread.png"),
-	Enums.Growables.Milk: preload("res://assets/banana hut/BananaSmoothieSlim.png"),
-	Enums.Growables.Ice: preload("res://assets/banana hut/banana.png")
+var holdable_textures : Dictionary[Enums.Holdables, Texture] = {
+	Enums.Holdables.BANANA: preload("res://assets/banana hut/banana.png"),
+	Enums.Holdables.BREAD: preload("res://assets/banana hut/Bread.png"),
+	Enums.Holdables.MILK: preload("res://assets/banana hut/BananaSmoothieSlim.png"),
+	Enums.Holdables.ICE: preload("res://assets/banana hut/banana.png")
 }
 
 func _ready() -> void:
-	if growable == Enums.Growables.None:
+	if holdable == Enums.Holdables.NONE:
 		return
 	
-	texture = growable_textures.get(growable)
-	collect.growable = growable
+	texture = holdable_textures.get(holdable)
+	collect.holdable = holdable
 	collect.texture = texture
 	
 	var full := branch_sprite.get_rect()

@@ -2,8 +2,6 @@ extends Node
 
 enum ArmType {Left, Right}
 
-enum Growables {None, Banana, Bread, Ice, Milk}
-
 enum Order {BANANA, BANANA_BREAD, BANANA_SMOOTHIE, BANANA_ICECREAM}
 
 enum Holdables {BANANA, BANANA_BREAD, BANANA_SMOOTHIE, BANANA_ICECREAM, BREAD, ICE, MILK, NONE}

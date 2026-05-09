@@ -1,17 +1,28 @@
 [gd_scene format=3 uid="uid://dntiqvymjvh75"]
 
 [ext_resource type="Script" uid="uid://wbq0s8k80roa" path="res://logic/droppable.gd" id="1_utneh"]
+[ext_resource type="Script" uid="uid://dcybawuouq3h8" path="res://map/collect_area.gd" id="2_c0jnu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_utneh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c0jnu"]
 
-[node name="Droppable" type="Node2D" unique_id=2097309084]
+[node name="Droppable" type="RigidBody2D" unique_id=1294692770]
+collision_layer = 0
 script = ExtResource("1_utneh")
 
-[node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=1925136345]
+[node name="Area2D" type="Area2D" parent="." unique_id=478254860]
 collision_layer = 0
+collision_mask = 4
+script = ExtResource("2_c0jnu")
 
-[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D" unique_id=1758117453]
+[node name="pickupcol" type="CollisionShape2D" parent="Area2D" unique_id=1508090800]
+scale = Vector2(7.227631, 7.2214775)
+shape = SubResource("RectangleShape2D_utneh")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=240905812]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1758117453]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=240905812]
 z_index = 5
+scale = Vector2(3.80268, 3.80268)
 shape = SubResource("RectangleShape2D_c0jnu")
