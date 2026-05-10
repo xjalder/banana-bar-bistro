@@ -12,3 +12,4 @@ signal end_day
 signal end_lv(curr_lv: Enums.Level)
 signal play_grapple_sound
 signal play_mixer_sound
+signal play_win_sound

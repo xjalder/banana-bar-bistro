@@ -19,6 +19,8 @@ var timer : Timer
 func _ready() -> void:
 	SignalBus.play_grapple_sound.connect(_play_grapple)
 	SignalBus.play_mixer_sound.connect(_play_mixer)
+	SignalBus.play_win_sound.connect(_play_win)
+
 
 	timer = Timer.new()
 	timer.one_shot = true
@@ -33,6 +35,9 @@ func _start_random_timer() -> void:
 	timer.wait_time = randf_range(25.0, 50.0)
 	timer.start()
 
+func _play_win() -> void:
+	stream = load("res://assets/SFX/finishday1.mp3")
+	play()
 
 func _play_random_rustle() -> void:
 	stream = load(monkey_sounds.pick_random())

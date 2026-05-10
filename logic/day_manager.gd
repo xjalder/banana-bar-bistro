@@ -33,6 +33,7 @@ func _add_money(x :float) -> void:
 	happy_customer_count += 1
 	if (happy_customer_count == customers_per_level[curr_lv]):
 		_next_level()
+		SignalBus.play_win_sound.emit()
 		await SceneManagerTscn.change_scene(get_tree().current_scene, main_scene)
 		happy_customer_count = 0
 	
