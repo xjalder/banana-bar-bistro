@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Banana-Bar_Bistro"
-run/main_scene="uid://dccwjy27hoe3j"
+run/main_scene="uid://dmkk1u82m3wev"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 

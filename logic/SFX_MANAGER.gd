@@ -21,7 +21,6 @@ func _ready() -> void:
 	SignalBus.play_mixer_sound.connect(_play_mixer)
 	SignalBus.play_win_sound.connect(_play_win)
 
-
 	timer = Timer.new()
 	timer.one_shot = true
 	add_child(timer)

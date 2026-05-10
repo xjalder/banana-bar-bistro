@@ -7,6 +7,7 @@ var timer : Timer
 func _ready():
 	# Plays the music if it wasn't set to Autoplay
 	stream = load(songs.pick_random())
+	volume_db = -12
 	play()
 	
 	timer = Timer.new()
