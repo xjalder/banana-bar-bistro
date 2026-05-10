@@ -18,7 +18,10 @@ signal show_cash(money : int)
 
 signal buy_order(_buy_item)
 
+
+
 func _add_money(income : int)->void:
+	print(money)
 	money += income
 	show_cash.emit(money)
 
@@ -36,7 +39,8 @@ func buy_item(item: String)->bool:
 
 #Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	money = 500
+	money = 0
+	SignalBus.add_money.connect(_add_money)
 
 
 #Called every frame. 'delta' is the elapsed time since the previous frame.
