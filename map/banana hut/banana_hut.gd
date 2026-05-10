@@ -4,7 +4,7 @@ var monkey_scene : PackedScene = preload("res://map/banana hut/MonkeyCustomer.ts
 @onready var sprite_2d: Sprite2D = $Sprite2D
 var current_monkey_count : int = 0
 var upgrades : Dictionary= GameManager.upgrades 
-var MAX_MONKEYS : int = GameManager.upgrades['capacity']
+var MAX_MONKEYS : int = min(DayManager.customers_per_level.get(DayManager.curr_lv), 5)
 @onready var timer_to_new_customer: Timer = $Timer
 
 
