@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://sxnsshywfnyv"
-path="res://.godot/imported/banana.png-84b6616c778d3a74eeb050cadcb3fbca.ctex"
+uid="uid://duyjhvdj1c2bp"
+path="res://.godot/imported/D.Luffy1.png-97b76215649141b5ea6d1ae8521dddc3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/banana hut/banana.png"
-dest_files=["res://.godot/imported/banana.png-84b6616c778d3a74eeb050cadcb3fbca.ctex"]
+source_file="res://assets/player/D.Luffy1.png"
+dest_files=["res://.godot/imported/D.Luffy1.png-97b76215649141b5ea6d1ae8521dddc3.ctex"]
 
 [params]
 

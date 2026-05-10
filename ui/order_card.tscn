@@ -35,7 +35,7 @@
 [ext_resource type="Texture2D" uid="uid://ycq2wc7kmclq" path="res://assets/Progress Bar/Progress29.png" id="33_iqpl3"]
 [ext_resource type="Texture2D" uid="uid://bfdyv5flo3tyr" path="res://assets/Progress Bar/Progress30.png" id="34_hmrid"]
 [ext_resource type="Texture2D" uid="uid://cm2c6r3byhr2u" path="res://assets/Progress Bar/Progress31.png" id="35_qb6d7"]
-[ext_resource type="Texture2D" uid="uid://0korsokg32lo" path="res://assets/banana hut/Bread.png" id="37_nl3fk"]
+[ext_resource type="Texture2D" uid="uid://wvnsc4f75mgt" path="res://assets/banana hut/Bread.png" id="37_nl3fk"]
 [ext_resource type="Texture2D" uid="uid://26kckkpch3la" path="res://assets/ui/ItemFrameV2.png" id="38_02wmi"]
 [ext_resource type="FontFile" uid="uid://bhjumwa63yq50" path="res://assets/fonts/daydream_3/Daydream DEMO.otf" id="39_d2vnf"]
 

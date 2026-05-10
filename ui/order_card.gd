@@ -7,5 +7,12 @@ class_name OrderCard extends Control
 var monkey : MonkeyCustomer
 
 func _start() -> void:
-	patience.sprite_frames.set_animation_speed("default", patience.sprite_frames.get_frame_count("default") / float(monkey.time_to_unhappy))
+	var fps := patience.sprite_frames.get_frame_count("default") / float(monkey.time_to_unhappy)
+	patience.sprite_frames.set_animation_speed("default", fps)
 	patience.play("default")
+	patience.frame = 0
+
+func _process(delta: float) -> void:
+	if patience.frame >= 30:
+		patience.frame = 30
+		patience.stop()

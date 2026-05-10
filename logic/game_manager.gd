@@ -12,7 +12,7 @@ var upgrades = {
 	'capacity': 2,
 	'time_to_new_customer':5,
 	'money_multiplier': 1,
-	'time_to_unhappy': 45}
+	'time_to_unhappy': 90}
 
 signal show_cash(money : int)
 

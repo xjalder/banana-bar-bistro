@@ -1,0 +1,97 @@
+[gd_scene format=3 uid="uid://sfld5xe1fqn1"]
+
+[ext_resource type="Texture2D" uid="uid://deniuwn4q43vj" path="res://assets/map/backdrop.png" id="1_k8651"]
+[ext_resource type="Texture2D" uid="uid://bfhagmhhag470" path="res://assets/ui/ShopMenu.png" id="1_oo8kp"]
+[ext_resource type="Script" uid="uid://c2del75k6bsy5" path="res://ui/gameover_board.gd" id="2_5eixk"]
+[ext_resource type="Texture2D" uid="uid://dahg03e0j23eo" path="res://assets/map/Background2.webp" id="2_55k1u"]
+[ext_resource type="FontFile" uid="uid://bhjumwa63yq50" path="res://assets/fonts/daydream_3/Daydream DEMO.otf" id="3_j1fe5"]
+[ext_resource type="Texture2D" uid="uid://xd35bcevvqwm" path="res://assets/ui/BananaCoin.png" id="6_tb368"]
+
+[node name="GameOver" type="Control" unique_id=351530583]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Backdrop" type="TextureRect" parent="." unique_id=923048307]
+layout_mode = 0
+offset_left = -1053.0
+offset_top = -736.0
+offset_right = 387.0
+offset_bottom = 344.0
+scale = Vector2(1.4799988, 1.4799988)
+texture = ExtResource("1_k8651")
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=1037746376]
+layout_mode = 0
+offset_left = -1047.0
+offset_top = -729.0
+offset_right = 437.8214
+offset_bottom = 381.71423
+scale = Vector2(1.4289651, 1.4289651)
+texture = ExtResource("2_55k1u")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1987045405]
+layout_mode = 0
+offset_left = -562.0
+offset_top = -691.0
+offset_right = -50.0
+offset_bottom = -179.0
+scale = Vector2(2.25, 2.25)
+texture = ExtResource("1_oo8kp")
+script = ExtResource("2_5eixk")
+
+[node name="TextureRect2" type="TextureRect" parent="TextureRect" unique_id=1173374258]
+layout_mode = 0
+offset_left = 249.77779
+offset_top = 307.1111
+offset_right = 289.77777
+offset_bottom = 347.1111
+
+[node name="Label" type="Label" parent="TextureRect" unique_id=1634236553]
+layout_mode = 0
+offset_left = 33.77778
+offset_top = 164.44444
+offset_right = 479.77777
+offset_bottom = 242.44444
+theme_override_fonts/font = ExtResource("3_j1fe5")
+theme_override_font_sizes/font_size = 48
+text = "GAME OVER"
+
+[node name="DayLabel" type="Label" parent="TextureRect" unique_id=1899314797]
+texture_filter = 1
+layout_mode = 0
+offset_left = 36.444443
+offset_top = 259.55554
+offset_right = 482.44446
+offset_bottom = 340.55554
+theme_override_fonts/font = ExtResource("3_j1fe5")
+theme_override_font_sizes/font_size = 24
+text = "You made it to
+DAY "
+horizontal_alignment = 1
+
+[node name="CoinLabel" type="Label" parent="TextureRect" unique_id=64647880]
+layout_mode = 0
+offset_left = 23.999998
+offset_top = 372.44443
+offset_right = 470.0
+offset_bottom = 495.44443
+theme_override_fonts/font = ExtResource("3_j1fe5")
+theme_override_font_sizes/font_size = 24
+text = "YOU EARNED
+"
+horizontal_alignment = 1
+
+[node name="BananaCoin" type="TextureRect" parent="TextureRect" unique_id=1213852480]
+layout_mode = 0
+offset_left = 385.7778
+offset_top = 390.6667
+offset_right = 513.77783
+offset_bottom = 518.6667
+scale = Vector2(0.6444446, 0.6444446)
+texture = ExtResource("6_tb368")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=355661892]

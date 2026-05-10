@@ -5,10 +5,10 @@ var money: int
 
 const main_scene : String = "res://logic/main.tscn"
 const buy_scene : String = "res://ui/buy_screen.tscn"
+const end_scene : String = "res://ui/game_over.tscn"
 
 
-
-var customers_per_level : Array[int] = [1,2,3,5,7,9,11,13,15,17,20,25,30,30,30]
+var customers_per_level : Array[int] = [2,2,3,5,7,9,11,13,15,17,20,25,30,30,30]
 var happy_customer_count : int = 0
 
 var max_capacity_of_branches : Array[int] = [1,1,2,2,2,3,3,3,3,3,3,3]
@@ -21,12 +21,11 @@ func _iterate_monkey_fed() ->void:
 func _ready() -> void:
 	curr_lv = Enums.Level.LV1
 	SignalBus.add_money.connect(_add_money)
+	SignalBus.unhappy_customer.connect(_end_game)
 	money = 0
+	
 func _next_level() -> void:
-	if curr_lv == Enums.Level.LV5:
-		curr_lv = Enums.Level.LV1
-	else:
-		curr_lv += 1
+	curr_lv += 1
 	GameManager.upgrades['capacity'] += 1
 
 func _add_money(x :float) -> void:
@@ -36,4 +35,6 @@ func _add_money(x :float) -> void:
 		SignalBus.play_win_sound.emit()
 		await SceneManagerTscn.change_scene(get_tree().current_scene, main_scene)
 		happy_customer_count = 0
-	
+
+func _end_game(_customer : MonkeyCustomer) -> void:
+	await SceneManagerTscn.change_scene(get_tree().current_scene, end_scene)

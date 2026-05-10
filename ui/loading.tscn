@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://dmkk1u82m3wev"]
+
+[ext_resource type="Texture2D" uid="uid://caugmvhf770nk" path="res://logo.png" id="1_5txd7"]
+[ext_resource type="Script" uid="uid://bct4jdo0ww5vx" path="res://ui/loading.gd" id="1_uku2u"]
+[ext_resource type="Texture2D" uid="uid://duyjhvdj1c2bp" path="res://assets/player/D.Luffy1.png" id="3_w2lu3"]
+
+[node name="Loading" type="Control" unique_id=1239452361]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_uku2u")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1458438907]
+layout_mode = 0
+offset_left = -1045.0
+offset_top = -740.0
+offset_right = 1015.4287
+offset_bottom = 722.0
+color = Color(0.3328807, 0.33288068, 0.33288068, 1)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2087155900]
+
+[node name="Logo" type="TextureRect" parent="." unique_id=463879578]
+layout_mode = 0
+offset_left = -647.0
+offset_top = -418.0
+offset_right = -392.0
+offset_bottom = -291.0
+scale = Vector2(5.5603366, 5.5603366)
+texture = ExtResource("1_5txd7")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=693206609]
+layout_mode = 0
+offset_left = 720.0
+offset_top = 345.0
+offset_right = 848.0
+offset_bottom = 473.0
+texture = ExtResource("3_w2lu3")
