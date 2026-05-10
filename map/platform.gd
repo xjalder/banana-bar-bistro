@@ -20,7 +20,7 @@ func body_enter(body : Node2D):
 		return
 		
 	var collision_dir = (body.global_position - platform_body.global_position).normalized()
-	if collision_dir.y < 0 and abs(collision_dir.x) < 0.7:
+	if collision_dir.y < 0 and abs(collision_dir.x) < 0.9:
 		_enable_collision()
 	else:
 		_disable_collision()

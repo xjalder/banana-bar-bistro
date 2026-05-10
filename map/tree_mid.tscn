@@ -17,48 +17,46 @@ position = Vector2(3, -246)
 [node name="Branch2" parent="." unique_id=637252882 instance=ExtResource("5_ou6lv")]
 position = Vector2(526, -1526.0001)
 scale = Vector2(4, 4)
-capacity = 1
+regrow_speed = 5
+
+[node name="Branch6" parent="." unique_id=908753985 instance=ExtResource("5_ou6lv")]
+position = Vector2(526, -2177)
+scale = Vector2(4, 4)
+holdable = 7
 regrow_speed = 5
 
 [node name="Branch3" parent="." unique_id=1712799913 instance=ExtResource("5_ou6lv")]
 position = Vector2(-511, -107)
 scale = Vector2(-3, 3)
-capacity = 1
 regrow_speed = 5
 
 [node name="Branch4" parent="." unique_id=395617969 instance=ExtResource("5_ou6lv")]
 position = Vector2(-595, -1098)
 scale = Vector2(3, 3)
 holdable = 4
-capacity = 1
 regrow_speed = 5
 
 [node name="Branch5" parent="." unique_id=791125992 instance=ExtResource("5_ou6lv")]
 position = Vector2(-516, -3075.9998)
 scale = Vector2(4, 4)
 holdable = 4
-capacity = 1
 regrow_speed = 5
 
 [node name="Platform" parent="." unique_id=626660404 instance=ExtResource("6_igw4o")]
-position = Vector2(642, -357)
-scale = Vector2(4.0539055, 2.42739)
+position = Vector2(503.00006, -343)
+scale = Vector2(2.9307268, 1.7548552)
 
 [node name="Platform7" parent="." unique_id=1450216375 instance=ExtResource("6_igw4o")]
 position = Vector2(-859, -1830)
 scale = Vector2(-5.456492, 2.834208)
 
 [node name="Platform8" parent="." unique_id=584864999 instance=ExtResource("6_igw4o")]
-position = Vector2(524.9999, -855.0002)
-scale = Vector2(2.8853328, 2.42739)
+position = Vector2(898, -904.99994)
+scale = Vector2(6.10236, 2.0080185)
 
 [node name="Platform9" parent="." unique_id=1285810628 instance=ExtResource("6_igw4o")]
 position = Vector2(-565, -530)
 scale = Vector2(-2.7209213, 2.7355692)
-
-[node name="Platform3" parent="." unique_id=1497843977 instance=ExtResource("6_igw4o")]
-position = Vector2(528, -2163)
-scale = Vector2(2.9809918, 1.6232952)
 
 [node name="Platform10" parent="." unique_id=2103491011 instance=ExtResource("6_igw4o")]
 position = Vector2(-647, -2432)

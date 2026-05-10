@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://dol4ca8if7jcj"]
+
+[ext_resource type="Texture2D" uid="uid://26kckkpch3la" path="res://assets/ui/ItemFrameV2.png" id="1_6lbl6"]
+[ext_resource type="Script" uid="uid://bghaag3paxmbh" path="res://ui/item_card.gd" id="1_xinyf"]
+[ext_resource type="FontFile" uid="uid://bhjumwa63yq50" path="res://assets/fonts/daydream_3/Daydream DEMO.otf" id="2_xinyf"]
+[ext_resource type="Texture2D" uid="uid://sxnsshywfnyv" path="res://assets/banana hut/banana.png" id="4_iovim"]
+
+[node name="ItemCard" type="Button" unique_id=1605356288]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -352.0
+offset_bottom = -352.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xinyf")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1129813242]
+layout_mode = 0
+offset_right = 984.0
+offset_bottom = 1084.0
+mouse_filter = 2
+texture = ExtResource("1_6lbl6")
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=1770991604]
+layout_mode = 0
+offset_left = 282.0
+offset_top = 86.0
+offset_right = 714.0
+offset_bottom = 588.0
+mouse_filter = 2
+texture = ExtResource("4_iovim")
+
+[node name="Label" type="Label" parent="." unique_id=1588501320]
+layout_mode = 0
+offset_left = 308.0
+offset_top = 608.0
+offset_right = 584.0
+offset_bottom = 712.0
+theme_override_fonts/font = ExtResource("2_xinyf")
+theme_override_font_sizes/font_size = 64
+text = "Test"
+
+[node name="Label2" type="Label" parent="." unique_id=33997366]
+layout_mode = 0
+offset_left = 318.0
+offset_top = 864.0
+offset_right = 594.0
+offset_bottom = 968.0
+theme_override_fonts/font = ExtResource("2_xinyf")
+theme_override_font_sizes/font_size = 64
+text = "cost"
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1839118199]
+zoom = Vector2(0.5, 0.5)

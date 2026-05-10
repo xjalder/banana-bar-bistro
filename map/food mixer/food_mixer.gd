@@ -80,7 +80,7 @@ func _finish_and_spawn() -> void:
 	tween.tween_property(face_sprite, "scale", Vector2(1.2, 0.9), 0.15)
 	tween.tween_property(face_sprite, "scale", Vector2(0.9, 1.2), 0.15)
 	tween.tween_property(face_sprite, "scale", Vector2(1.0, 1.0), 0.12)
-
+	SignalBus.play_mixer_sound.emit()
 	await get_tree().create_timer(0.08).timeout
 	_make_product()
 

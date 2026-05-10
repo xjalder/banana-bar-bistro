@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://crrlemhqnnf3u"
+path="res://.godot/imported/food cooker1.mp3-500e6efcdee2113194f148fb65468dbf.mp3str"
+
+[deps]
+
+source_file="res://assets/SFX/food cooker1.mp3"
+dest_files=["res://.godot/imported/food cooker1.mp3-500e6efcdee2113194f148fb65468dbf.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
