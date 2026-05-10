@@ -2,9 +2,7 @@ class_name Spawner extends Node2D
 
 @export var holdable : Enums.Holdables
 @export var branch_sprite : Sprite2D
-@export var capacity : int
 @export var regrow_speed : int
-
 @onready var collect : CollectArea = $CollectArea
 
 var regrow_timer : Timer
@@ -58,7 +56,7 @@ func _ready() -> void:
 	collect.fruit_taken.connect(remove_fruit)
 
 func _regrow() -> void:
-	if num_fruits >= capacity:
+	if num_fruits >= DayManager.max_capacity_of_branches[DayManager.curr_lv]:
 		return
 	
 	var box: Rect2 = bound_blocks[current_block]

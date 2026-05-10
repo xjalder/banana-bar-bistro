@@ -107,8 +107,8 @@ repeat_times = 10
 
 [node name="Sprite2D" type="Sprite2D" parent="Parallax2D" unique_id=2106928532]
 z_index = -1
-position = Vector2(-1248, -1028.5)
-scale = Vector2(2, 4.3416667)
+position = Vector2(-1248, -824.7499)
+scale = Vector2(2, 4.7180557)
 texture = ExtResource("5_ri3ss")
 
 [node name="LeftBoundary" type="StaticBody2D" parent="." unique_id=140885025]

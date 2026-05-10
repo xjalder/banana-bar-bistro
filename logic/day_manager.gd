@@ -6,17 +6,12 @@ var money: int
 const main_scene : String = "res://logic/main.tscn"
 const buy_scene : String = "res://ui/buy_screen.tscn"
 
-var level_limit: Dictionary = {
-	Enums.Level.LV1: 1, # one monkey order completed to finish day 
-	Enums.Level.LV2: 2, #etc
-	Enums.Level.LV3: 3,
-	Enums.Level.LV4: 3,
-	Enums.Level.LV5: 4
-}
 
-var customers_per_level : Array[int] = [1,2,4,5,7,9,10,15,20]
+
+var customers_per_level : Array[int] = [1,2,3,5,7,9,11,13,15,17,20,25,30,30,30]
 var happy_customer_count : int = 0
 
+var max_capacity_of_branches : Array[int] = [1,1,2,2,2,3,3,3,3,3,3,3]
 var monkeys_fed : int = 0
 
 func _iterate_monkey_fed() ->void:
@@ -38,5 +33,6 @@ func _add_money(x :float) -> void:
 	happy_customer_count += 1
 	if (happy_customer_count == customers_per_level[curr_lv]):
 		_next_level()
-		await SceneManagerTscn.change_scene(get_tree().current_scene, buy_scene)
+		await SceneManagerTscn.change_scene(get_tree().current_scene, main_scene)
+		happy_customer_count = 0
 	
