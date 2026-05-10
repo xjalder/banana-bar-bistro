@@ -20,7 +20,7 @@ func body_enter(body : Node2D):
 		return
 		
 	var collision_dir = (body.global_position - platform_body.global_position).normalized()
-	if collision_dir.y < 0:
+	if collision_dir.y < 0 and abs(collision_dir.x) < 0.7:
 		_enable_collision()
 	else:
 		_disable_collision()
@@ -60,7 +60,6 @@ func on_ungrapple(is_left : bool) -> void:
 		right_arm_grappled = false
 	if not left_arm_grappled and not right_arm_grappled:
 		grappling = false
-		_enable_collision()
 		
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("crouch"):
@@ -69,4 +68,3 @@ func _input(event: InputEvent) -> void:
 	
 	if event.is_action_released("crouch"):
 		crouching = false
-		_try_enable()

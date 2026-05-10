@@ -49,10 +49,6 @@ position = Vector2(-569.00006, 370)
 rotation = 3.1415927
 scale = Vector2(2.8536787, -2.2108514)
 
-[node name="Platform3" parent="." unique_id=1497843977 instance=ExtResource("3_3puuq")]
-position = Vector2(509.00003, -511)
-scale = Vector2(2.7813153, 2)
-
 [node name="Platform4" parent="." unique_id=2139933727 instance=ExtResource("3_3puuq")]
 position = Vector2(-410, -390)
 scale = Vector2(-2.5141175, 2)
