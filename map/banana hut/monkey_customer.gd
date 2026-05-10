@@ -19,7 +19,7 @@ func _ready() -> void:
 		_spawn_sprite(order_sprite, "res://assets/banana hut/banana.png")
 	elif (values[x] == Enums.Order.BANANA_BREAD):
 		order = Enums.Order.BANANA_BREAD
-		_spawn_sprite(order_sprite, "res://assets/banana hut/banana_bread.png")
+		_spawn_sprite(order_sprite, "res://assets/banana hut/BananaBreadV2.webp")
 	elif (values[x] == Enums.Order.BANANA_SMOOTHIE):
 		order = Enums.Order.BANANA_SMOOTHIE
 		_spawn_sprite(order_sprite, "res://assets/banana hut/BananaSmoothieSlim.png")
