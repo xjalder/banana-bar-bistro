@@ -86,16 +86,12 @@ func _delete_monkey_at_index(index :int) -> void:
 	monkeys.get(index).queue_free()
 	_deleted_monkey()
 	current_monkey_count -= 1
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
 		
 func _remove_monkey_with_order(order : Enums.Holdables) -> bool:
 	for i in range(len(monkeys)):
 		if monkeys[i] != null and monkeys[i].order == order:
 			_delete_monkey_at_index(i)
-			SignalBus.happy_customer.emit(self)
+			SignalBus.happy_customer.emit(monkeys[i])
 			SignalBus.add_money.emit(Enums.OrderCost[order] * upgrades["money_multiplier"])
 			return true
 	return false

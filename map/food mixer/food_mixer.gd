@@ -36,9 +36,6 @@ func _ready() -> void:
 	collector.collect_fruit.connect(_add_holdable_to_face)
 
 func _process(delta: float) -> void:
-	if Input.is_action_just_pressed("spawn_monkey"):
-		_add_holdable_to_face(Enums.Holdables.BANANA)
-
 	match shake_state:
 		ShakeState.IDLE:
 			shake_time += delta

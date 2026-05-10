@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://cm448af2jrlku"]
+
+[ext_resource type="Script" uid="uid://cu81t8odkt0m1" path="res://logic/pause_menu.gd" id="1_rtk44"]
+[ext_resource type="FontFile" uid="uid://bhjumwa63yq50" path="res://assets/fonts/daydream_3/Daydream DEMO.otf" id="1_twskp"]
+
+[node name="PauseMenu" type="CanvasLayer" unique_id=648181077]
+process_mode = 3
+script = ExtResource("1_rtk44")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=390893910]
+offset_top = -147.99998
+offset_right = 1498.0
+offset_bottom = 982.0
+scale = Vector2(1.4799998, 1.4799998)
+color = Color(0.2665752, 0.26657522, 0.26657513, 0.8784314)
+
+[node name="Label" type="Label" parent="." unique_id=211786126]
+offset_left = 323.0
+offset_top = 258.0
+offset_right = 1151.0
+offset_bottom = 466.0
+scale = Vector2(1.4799998, 1.4799998)
+theme_override_colors/font_color = Color(0.7836408, 0.60039616, 0, 1)
+theme_override_fonts/font = ExtResource("1_twskp")
+theme_override_font_sizes/font_size = 128
+text = "PAUSED"
+
+[node name="Label" type="Label" parent="Label" unique_id=1447042968]
+layout_mode = 0
+offset_left = 114.0
+offset_top = 257.0
+offset_right = 693.0
+offset_bottom = 309.0
+theme_override_fonts/font = ExtResource("1_twskp")
+theme_override_font_sizes/font_size = 32
+text = "PRESS ESC TO RESUME"
