@@ -4,6 +4,7 @@ var money: int
 @export var curr_lv: Enums.Level
 
 const main_scene : String = "res://logic/main.tscn"
+const buy_scene : String = "res://ui/buy_screen.tscn"
 
 var level_limit: Dictionary = {
 	Enums.Level.LV1: 1, # one monkey order completed to finish day 
@@ -36,9 +37,6 @@ func _next_level() -> void:
 func _add_money(x :float) -> void:
 	happy_customer_count += 1
 	if (happy_customer_count == customers_per_level[curr_lv]):
-		_reload_map()
-	
-func _reload_map() -> void:
-	_next_level()
-	await SceneManagerTscn.change_scene(get_tree().current_scene, main_scene)
+		_next_level()
+		await SceneManagerTscn.change_scene(get_tree().current_scene, buy_scene)
 	
